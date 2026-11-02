@@ -2,30 +2,6 @@
   "version": 1,
   "entries": [
     {
-      "content": "自建搜索桥 http://39.96.21.173:8791（/opt/dsh-search-bridge/bridge.py）已卸载：端口 refused，备份在服务器 /root/dsh-search-bridge-20261102-1049.tgz。DSH desktop profile（C:\\Users\\63588\\.dsh\\profiles\\desktop\\cordis.patch.yml）里已加 `- id: web / config: searchProvider: ddg, fetchProvider: http`，把核心 web_search 路由到 dsh-free-search 注册的 provider（其 id 字面是 ddg，实际按插件 provider 设置 auto 路由，实测落到 bing）；该 patch 改动无需重启 DSH 即热生效。free 插件设置桥在 http://127.0.0.1:57921/api/dsh-free-search-settings/{describe,raw-search}（POST）。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-02T02:19:37.860Z",
-      "updated_at": "2026-11-02T02:50:33.048Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-02T02:50:33.048Z"
-      }
-    },
-    {
-      "content": "bsk（BrowserSkill）升级坑：`bsk update` 只替换 CLI 二进制（C:\\Users\\63588\\.cargo\\bin\\bsk.exe，现 0.4.1），已运行的老 daemon 进程仍是旧版本（曾在 0.3.3/协议1.3），Chrome 扩展要求协议≥1.6 会被反复踢（daemon.log 里 `kicked: local protocol 1.3 is below peer min_compatible_protocol 1.6`），必须 `bsk daemon stop` + 重启 daemon 才生效。在 DSH 沙箱 shell 里 `bsk daemon start` 会失败（进程在 Job Object 里，报 cannot start an independent Windows daemon），可用 WMI 在 Job 外拉起：Invoke-CimMethod Win32_Process Create CommandLine='cmd /c \"<exe>\" daemon start --foreground > %TEMP%\\bsk-daemon-start.log 2>&1'。健康检查 `bsk doctor`；状态 `bsk status`（daemon/协议版本、端口 52800）。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-02T03:11:39.811Z",
-      "updated_at": "2026-11-02T03:11:39.811Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-02T03:11:39.811Z"
-      }
-    },
-    {
       "content": "ssg-sales-ops 生产库 = 10.62.79.215:5432/ssg_ops_agent（表在 public schema；dev/tst=10.62.79.148、pre=10.62.79.221，见 smartop-service/admin/src/main/resources/application-lmp-*-prod.yml）。admin 服务 datasource 密码是 jasypt 密文，encryptor password 在同目录 application.yml 的 jasypt.encryptor.password（PBEWithMD5AndDES），可用 org.jasypt BasicTextEncryptor 解密；无 psql 时可用 .m2 里的 postgresql-42.5.4.jar 写临时 JDBC 查询类。菜单权限模型：ssg_menu(default_access)/ssg_user_menu(用户覆盖,缺行=INHERIT)/ssg_role_menu+ssg_user_role/ssg_user_group*，生效顺序 管理员直通 > 用户覆盖 > 角色 > 菜单默认（EffectivePermissionService），管理员判定函数 public.ssg_is_active_admin(itcode)。",
       "target": "memory",
       "importance": "normal",
@@ -35,6 +11,18 @@
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
         "at": "2026-11-02T08:20:06.661Z"
+      }
+    },
+    {
+      "content": "SPARK(Business Insights) 菜单权限只有 6 个：businessInsight 父 + workspace/bookings/lgfs/gpssus/tcv；HC list Sheet6 的 \"ISG TCV\"、\"DaaS TCV\" 两列都映射到同一个 businessInsight:tcv 菜单（任一为 Y 即需开通），实测 80 个非管理员 0 偏差。权限页对用户是 ssg_user_menu.access_state=VISIBLE/HIDDEN 覆盖，缺行=继承角色/菜单默认 HIDDEN。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-02T08:33:32.279Z",
+      "updated_at": "2026-11-02T08:33:32.279Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-02T08:33:32.279Z"
       }
     }
   ]
