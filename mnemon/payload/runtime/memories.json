@@ -36,6 +36,42 @@
         "label": "rxp",
         "at": "2026-11-03T03:18:09.342Z"
       }
+    },
+    {
+      "content": "Metadata 审计补写约定（agent.pbi_meta_audit_change_sets / pbi_meta_audit_entity_versions）：删除 Sheet Catalog 需 1 条 change_set（source=maintenance|web, method=DELETE, path=/api/database/catalog/<id>, summary='delete KPI mapping #x; ...; delete Sheet Catalog #id', feature=pbi-metadata-editor）+ 每行实体 1 条 version（entity_type=kpi|rag|catalog, version_no=1, operation=delete, entity_key='<link_bi> / <name_bi> / <sheet_name>', before_data=整行, after_data=NULL, changed_fields=每列 {before,after:null}）。json 列需显式 %s::json，否则 psycopg3 报 type text 不能赋给 json。2026-11-03 实践：删 catalog 1626 后补 change_set id=5113 + 7 条 version。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-03T08:16:03.702Z",
+      "updated_at": "2026-11-03T08:16:03.702Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-03T08:16:03.702Z"
+      }
+    },
+    {
+      "content": "ssg-sales-ops 同步表范围（2026-11-03 定，用户以其 Excel 为准）：16 张 public 目标表 ↔ 19 张 LUDP 源表（GPS&SUS 6 + Bookings 3 + LGFS 4 + I&C 2 + CFS&AFE 1，21 条对应关系）。GPS 6 张统一每天 07:00（Quartz 0 0 7 * * ?），测试环境现有 4 张仍是周三 05:00。改名映射：prd_upsell.Concord_Project_PN_Bkgs → public.gps_concord_project_pn_bkgs。prd_upsell.eaas_daas_tranche_comments 不存在；lgfs_lease_asset_summary 源表仍缺（17 列资产级，非 billing 那段 SQL）；prd_common.cml_account_dedup 的 crm_id / l2_idg_gtm_segment / l2_idg_gtm_sub_segment 无权限（仅测试 billing SQL 需要）。TrinoToPostgresSyncService.buildSourceColumnIndexes 按目标表列名逐列匹配，源 SQL 缺任一列即报“源查询缺少目标列”。清单文件 C:\\Users\\63588\\Downloads\\同步表清单_16目标表_20261103.xlsx。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-03T08:34:18.194Z",
+      "updated_at": "2026-11-03T08:34:18.194Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-03T08:34:18.194Z"
+      }
+    },
+    {
+      "content": "调用任何付费外部大模型前，必须先告诉用户用哪个模型、为什么、预计多少 token，并等用户同意后才执行；小规模测试（单次约 ≤5K token、总调用 ≤3 次）可免申请直接跑，但事后仍需在结果里注明模型名与实际消耗 token。用户指定模型时严格用指定的，不得擅自替换。",
+      "target": "user",
+      "importance": "critical",
+      "created_at": "2026-11-03T08:58:44.613Z",
+      "updated_at": "2026-11-03T08:58:44.613Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-03T08:58:44.613Z"
+      }
     }
   ]
 }
