@@ -72,6 +72,18 @@
         "label": "rxp",
         "at": "2026-11-03T08:58:44.613Z"
       }
+    },
+    {
+      "content": "ssg-sales-ops 生产登录态：Redis 哨兵 master 10.62.79.178:6379 db1，key=token_<itcode>（hash 存 token + user 快照，menuKeys 在登录时写死）。改菜单权限必须踢会话才生效，接口 POST /api/admin/permission/users/{userId}/kick（PermissionManagementService.kickUser，会写 ssg_permission_audit_log action=REVOKE_TOKEN），否则用户用旧快照。鉴权后端信任 \"user\" 请求头（JSON itcode）且生产网关未剥离，等于可绕过登录——已实测只读接口 200，待修。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-03T14:42:55.970Z",
+      "updated_at": "2026-11-03T14:42:55.970Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-03T14:42:55.970Z"
+      }
     }
   ]
 }
