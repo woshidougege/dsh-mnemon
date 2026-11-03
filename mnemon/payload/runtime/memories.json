@@ -24,6 +24,18 @@
         "label": "rxp",
         "at": "2026-11-02T08:33:32.279Z"
       }
+    },
+    {
+      "content": "dsmarket/pnpm 新版等待期：pnpm 11 只认 pnpm-workspace.yaml 的 minimumReleaseAge（实测 11.20.0 忽略 .npmrc 的 minimum-release-age）；已把 4 个 DSH profile（desktop/lanverify/tui/web）都设为 120 分钟；pnpm 显式装精确版本时会自动把该版本写进 minimumReleaseAgeExclude。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-03T03:18:09.342Z",
+      "updated_at": "2026-11-03T03:18:09.342Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-03T03:18:09.342Z"
+      }
     }
   ]
 }

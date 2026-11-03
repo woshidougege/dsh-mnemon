@@ -1,3 +1,5 @@
 ssg-sales-ops 生产库 = 10.62.79.215:5432/ssg_ops_agent（表在 public schema；dev/tst=10.62.79.148、pre=10.62.79.221，见 smartop-service/admin/src/main/resources/application-lmp-*-prod.yml）。admin 服务 datasource 密码是 jasypt 密文，encryptor password 在同目录 application.yml 的 jasypt.encryptor.password（PBEWithMD5AndDES），可用 org.jasypt BasicTextEncryptor 解密；无 psql 时可用 .m2 里的 postgresql-42.5.4.jar 写临时 JDBC 查询类。菜单权限模型：ssg_menu(default_access)/ssg_user_menu(用户覆盖,缺行=INHERIT)/ssg_role_menu+ssg_user_role/ssg_user_group*，生效顺序 管理员直通 > 用户覆盖 > 角色 > 菜单默认（EffectivePermissionService），管理员判定函数 public.ssg_is_active_admin(itcode)。
 §
 SPARK(Business Insights) 菜单权限只有 6 个：businessInsight 父 + workspace/bookings/lgfs/gpssus/tcv；HC list Sheet6 的 "ISG TCV"、"DaaS TCV" 两列都映射到同一个 businessInsight:tcv 菜单（任一为 Y 即需开通），实测 80 个非管理员 0 偏差。权限页对用户是 ssg_user_menu.access_state=VISIBLE/HIDDEN 覆盖，缺行=继承角色/菜单默认 HIDDEN。
+§
+dsmarket/pnpm 新版等待期：pnpm 11 只认 pnpm-workspace.yaml 的 minimumReleaseAge（实测 11.20.0 忽略 .npmrc 的 minimum-release-age）；已把 4 个 DSH profile（desktop/lanverify/tui/web）都设为 120 分钟；pnpm 显式装精确版本时会自动把该版本写进 minimumReleaseAgeExclude。
