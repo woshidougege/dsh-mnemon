@@ -84,6 +84,18 @@
         "label": "rxp",
         "at": "2026-11-03T14:42:55.970Z"
       }
+    },
+    {
+      "content": "DSH 插件反复提示“需重启”的典型根因（2026-11-04 dsh-chat-import 0.26.4 实测）：profile 的 cordis.patch.yml 中该入口是长条目（name/config + `disabled: true`），loader 每次启动都禁用该行 → 插件永不 apply，面板 /api-import/* 路由未注册（POST 返回 405），客户端报“路由可能未注册，请重启 dsh”。同时 dshmarket 的 readUserPatchState 只识别独立 `- id: X` 行且下一有效行恰好是 ` disabled: true`，长条目里的 disabled 认不出 → activation 落 restart 而非 disabled，横幅“1 项变更需重启”常驻，重启永远无效。删掉那行 disabled 使其变回纯配置行即可；dsh-hmr 监听 patch 文件，改完约 2 秒热加载变 live，无需重启。诊断入口 GET http://127.0.0.1:57921/dsh-market/installed（免认证，含 activation 与 patch.disables；未知 POST 路由 405、sameOrigin 校验失败 403）。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-04T02:09:33.860Z",
+      "updated_at": "2026-11-04T02:09:33.860Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-04T02:09:33.860Z"
+      }
     }
   ]
 }
