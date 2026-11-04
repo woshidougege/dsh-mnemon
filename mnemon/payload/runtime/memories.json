@@ -96,6 +96,18 @@
         "label": "rxp",
         "at": "2026-11-04T02:09:33.860Z"
       }
+    },
+    {
+      "content": "用户的模型 = DeepSeek V4.1 flash，多模态（能读图/看图，不能生图）；做抖音图文时图片必须外部获取。本机实测图源：360 图片 JSON（image.so.com/j?q=..&pn=0&rn=N，keyless，字段 img/https/thumb/title/width/height/site/copyright_owner，CDN 需带 Referer=https://image.so.com/ 才能下）、Wikimedia Commons API（keyless 可用）；搜狗图片接口已 404、百度反爬强。抖音图文硬限：标题 ≤20 字、正文 ≤1000 字，素材 3:4 竖版最佳。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-04T06:20:31.066Z",
+      "updated_at": "2026-11-04T06:20:31.066Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-04T06:20:31.066Z"
+      }
     }
   ]
 }
