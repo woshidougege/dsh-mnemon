@@ -132,6 +132,18 @@
         "label": "rxp",
         "at": "2026-11-05T07:07:47.867Z"
       }
+    },
+    {
+      "content": "平台代发 Jira 留言的署名规则（2026-11-05，后端 MR !472，分支 feature/jira-comment-signature-admin）：Jira 侧是集成账号，所以发出去的正文 = 用户原话 + 空行 + `{color:#6b778c}— 由 姓名（itcode） 通过 SSG Spark 反馈平台发送{color}`（JiraCommentSignature.wiki 统一生成，名字缺省退化成 itcode，清掉花括号/换行）。平台回显仍是原话：ssg_jira_comment.body_plain 存原话，JiraCommentMapper.upsertBatch 对 source='PLATFORM' 的行不再覆盖 body/body_plain；ssg_jira_issue.note_body 落库前用 JiraCommentSignature.strip 摘掉署名。线上 Jira = https://jira.xpaas.lenovo.com（Server 11.3.12，评论走 wiki 渲染，h3./* 已用 expand=renderedBody 验证）。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-05T11:18:53.881Z",
+      "updated_at": "2026-11-05T11:18:53.881Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-05T11:18:53.881Z"
+      }
     }
   ]
 }
