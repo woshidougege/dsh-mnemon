@@ -144,6 +144,18 @@
         "label": "rxp",
         "at": "2026-11-05T11:18:53.881Z"
       }
+    },
+    {
+      "content": "SPARK Scheduler Center 的 Task Groups 数据来自 public.ssg_sync_task，只统计 handler_key='trino-to-postgres' 的行；分组=display_group 优先，否则按 target_table 名推断（bookings/v_daas_bkgs→Bookings，lgfs/lilo/dim_svc_acnt_group→LGFS，gps→GPS&SUS，ic_→I&C，cfs/afe→CFS&AFE）。调度轮询只认 next_trigger_time 非空且到点（backfill 只在启动时跑），直接写库新建任务必须自己算 next_trigger_time。2026-11-06 环境差异：funder_report_lilo_and_lfs_detail 测试 166 列 / 生产 13 列；dim_svc_acnt_group 测试 6 列 / 生产 2 列；d365_opportunity_link、d365_quote_link、contract_center_link 目标表生产不存在；测试 lgfs_lease_billing_summary 的 SQL 因 prd_common.cml_account_dedup 列权限失败。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-06T04:43:00.897Z",
+      "updated_at": "2026-11-06T04:43:00.897Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-06T04:43:00.897Z"
+      }
     }
   ]
 }
