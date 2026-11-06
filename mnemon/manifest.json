@@ -2,10 +2,10 @@
   "format": "mnemonpack",
   "version": 1,
   "scope": "full",
-  "exportedAt": "2026-11-06T10:23:04.246Z",
+  "exportedAt": "2026-11-06T13:43:56.651Z",
   "source": {
     "plugin": "dsh-mnemon",
-    "pluginVersion": "0.5.40"
+    "pluginVersion": "0.5.41"
   },
   "components": [
     "runtime",
@@ -36,7 +36,7 @@
     "channel": "git",
     "branch": "mnemon-sync",
     "subdir": "mnemon/",
-    "pushedAt": "2026-11-06T10:23:04.246Z",
+    "pushedAt": "2026-11-06T13:43:56.651Z",
     "machine": {
       "id": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
       "label": "rxp",
