@@ -122,51 +122,15 @@
       }
     },
     {
-      "content": "联想 Jira 账号名 = itcode（姓氏全拼+名缩写+数字，如 wangjj63/renxp4/panglei2/gaoge2/xuxl7），不是拼音全拼也不是显示名。校验方法：生产库 ssg_user 按 display_name 反查 itcode，再 GET https://jira.xpaas.lenovo.com/rest/api/2/user?username=<itcode>（token 在 ssg_probe_setting 的 jira.api-token），200 且 active=true 才可用；拼音写法（jianjun/panglei/gaoge/xianglong）全部 404。",
+      "content": "数据库硬规则（已写进 dev-requirements Skill 第 0 条）：连 PostgreSQL 一律用个人账号 p_renxp4 / 密码 K7~pL2=zR9;vT4_，禁止使用项目 datasource、jasypt 密文、Nacos、.env 或团队共享账号；唯一例外是应用自身启动/flyway 由 Spring 用项目配置连库。2026-11-10 实测：10.62.79.215:5432/ssg_ops_agent 登录成功，current_user=p_renxp4，PostgreSQL 16.4，public 116 张表可读（ssg_user 263 行），无 superuser/createdb/createrole 角色、无角色继承。密码含 ~ = ; _，PowerShell 用单引号 PGPASSWORD，JDBC 必须用 Properties 传 user/password 不能拼 URL。",
       "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-06T09:04:16.927Z",
-      "updated_at": "2026-11-06T09:04:16.927Z",
+      "importance": "critical",
+      "created_at": "2026-11-10T09:10:00.010Z",
+      "updated_at": "2026-11-10T09:10:00.010Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-06T09:04:16.927Z"
-      }
-    },
-    {
-      "content": "LUDP 生产 Trino 账号实测（2026-11-06）：pbi-presto-row.ludp.lenovo.com:443/hive，keystore ludp-row-prd-keystore.jks / 密码 abcd-1234，账号密码走 Properties 不拼 URL。服务账号 p49_g1189（同步+巡检固定账号，见 LudpVerificationService.java:55 与 sync-schedule.yml:15）与 p49_g361 都能查数据：prd_upsell.bookings_simulation_ssg 均 92,865,554 行（BU 分布一致 ISG 5,986,088 / PCSD 79,578,646 / MBG 5,210,192 / FCCL 826,549 / DaaS HW 1,264,079）、bookings_simulation_ssg_kpi 15,252,158 行、cfs_and_afe_sites 100 行、funder_report_lilo_and_lfs_detail 2,390,089 行，两边完全一致。差异只在 prd_common.cml_account_dedup：p49_g1189 查 crm_id 报 Access Denied: Cannot select from columns [crm_id] in table or view cml_account_dedup，p49_g361 可读；且该表 count(*) g1189=12,069,794 vs g361=12,060,123（差 9,671 行，推断存在账号级行级过滤）。探针：.tmp/ludp-acct-probe/LudpProbe.java，用法 java -cp '.;<m2>/io/trino/trino-jdbc/476/trino-jdbc-476.jar' LudpProbe <user> <password> \"<sql>\"。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-06T09:39:36.573Z",
-      "updated_at": "2026-11-06T09:39:36.573Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-06T09:39:36.573Z"
-      }
-    },
-    {
-      "content": "ssg-sales-ops 本地起 admin 服务：`mvn spring-boot:run` 会报 CreateProcess error=206（Windows 命令行过长），改用 `dependency:build-classpath -Dmdep.outputFile=...` 生成 cp.txt，再 `java @argfile`（-cp 用正斜杠）启动；profile 只能给单个 `lmp-reston-dev`（写两个会让 CdpProperties.CDPEnv 解析成 \"dev,local\" 启动失败），另加 --spring.rabbitmq.addresses=localhost:5672 --spring.rabbitmq.listener.simple.auto-startup=false --spring.cloud.bus.enabled=false --notification.sse.redis-enabled=false 避开远端 Rabbit；8082 常被别人 IDEA 实例占用，用 --server.port=18082。JAVA_HOME 必须指真实 JDK17（C:\\Program Files\\Java\\jdk-17.0.19），用 IDEA 的 jbr 会让 lombok 失效。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-09T09:30:08.533Z",
-      "updated_at": "2026-11-09T09:30:08.533Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-09T09:30:08.533Z"
-      }
-    },
-    {
-      "content": "Service Portfolio 后端：worktree C:/Users/63588/lenovo/ssg-sales-ops/.agents/worktrees/service-portfolio-admin（分支 service-portfolio-admin，已推 origin，commit 4e17f10be），包 com.lenovo.admin.serviceportfolio，迁移 V1.1.107（11 张 sp_* 表）+ V1.1.108（时间列改 timestamp，否则 timestamptz 读不成 LocalDateTime）已在 dev 库执行。自测页在 src/main/resources/static/service-portfolio/index.html，但 static/ 在 .gitignore 里（不进仓库、只进 jar）。MyBatis 注解 SQL 里禁用 `<>`/`<`（会被当 XML 解析），用 `!=`。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-09T09:30:08.689Z",
-      "updated_at": "2026-11-09T09:30:08.689Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-09T09:30:08.689Z"
+        "at": "2026-11-10T09:10:00.010Z"
       }
     }
   ]
