@@ -17,3 +17,5 @@ DSH 插件反复提示“需重启”的典型根因（2026-11-04 dsh-chat-impor
 ssg-sales-ops 的数据库迁移只改表结构，绝不塞数据（seed INSERT / 数据修正 UPDATE 都不要）：映射、开关这类运行期配置由管理员在 Admin Control 里维护或手工改库。用户原话（2026-11-06）：“sql版本 不要管理数据啊 只管理表结构 我们手动改库就行了呀”。项目 flyway 是 validate-on-migrate: false + VALIDATE_NOT_PRESENT，改已执行过的迁移内容不会报 checksum。
 §
 数据库硬规则（已写进 dev-requirements Skill 第 0 条）：连 PostgreSQL 一律用个人账号 p_renxp4 / 密码 K7~pL2=zR9;vT4_，禁止使用项目 datasource、jasypt 密文、Nacos、.env 或团队共享账号；唯一例外是应用自身启动/flyway 由 Spring 用项目配置连库。2026-11-10 实测：10.62.79.215:5432/ssg_ops_agent 登录成功，current_user=p_renxp4，PostgreSQL 16.4，public 116 张表可读（ssg_user 263 行），无 superuser/createdb/createrole 角色、无角色继承。密码含 ~ = ; _，PowerShell 用单引号 PGPASSWORD，JDBC 必须用 Properties 传 user/password 不能拼 URL。
+§
+ssg_sales_ops 前端验证踩坑：多个 subagent 共享同一个 Chrome 实例/窗口（bsk browserInstanceId 62af6ee9），同一窗口的标签页会被其他 agent 不断导航（例如从 ?panel=audit-log 被切到 ?panel=access&sub=groups），导致 bsk screenshot/observe 抓到的内容与自己的 ref 不一致。对策：用 bsk_tabs create 单独开标签页并尽快在同一调用序列里取证，或用 VOM/DOM 文本作为证据；incognito 被扩展策略禁用（需 chrome://extensions 里 Allow in incognito）。

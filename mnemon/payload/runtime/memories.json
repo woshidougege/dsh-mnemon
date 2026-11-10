@@ -132,6 +132,18 @@
         "label": "rxp",
         "at": "2026-11-10T09:10:00.010Z"
       }
+    },
+    {
+      "content": "ssg_sales_ops 前端验证踩坑：多个 subagent 共享同一个 Chrome 实例/窗口（bsk browserInstanceId 62af6ee9），同一窗口的标签页会被其他 agent 不断导航（例如从 ?panel=audit-log 被切到 ?panel=access&sub=groups），导致 bsk screenshot/observe 抓到的内容与自己的 ref 不一致。对策：用 bsk_tabs create 单独开标签页并尽快在同一调用序列里取证，或用 VOM/DOM 文本作为证据；incognito 被扩展策略禁用（需 chrome://extensions 里 Allow in incognito）。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-10T11:51:20.820Z",
+      "updated_at": "2026-11-10T11:51:20.820Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-10T11:51:20.820Z"
+      }
     }
   ]
 }
