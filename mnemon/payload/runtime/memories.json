@@ -144,6 +144,30 @@
         "label": "rxp",
         "at": "2026-11-10T11:51:20.820Z"
       }
+    },
+    {
+      "content": "ssg-sales-ops 的 COC 用户判定：ssg_user.coc_flag 由 auth 服务的 CocFlagService 解析，只在 CIOP 业务账号登录、普通密码登录、ADFS 回调 setToken 这三处更新，滑动续期不重算。2026-11-11 已用脚本全量刷新生产 262 行（Y 96→111、N 123→153、NULL 46→1，只剩 lmadaiah 查不到），并用 MR !499（fix/coc-flag-sync-auth → auth-release）加了每日 2:40 全量同步 + 启动配置检查。生产当时缺 UPP_COC_CLIENT_KEY/SECRET，是「标记从不更新」的根因，需运维补环境变量后新代码才会真正生效。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-11T03:52:21.860Z",
+      "updated_at": "2026-11-11T03:52:21.860Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-11T03:52:21.860Z"
+      }
+    },
+    {
+      "content": "ssg_sales_ops 前端 master（生产）还没有 I&C 页面：src/views/IC 与 /spark/ic 路由只存在于 develop。2026-11-11 菜单单一真源重构（src/constants/sparkNav.ts）里，master 分支的 INSIGHTS_NAV 暂时注释掉 I&C，避免生产导航多出点不开的菜单、反馈页把它列成可选；I&C 上生产后打开注释即与 TST 一致。对应 MR !948（develop）/ !949（master）。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-11T04:30:27.896Z",
+      "updated_at": "2026-11-11T04:30:27.896Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-11T04:30:27.896Z"
+      }
     }
   ]
 }

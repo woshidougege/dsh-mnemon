@@ -19,3 +19,7 @@ ssg-sales-ops 的数据库迁移只改表结构，绝不塞数据（seed INSERT 
 数据库硬规则（已写进 dev-requirements Skill 第 0 条）：连 PostgreSQL 一律用个人账号 p_renxp4 / 密码 K7~pL2=zR9;vT4_，禁止使用项目 datasource、jasypt 密文、Nacos、.env 或团队共享账号；唯一例外是应用自身启动/flyway 由 Spring 用项目配置连库。2026-11-10 实测：10.62.79.215:5432/ssg_ops_agent 登录成功，current_user=p_renxp4，PostgreSQL 16.4，public 116 张表可读（ssg_user 263 行），无 superuser/createdb/createrole 角色、无角色继承。密码含 ~ = ; _，PowerShell 用单引号 PGPASSWORD，JDBC 必须用 Properties 传 user/password 不能拼 URL。
 §
 ssg_sales_ops 前端验证踩坑：多个 subagent 共享同一个 Chrome 实例/窗口（bsk browserInstanceId 62af6ee9），同一窗口的标签页会被其他 agent 不断导航（例如从 ?panel=audit-log 被切到 ?panel=access&sub=groups），导致 bsk screenshot/observe 抓到的内容与自己的 ref 不一致。对策：用 bsk_tabs create 单独开标签页并尽快在同一调用序列里取证，或用 VOM/DOM 文本作为证据；incognito 被扩展策略禁用（需 chrome://extensions 里 Allow in incognito）。
+§
+ssg-sales-ops 的 COC 用户判定：ssg_user.coc_flag 由 auth 服务的 CocFlagService 解析，只在 CIOP 业务账号登录、普通密码登录、ADFS 回调 setToken 这三处更新，滑动续期不重算。2026-11-11 已用脚本全量刷新生产 262 行（Y 96→111、N 123→153、NULL 46→1，只剩 lmadaiah 查不到），并用 MR !499（fix/coc-flag-sync-auth → auth-release）加了每日 2:40 全量同步 + 启动配置检查。生产当时缺 UPP_COC_CLIENT_KEY/SECRET，是「标记从不更新」的根因，需运维补环境变量后新代码才会真正生效。
+§
+ssg_sales_ops 前端 master（生产）还没有 I&C 页面：src/views/IC 与 /spark/ic 路由只存在于 develop。2026-11-11 菜单单一真源重构（src/constants/sparkNav.ts）里，master 分支的 INSIGHTS_NAV 暂时注释掉 I&C，避免生产导航多出点不开的菜单、反馈页把它列成可选；I&C 上生产后打开注释即与 TST 一致。对应 MR !948（develop）/ !949（master）。
