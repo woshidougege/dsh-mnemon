@@ -156,6 +156,18 @@
         "label": "rxp",
         "at": "2026-11-11T07:26:52.814Z"
       }
+    },
+    {
+      "content": "SPARK 通知邮件约定：反馈类通知（USAGE_FEEDBACK_*/FEEDBACK_*，actionUrl 为 /usageIssueFeedback 深链）的收件人没有 Jira 权限，邮件按钮必须是「View in My Feedback」并指向平台深链，不能指向 jira.lenovo.com（点开只有登录页/403，用户会反复来问）。非反馈通知才保留 View ticket in Jira / Open SPARK。实现位置 smartop-service/admin 的 NotificationEmailNotifier。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-11T09:04:27.541Z",
+      "updated_at": "2026-11-11T09:04:27.541Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-11T09:04:27.541Z"
+      }
     }
   ]
 }
