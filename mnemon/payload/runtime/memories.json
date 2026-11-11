@@ -168,6 +168,18 @@
         "label": "rxp",
         "at": "2026-11-11T09:04:27.541Z"
       }
+    },
+    {
+      "content": "ssg-sales-ops 单测/编译 admin 模块必须带 -am：只用 -pl smartop-service/admin 会拿本地仓库里旧的 smartop-api，报 CocFlagSyncScheduleHandler 找不到 AuthFeignService.cocFlagSyncStatus() 而编译失败。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-11T09:55:00.593Z",
+      "updated_at": "2026-11-11T09:55:00.593Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-11T09:55:00.593Z"
+      }
     }
   ]
 }

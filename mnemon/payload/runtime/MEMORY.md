@@ -23,3 +23,5 @@ Service Portfolio 空态约定（2026-11-11 用户要求）：算不出来的不
 浏览器工具（bsk_*）实测成本（2026-11-09~11 三天本机会话）：4333 次调用、1574 个 step、6h17m，占全部 step 17%、墙钟 13%；其中 bsk_session 1956 次（第三高频工具，仅次于 pwsh 4594、read 2393）、bsk_interact 1055、bsk_inspect 783、bsk_page 380。已把「非必要不开浏览器」写进 dev-requirements 第 17 条（三档最小验证 + 三条开启门槛 + 单次 ≤10 步）、agent-dev-efficiency「单步预算」、两份 description。
 §
 SPARK 通知邮件约定：反馈类通知（USAGE_FEEDBACK_*/FEEDBACK_*，actionUrl 为 /usageIssueFeedback 深链）的收件人没有 Jira 权限，邮件按钮必须是「View in My Feedback」并指向平台深链，不能指向 jira.lenovo.com（点开只有登录页/403，用户会反复来问）。非反馈通知才保留 View ticket in Jira / Open SPARK。实现位置 smartop-service/admin 的 NotificationEmailNotifier。
+§
+ssg-sales-ops 单测/编译 admin 模块必须带 -am：只用 -pl smartop-service/admin 会拿本地仓库里旧的 smartop-api，报 CocFlagSyncScheduleHandler 找不到 AuthFeignService.cocFlagSyncStatus() 而编译失败。
