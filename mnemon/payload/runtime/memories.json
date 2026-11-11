@@ -86,18 +86,6 @@
       }
     },
     {
-      "content": "DSH 插件反复提示“需重启”的典型根因（2026-11-04 dsh-chat-import 0.26.4 实测）：profile 的 cordis.patch.yml 中该入口是长条目（name/config + `disabled: true`），loader 每次启动都禁用该行 → 插件永不 apply，面板 /api-import/* 路由未注册（POST 返回 405），客户端报“路由可能未注册，请重启 dsh”。同时 dshmarket 的 readUserPatchState 只识别独立 `- id: X` 行且下一有效行恰好是 ` disabled: true`，长条目里的 disabled 认不出 → activation 落 restart 而非 disabled，横幅“1 项变更需重启”常驻，重启永远无效。删掉那行 disabled 使其变回纯配置行即可；dsh-hmr 监听 patch 文件，改完约 2 秒热加载变 live，无需重启。诊断入口 GET http://127.0.0.1:57921/dsh-market/installed（免认证，含 activation 与 patch.disables；未知 POST 路由 405、sameOrigin 校验失败 403）。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-04T02:09:33.860Z",
-      "updated_at": "2026-11-04T02:09:33.860Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-04T02:09:33.860Z"
-      }
-    },
-    {
       "content": "ssg-sales-ops 的数据库迁移只改表结构，绝不塞数据（seed INSERT / 数据修正 UPDATE 都不要）：映射、开关这类运行期配置由管理员在 Admin Control 里维护或手工改库。用户原话（2026-11-06）：“sql版本 不要管理数据啊 只管理表结构 我们手动改库就行了呀”。项目 flyway 是 validate-on-migrate: false + VALIDATE_NOT_PRESENT，改已执行过的迁移内容不会报 checksum。",
       "target": "memory",
       "importance": "critical",
@@ -122,18 +110,6 @@
       }
     },
     {
-      "content": "DSH 会话日志分析要点：code-mode/PTC 模式下 assistant/message 的 tool-call 只有 run_code，真实工具调用与参数在 tool/ptc-dispatch（data.name / data.arguments / data.content）；按 skill 名统计要扫 ptc-dispatch 而不是 assistant-message。sessions 目录的 .jsonl.zstd 是多帧 zstd，必须按魔数 28 B5 2F FD 逐帧 zstdDecompressSync 再拼接。skill 机制：catalog 按 name+description 的 digest 每次 pre-step 重算、变化即时追加（改 description 对运行中会话立刻生效）；但 skill 正文一旦加载就成为历史工具结果，改文件不会回改已加载的会话，需重打 /skillname 或开新会话才生效。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-11T07:05:05.570Z",
-      "updated_at": "2026-11-11T07:05:05.570Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-11T07:05:05.570Z"
-      }
-    },
-    {
       "content": "Service Portfolio 空态约定（2026-11-11 用户要求）：算不出来的不要兜底造假，接口直接返回空结构 —— 三张无数据源 KPI（Fast Pass / Cross-Team / SLA）value=null，前端 paintKpi 渲染 \"— 待接入\"；/roadmap 配置表空时返回 4 个空季度 + banner=null，前端时间轴出 \"暂无路线图数据\"；/links 返回两个空数组。凡有数据源的一律走 SQL，不再写死数字。",
       "target": "memory",
       "importance": "critical",
@@ -143,30 +119,6 @@
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
         "at": "2026-11-11T07:09:51.139Z"
-      }
-    },
-    {
-      "content": "浏览器工具（bsk_*）实测成本（2026-11-09~11 三天本机会话）：4333 次调用、1574 个 step、6h17m，占全部 step 17%、墙钟 13%；其中 bsk_session 1956 次（第三高频工具，仅次于 pwsh 4594、read 2393）、bsk_interact 1055、bsk_inspect 783、bsk_page 380。已把「非必要不开浏览器」写进 dev-requirements 第 17 条（三档最小验证 + 三条开启门槛 + 单次 ≤10 步）、agent-dev-efficiency「单步预算」、两份 description。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-11T07:26:52.814Z",
-      "updated_at": "2026-11-11T07:26:52.814Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-11T07:26:52.814Z"
-      }
-    },
-    {
-      "content": "SPARK 通知邮件约定：反馈类通知（USAGE_FEEDBACK_*/FEEDBACK_*，actionUrl 为 /usageIssueFeedback 深链）的收件人没有 Jira 权限，邮件按钮必须是「View in My Feedback」并指向平台深链，不能指向 jira.lenovo.com（点开只有登录页/403，用户会反复来问）。非反馈通知才保留 View ticket in Jira / Open SPARK。实现位置 smartop-service/admin 的 NotificationEmailNotifier。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-11T09:04:27.541Z",
-      "updated_at": "2026-11-11T09:04:27.541Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-11T09:04:27.541Z"
       }
     },
     {
@@ -182,15 +134,15 @@
       }
     },
     {
-      "content": "ssg-sales-ops 汇报线读口径（2026-11-11，admin MR !510 已 merged，sha 723d05ff0，迁移 V1.1.112）：看板 Band/JobFamily/L3-L5 改读视图 public.ssg_hc_member_line（= ssg_hc_member_effective FULL JOIN 顾问表 ssg_hc_consultant_manager + 由直属经理沿 manager_chain 上溯最近 HC 祖先推出的 L3/L4/L5）。顾问经理来源就是 ADFS：auth 的 POST /user/ldapOrgBatch（LDAPUserInfo.manager 已是经理 itcode），admin 侧 POST /api/chatbi/hc/consultant-managers/sync 落库（source=ADFS），另有 GET 列表/GET {itcode}/line/POST 批量/DELETE 撤销。生产 2026-11-11 已手工把 V1.1.112 跑完（用户一次性授权用项目 datasource 账号 a_appconnect）并在 flyway_schema_history 登记 installed_rank=116 / version=1.1.112 / checksum=1519229004（与 tst 一致），补了 29 行顾问经理，视图 42,778 行、推导 40 人、正式员工 L3/L4/L5 零差异；剩 CODEX-TEST/SYSTEM 无 ADFS 记录。prod 未部署新代码时端点仍 404（旧进程读 effective，不受影响）。Flyway checksum 算法：按行 CRC32（UTF-8，去首行 BOM，不加换行），可用 java.util.zip.CRC32 复现。编译 admin 必须带 -am。本机 mvn：C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.1.3\\plugins\\maven-plugin\\lib\\maven3\\bin\\mvn.cmd；JAVA_HOME=C:\\Program Files\\Java\\jdk-17.0.19。",
+      "content": "ssg-sales-ops TST 接口性能基线（2026-11-11 实测 216 场景/106 路径）：传输地板 /api/auth/user/info p50≈260ms（净业务=p50-260）。Top 慢点：①feedback-records 13.9s(size20)/17.1s(size50)，根因 enrichFeedbackTurnOutcome 逐会话调 querySessionsPage（FEEDBACK_TURN_LOOKUP_SESSIONS=200）+ 内联 querySessionSummary；②queries 带 keyword 19s~超时（11 个 ILIKE + 2 个相关子查询逐行求值，pg_trgm 已装但无索引）；③admin/feedback 850~1103ms（3 条 SQL 各重算 42,738 行 ssg_hc_member_effective，去 join 后 213ms→21ms）；④overview 708~806ms（7 条 SQL 全表扫）；⑤queries/summary 1.2~1.7s（4 条聚合）；⑥导出 xlsx 7.3s 同步生成（user-logs 已是异步）。报告/脚本：.tmp/api-perf-tst/report 与 results。",
       "target": "memory",
       "importance": "normal",
-      "created_at": "2026-11-11T11:19:19.881Z",
-      "updated_at": "2026-11-11T12:17:54.698Z",
+      "created_at": "2026-11-11T15:47:03.893Z",
+      "updated_at": "2026-11-11T15:47:03.893Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-11T12:17:54.698Z"
+        "at": "2026-11-11T15:47:03.893Z"
       }
     }
   ]
