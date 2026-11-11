@@ -98,18 +98,6 @@
       }
     },
     {
-      "content": "用户的模型 = DeepSeek V4.1 flash，多模态（能读图/看图，不能生图）；做抖音图文时图片必须外部获取。本机实测图源：360 图片 JSON（image.so.com/j?q=..&pn=0&rn=N，keyless，字段 img/https/thumb/title/width/height/site/copyright_owner，CDN 需带 Referer=https://image.so.com/ 才能下）、Wikimedia Commons API（keyless 可用）；搜狗图片接口已 404、百度反爬强。抖音图文硬限：标题 ≤20 字、正文 ≤1000 字，素材 3:4 竖版最佳。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-04T06:20:31.066Z",
-      "updated_at": "2026-11-04T06:20:31.066Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-04T06:20:31.066Z"
-      }
-    },
-    {
       "content": "ssg-sales-ops 的数据库迁移只改表结构，绝不塞数据（seed INSERT / 数据修正 UPDATE 都不要）：映射、开关这类运行期配置由管理员在 Admin Control 里维护或手工改库。用户原话（2026-11-06）：“sql版本 不要管理数据啊 只管理表结构 我们手动改库就行了呀”。项目 flyway 是 validate-on-migrate: false + VALIDATE_NOT_PRESENT，改已执行过的迁移内容不会报 checksum。",
       "target": "memory",
       "importance": "critical",
@@ -134,39 +122,39 @@
       }
     },
     {
-      "content": "ssg_sales_ops 前端验证踩坑：多个 subagent 共享同一个 Chrome 实例/窗口（bsk browserInstanceId 62af6ee9），同一窗口的标签页会被其他 agent 不断导航（例如从 ?panel=audit-log 被切到 ?panel=access&sub=groups），导致 bsk screenshot/observe 抓到的内容与自己的 ref 不一致。对策：用 bsk_tabs create 单独开标签页并尽快在同一调用序列里取证，或用 VOM/DOM 文本作为证据；incognito 被扩展策略禁用（需 chrome://extensions 里 Allow in incognito）。",
+      "content": "DSH 会话日志分析要点：code-mode/PTC 模式下 assistant/message 的 tool-call 只有 run_code，真实工具调用与参数在 tool/ptc-dispatch（data.name / data.arguments / data.content）；按 skill 名统计要扫 ptc-dispatch 而不是 assistant-message。sessions 目录的 .jsonl.zstd 是多帧 zstd，必须按魔数 28 B5 2F FD 逐帧 zstdDecompressSync 再拼接。skill 机制：catalog 按 name+description 的 digest 每次 pre-step 重算、变化即时追加（改 description 对运行中会话立刻生效）；但 skill 正文一旦加载就成为历史工具结果，改文件不会回改已加载的会话，需重打 /skillname 或开新会话才生效。",
       "target": "memory",
       "importance": "normal",
-      "created_at": "2026-11-10T11:51:20.820Z",
-      "updated_at": "2026-11-10T11:51:20.820Z",
+      "created_at": "2026-11-11T07:05:05.570Z",
+      "updated_at": "2026-11-11T07:05:05.570Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-10T11:51:20.820Z"
+        "at": "2026-11-11T07:05:05.570Z"
       }
     },
     {
-      "content": "ssg-sales-ops 的 COC 用户判定：ssg_user.coc_flag 由 auth 的 CocFlagService 解析，只在 CIOP 业务账号登录、普通密码登录、ADFS 回调 setToken 三处更新，滑动续期不重算。2026-11-11 已用脚本全量刷新生产 262 行（Y 96→111、N 123→153、NULL→1），并做全量同步：调度放 admin 的调度中心（smartop-component-task-schedule，组件只存在于 admin-release），handler_key=coc-flag-sync、businessModule=user、category=coc-flag-sync，cron 默认 `0 40 2 */3 * ?`（每 3 天 02:40）；auth 只提供 POST /user/coc/sync 与 GET /user/coc/sync/status（@IgnoreServiceAuth 跳过 lmp 服务鉴权），Redis 锁 upp:coc:sync:lock + 状态 upp:coc:sync:status，同步跑后台线程（admin hystrix 80s 扛不住逐用户查 UPP）。任务行由 admin 启动时 ApplicationRunner 按 handler_key 幂等补 ssg_sync_task（不用迁移塞数据、p_renxp4 无 INSERT 权限），开关 coc-sync.auto-register-task。MR：auth !499（先合）、admin !501（后合）。生产仍缺 UPP_COC_CLIENT_KEY/SECRET，补上后定时同步才会真正改值。",
+      "content": "Service Portfolio 空态约定（2026-11-11 用户要求）：算不出来的不要兜底造假，接口直接返回空结构 —— 三张无数据源 KPI（Fast Pass / Cross-Team / SLA）value=null，前端 paintKpi 渲染 \"— 待接入\"；/roadmap 配置表空时返回 4 个空季度 + banner=null，前端时间轴出 \"暂无路线图数据\"；/links 返回两个空数组。凡有数据源的一律走 SQL，不再写死数字。",
       "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-11T03:52:21.860Z",
-      "updated_at": "2026-11-11T04:59:34.921Z",
+      "importance": "critical",
+      "created_at": "2026-11-11T07:09:51.139Z",
+      "updated_at": "2026-11-11T07:09:51.139Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-11T04:59:34.921Z"
+        "at": "2026-11-11T07:09:51.139Z"
       }
     },
     {
-      "content": "ssg_sales_ops 前端 master（生产）还没有 I&C 页面：src/views/IC 与 /spark/ic 路由只存在于 develop。2026-11-11 菜单单一真源重构（src/constants/sparkNav.ts）里，master 分支的 INSIGHTS_NAV 暂时注释掉 I&C，避免生产导航多出点不开的菜单、反馈页把它列成可选；I&C 上生产后打开注释即与 TST 一致。对应 MR !948（develop）/ !949（master）。",
+      "content": "浏览器工具（bsk_*）实测成本（2026-11-09~11 三天本机会话）：4333 次调用、1574 个 step、6h17m，占全部 step 17%、墙钟 13%；其中 bsk_session 1956 次（第三高频工具，仅次于 pwsh 4594、read 2393）、bsk_interact 1055、bsk_inspect 783、bsk_page 380。已把「非必要不开浏览器」写进 dev-requirements 第 17 条（三档最小验证 + 三条开启门槛 + 单次 ≤10 步）、agent-dev-efficiency「单步预算」、两份 description。",
       "target": "memory",
       "importance": "normal",
-      "created_at": "2026-11-11T04:30:27.896Z",
-      "updated_at": "2026-11-11T04:30:27.896Z",
+      "created_at": "2026-11-11T07:26:52.814Z",
+      "updated_at": "2026-11-11T07:26:52.814Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-11T04:30:27.896Z"
+        "at": "2026-11-11T07:26:52.814Z"
       }
     }
   ]
