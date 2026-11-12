@@ -98,15 +98,15 @@
       }
     },
     {
-      "content": "数据库硬规则（已写进 dev-requirements Skill 第 0 条）：连 PostgreSQL 一律用个人账号 p_renxp4 / 密码 K7~pL2=zR9;vT4_，禁止使用项目 datasource、jasypt 密文、Nacos、.env 或团队共享账号；唯一例外是应用自身启动/flyway 由 Spring 用项目配置连库。2026-11-10 实测：10.62.79.215:5432/ssg_ops_agent 登录成功，current_user=p_renxp4，PostgreSQL 16.4，public 116 张表可读（ssg_user 263 行），无 superuser/createdb/createrole 角色、无角色继承。密码含 ~ = ; _，PowerShell 用单引号 PGPASSWORD，JDBC 必须用 Properties 传 user/password 不能拼 URL。",
+      "content": "数据库访问规则（dev-requirements Skill 第 0 条，2026-11-12 改版）：默认用个人账号 p_renxp4 / K7~pL2=zR9;vT4_；服务账号 a_appconnect 必须逐次申请、用户明确同意后才能连，只读也要先说明用途；应用自启动/flyway 用项目配置不属人工连库、无需申请。各环境 a_appconnect 明文密码已写进 Skill（入口 10.62.79.215 生产 sIN0dTD%Js56｜10.62.79.221 预发 xhZt31tTr#Hz｜10.62.79.148 tst VK0C:XFWf8RV｜10.196.155.93 ops_agent GjYE%NUOW3lH），三套 PG 已实测登录成功。LUDP Trino 源 p49_g1189/Ai_portal@@，keystore abcd-1234。jasypt：password=2c8d34a64e38ade6ba2c7441caf32377、PBEWithMD5AndDES、NoIvGenerator，jasypt-1.9.3.jar 的 StandardPBEStringEncryptor 可解；生产 ENC(hb7JlW3K/RyADKFniNrPeJvrqnIgSMcj)=sIN0dTD%Js56。密码含 ~ = ; _ % :，psql 用单引号 PGPASSWORD，JDBC 必须 Properties 传参不能拼 URL。",
       "target": "memory",
       "importance": "critical",
       "created_at": "2026-11-10T09:10:00.010Z",
-      "updated_at": "2026-11-10T09:10:00.010Z",
+      "updated_at": "2026-11-12T02:28:30.761Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-10T09:10:00.010Z"
+        "at": "2026-11-12T02:28:30.761Z"
       }
     },
     {
@@ -155,6 +155,18 @@
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
         "at": "2026-11-12T01:55:16.859Z"
+      }
+    },
+    {
+      "content": "ssg-sales-ops Flyway 版本盘账（2026-11-12 实测）：迁移脚本只在 smartop-service/admin/src/main/resources/db/migration（auth 模块 0 个）。admin-release 已用到 1.1.114，1.1.107/1.1.108 是缺号（service-portfolio 那对脚本先在 TST 以 1.1.107/1.1.108 跑过，后改号为 1.1.113/1.1.114，所以 TST flyway_schema_history 里两套都在，pre=1.1.111、prod=1.1.112）。查撞车方法：git merge-tree --write-tree <target> <source> 后数 db/migration 里重复的版本号；再对 10.62.79.148/221/215 的 flyway_schema_history 查是否已有该版本。Flyway 配置 validate-on-migrate=false + ignore-missing-migrations=true，但同版本两个不同脚本文件仍会让启动报 Found more than one migration。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-12T02:32:33.529Z",
+      "updated_at": "2026-11-12T02:32:33.529Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-12T02:32:33.529Z"
       }
     }
   ]
