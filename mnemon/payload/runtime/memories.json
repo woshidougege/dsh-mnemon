@@ -74,18 +74,6 @@
       }
     },
     {
-      "content": "ssg-sales-ops 生产登录态：Redis 哨兵 master 10.62.79.178:6379 db1，key=token_<itcode>（hash 存 token + user 快照，menuKeys 在登录时算一次写进快照）。2026-11-05 复核 HEAD 代码：saveUserMenus / updateUserAdmin / 角色与用户组变更都会 refreshTokenAfterCommit → authFeignService.refreshToken 就地重写快照，所以不是“必须 kick”；kick（POST /api/admin/permission/users/{userId}/kick，写 ssg_permission_audit_log action=REVOKE_TOKEN）只用于兜底强制下线，且 API 拒绝自踢（You cannot kick your own session）、拒绝自降 SUPER_ADMIN（You cannot change your own SUPER_ADMIN access）。is_admin 由 public.ssg_is_active_admin(itcode) 计算 = ssg_user.is_admin=true OR 有效的 enabled SUPER_ADMIN 角色，所以降级必须同时删角色，只改 is_admin 列无效。绕过 service 直接改库时快照不会自动刷新，需清 token_<itcode>。鉴权后端信任 \"user\" 请求头（JSON itcode）且生产网关未剥离，等于可绕过登录——已实测只读接口 200，待修。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-03T14:42:55.970Z",
-      "updated_at": "2026-11-05T07:07:47.764Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-05T07:07:47.764Z"
-      }
-    },
-    {
       "content": "ssg-sales-ops 的数据库迁移只改表结构，绝不塞数据（seed INSERT / 数据修正 UPDATE 都不要）：映射、开关这类运行期配置由管理员在 Admin Control 里维护或手工改库。用户原话（2026-11-06）：“sql版本 不要管理数据啊 只管理表结构 我们手动改库就行了呀”。项目 flyway 是 validate-on-migrate: false + VALIDATE_NOT_PRESENT，改已执行过的迁移内容不会报 checksum。",
       "target": "memory",
       "importance": "critical",
@@ -134,18 +122,6 @@
       }
     },
     {
-      "content": "ssg-sales-ops TST 接口性能基线（2026-11-11 实测 216 场景/106 路径）：传输地板 /api/auth/user/info p50≈260ms（净业务=p50-260）。Top 慢点：①feedback-records 13.9s(size20)/17.1s(size50)，根因 enrichFeedbackTurnOutcome 逐会话调 querySessionsPage（FEEDBACK_TURN_LOOKUP_SESSIONS=200）+ 内联 querySessionSummary；②queries 带 keyword 19s~超时（11 个 ILIKE + 2 个相关子查询逐行求值，pg_trgm 已装但无索引）；③admin/feedback 850~1103ms（3 条 SQL 各重算 42,738 行 ssg_hc_member_effective，去 join 后 213ms→21ms）；④overview 708~806ms（7 条 SQL 全表扫）；⑤queries/summary 1.2~1.7s（4 条聚合）；⑥导出 xlsx 7.3s 同步生成（user-logs 已是异步）。报告/脚本：.tmp/api-perf-tst/report 与 results。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-11T15:47:03.893Z",
-      "updated_at": "2026-11-11T15:47:03.893Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-11T15:47:03.893Z"
-      }
-    },
-    {
       "content": "MR 只能由用户点击合并：我用 ssg-sales-ops-branch-workflow skill 时只负责建分支、提交、push、用 GitLab API 建 MR 并回查 state/merge_status/has_conflicts，禁止调用 /merge 接口（即使上一句说“提MR 合并吧”也算越权，用户 2026-11-12 明确纠正：“你怎么总是帮我合并 你没看skill吗”）。合并、部署、发布一律先问，等用户明确说“合并”且确认到具体 iid 才动手。",
       "target": "memory",
       "importance": "critical",
@@ -155,18 +131,6 @@
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
         "at": "2026-11-12T01:55:16.859Z"
-      }
-    },
-    {
-      "content": "ssg-sales-ops Flyway 版本盘账（2026-11-12 实测）：迁移脚本只在 smartop-service/admin/src/main/resources/db/migration（auth 模块 0 个）。admin-release 已用到 1.1.114，1.1.107/1.1.108 是缺号（service-portfolio 那对脚本先在 TST 以 1.1.107/1.1.108 跑过，后改号为 1.1.113/1.1.114，所以 TST flyway_schema_history 里两套都在，pre=1.1.111、prod=1.1.112）。查撞车方法：git merge-tree --write-tree <target> <source> 后数 db/migration 里重复的版本号；再对 10.62.79.148/221/215 的 flyway_schema_history 查是否已有该版本。Flyway 配置 validate-on-migrate=false + ignore-missing-migrations=true，但同版本两个不同脚本文件仍会让启动报 Found more than one migration。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-12T02:32:33.529Z",
-      "updated_at": "2026-11-12T02:32:33.529Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-12T02:32:33.529Z"
       }
     },
     {
@@ -182,27 +146,15 @@
       }
     },
     {
-      "content": "共享数据库手工 DDL 必须用应用部署账号（ssg-sales-ops 的 a_appconnect），不能用个人账号 p_renxp4：CREATE OR REPLACE FUNCTION 只有 owner 能执行，个人账号建过函数后 Flyway 部署会报 42501 must be owner of function（2026-11-12 TST 部署 V1.1.116 就是这样挂的）。索引/表由表 owner 决定，问题只在函数/视图这类独立对象。修法：用 owner 账号 DROP 掉再用部署账号重建。PG 里迁移失败会整事务回滚，flyway_schema_history 不留 failed 行，无需 repair。",
+      "content": "ssg-sales-ops admin-release 上 4 个 SQL 用例是历史红灯（HC 视图改用 ssg_hc_member_line 后断言没同步，8 失败/3 错误）：ChatbiEventQueryStatusSqlTest、ChatbiJobFamilyJiraFilterSqlTest、ChatbiReporterInternalSqlTest、ChatbiSessionActiveOptionSqlTest；另有 ChatbiHcServiceCascadeTest 曾经 stub 已删除的 hcMapper.listEffectiveByItcodes 导致 admin 模块 testCompile 直接失败（!517 改成 listLineByItcodes 后 6/6 通过）。在干净 origin/admin-release 副本上跑同一批用例结果完全一致，说明这些失败不是新改动引入的。",
       "target": "memory",
       "importance": "normal",
-      "created_at": "2026-11-12T03:37:36.154Z",
-      "updated_at": "2026-11-12T03:37:36.154Z",
+      "created_at": "2026-11-12T05:03:10.212Z",
+      "updated_at": "2026-11-12T05:03:10.212Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-12T03:37:36.154Z"
-      }
-    },
-    {
-      "content": "ssg-sales-ops 生产（ssgspark）无法注入环境变量：需要凭据的配置不要只留 ${ENV:} 空默认值，按项目既有约定用 jasypt ENC(...) 作为占位符默认值写进 application.yml（jasypt.encryptor.password=2c8d34a64e38ade6ba2c7441caf32377 就在同一文件顶部，算法 PBEWithMD5AndDES + NoIvGenerator）。yaml 打在 jar 内，改完必须重新构建部署才生效。UPP COC 凭据已按此方式入库：auth MR !516。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-12T04:01:15.198Z",
-      "updated_at": "2026-11-12T04:01:15.198Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-12T04:01:15.198Z"
+        "at": "2026-11-12T05:03:10.212Z"
       }
     }
   ]

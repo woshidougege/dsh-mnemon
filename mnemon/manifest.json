@@ -2,7 +2,7 @@
   "format": "mnemonpack",
   "version": 1,
   "scope": "full",
-  "exportedAt": "2026-11-12T04:10:14.155Z",
+  "exportedAt": "2026-11-12T05:10:40.862Z",
   "source": {
     "plugin": "dsh-mnemon",
     "pluginVersion": "0.5.43"
@@ -16,8 +16,8 @@
     {
       "component": "runtime",
       "files": 3,
-      "bytes": 26352,
-      "items": 17
+      "bytes": 18910,
+      "items": 13
     },
     {
       "component": "documents",
@@ -36,7 +36,7 @@
     "channel": "git",
     "branch": "mnemon-sync",
     "subdir": "mnemon/",
-    "pushedAt": "2026-11-12T04:10:14.155Z",
+    "pushedAt": "2026-11-12T05:10:40.862Z",
     "machine": {
       "id": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
       "label": "rxp",
@@ -191,6 +191,36 @@
         "target": "memory",
         "contentHash": "6cc8cd7f13a9a6ba453afadd27e54eb0b0df904e1583d1fe03b3947e25b28247",
         "deletedAt": "2026-11-12T03:09:43.757Z",
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f"
+      },
+      {
+        "target": "memory",
+        "contentHash": "3ad7793efe52485041b27c90b86a16052b89cd31de6988ab935b77229f4df254",
+        "deletedAt": "2026-11-12T05:10:39.842Z",
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f"
+      },
+      {
+        "target": "memory",
+        "contentHash": "d75d32e642ae8c76a9cb9d7d283fad5eb78915f1614cafdb3e23388f82b4d9c7",
+        "deletedAt": "2026-11-12T05:10:39.842Z",
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f"
+      },
+      {
+        "target": "memory",
+        "contentHash": "ba9035931eb345da7d25013aa17a3bb2ff8c1d013758dfa5b89b152df3a7c6d2",
+        "deletedAt": "2026-11-12T05:10:39.842Z",
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f"
+      },
+      {
+        "target": "memory",
+        "contentHash": "cb7c1be450a678dad7563e06d2166f4d2cd793f7bf2561acc74874bbcdb5390b",
+        "deletedAt": "2026-11-12T05:10:39.842Z",
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f"
+      },
+      {
+        "target": "memory",
+        "contentHash": "0e7a5e8798f6f85d11dbdbced4aaa8e19f7c6bc82d7ebf41dfabd044cf601934",
+        "deletedAt": "2026-11-12T05:10:39.842Z",
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f"
       }
     ]
