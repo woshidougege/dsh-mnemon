@@ -20,7 +20,7 @@
       ],
       "createdAt": "2026-11-12T10:12:20.402Z",
       "updatedAt": "2026-11-12T10:12:20.402Z",
-      "lastAccessedAt": "2026-11-12T10:28:32.442Z",
+      "lastAccessedAt": "2026-11-12T11:50:52.347Z",
       "revision": 1,
       "contentHash": "f6c67e17fc98e852dffbf6cb31b4967a2258f16fa68f2a07e381f05eee757756",
       "sizeBytes": 10652,
@@ -42,7 +42,7 @@
       ],
       "createdAt": "2026-11-12T10:21:57.504Z",
       "updatedAt": "2026-11-12T10:21:57.504Z",
-      "lastAccessedAt": "2026-11-12T10:21:57.504Z",
+      "lastAccessedAt": "2026-11-12T10:52:53.380Z",
       "revision": 1,
       "contentHash": "44d9dce11e3e7fcaddc7c5466a22afe0ff440326c2b4de9819369b746957a153",
       "sizeBytes": 5803,
@@ -66,10 +66,78 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-12T10:27:28.174Z",
+      "lastAccessedAt": "2026-11-12T11:50:52.347Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "4568440b-b6c8-47bd-a416-bce10601a830",
+      "title": "生产→TST 数据同步：三个导出按钮依赖的 8 张表与踩坑（ssg-sales-ops）",
+      "description": "把反馈中心/点踩/User Logs/巡检报告导出所需的生产数据灌入 TST：依赖表清单与行数基线、replace vs 按 id 合并策略、生成列/序列/时间列等 6 个坑、回滚备份、附件文件缺失与 jira 开关未开的未决事项。",
+      "status": "active",
+      "filename": "tst-8-ssg-sales-ops-4568440b.md",
+      "relativePath": "documents/active/tst-8-ssg-sales-ops-4568440b.md",
+      "sourcePaths": [],
+      "sessionIds": [
+        "mnemon-run-v1-bd4ab953-fec1-4b9a-80bf-4cc277a76735"
+      ],
+      "createdAt": "2026-11-12T10:53:23.644Z",
+      "updatedAt": "2026-11-12T10:53:23.644Z",
+      "lastAccessedAt": "2026-11-12T11:50:52.347Z",
+      "revision": 1,
+      "contentHash": "8bebf207094d8951fc1370436fb852f9134b4744b631f33c27ee97ebe1954f6d",
+      "sizeBytes": 7845,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "ea0c4abe-9366-4b26-964c-e4b8149e3fad",
+      "title": "ChatBI 人工评审 / Accuracy Rate 交付记录：后端 + 前端 master/develop 三支 MR（ssg-sales-ops）",
+      "description": "人工评审与 Accuracy Rate 的落地记录：三支 MR（后端 !524、前端 master !975 / develop !974）、口径实现细节与关键代码行、评审行为约定、建表 V1.1.119、入口放管理员页的判断理由、验证到类型检查一级及 TST 未实跑的缺口。",
+      "status": "active",
+      "filename": "chatbi-accuracy-rate-master-develop-mr-ssg-sales-ea0c4abe.md",
+      "relativePath": "documents/active/chatbi-accuracy-rate-master-develop-mr-ssg-sales-ea0c4abe.md",
+      "sourcePaths": [
+        "ssg_sales_ops-wt-review-master/src/views/Setting/reports/user-logs/components/views/QueryView.vue",
+        "ssg_sales_ops-wt-review-master/src/views/Setting/reports/components/QuestionReviewDrawer.vue",
+        "ssg_sales_ops-wt-review-master/src/views/Setting/reports/usage-issue-feedback/index.vue",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiQuestionReviewService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiQuestionReviewMapper.java",
+        "smartop-service/admin/src/main/resources/db/migration/V1.1.119__Create_ssg_chatbi_question_review.sql"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-014d6b78-3f8f-47ae-9425-e1b75134bbf9"
+      ],
+      "createdAt": "2026-11-12T11:13:36.272Z",
+      "updatedAt": "2026-11-12T11:13:36.272Z",
+      "lastAccessedAt": "2026-11-12T11:50:52.347Z",
+      "revision": 1,
+      "contentHash": "92bcf24e3650691fc2ab7aea7436bae3bfaeb39e08a2a9762868cc7258a27c33",
+      "sizeBytes": 7400,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "5b52aa68-ce8b-4e5c-9d25-575abd544793",
+      "title": "Service Portfolio（admin）身份接口清理与 KPI 卡片文案来源排查（ssg-sales-ops）",
+      "description": "删除 /service-portfolio/me 改用 GET /api/auth/user/info（MR !514）；KPI 卡片配置表 sp_sp_kpi_card/roadmap/page_link 在 TST 均为 0 行，中文文案来自 defaultsOfKpi() 的 Java 字面量兜底；docs/ 被 .gitignore 忽略。",
+      "status": "active",
+      "filename": "service-portfolio-admin-kpi-ssg-sales-ops-5b52aa68.md",
+      "relativePath": "documents/active/service-portfolio-admin-kpi-ssg-sales-ops-5b52aa68.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/controller/ServicePortfolioController.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/service/ServicePortfolioReadService.java",
+        "docs/service-portfolio-api.md"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-3dceeade-dc4a-4b1d-870e-cdbca577f4fc"
+      ],
+      "createdAt": "2026-11-12T11:51:08.108Z",
+      "updatedAt": "2026-11-12T11:51:08.108Z",
+      "lastAccessedAt": "2026-11-12T11:51:08.108Z",
+      "revision": 1,
+      "contentHash": "b66e824e08441672ba740cd453063a628c1b6058367caa128b7e63d4b48d3e99",
+      "sizeBytes": 7389,
       "memoryBodyIds": []
     }
   ]
