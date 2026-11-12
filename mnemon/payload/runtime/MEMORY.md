@@ -21,3 +21,5 @@ MR 只能由用户点击合并：我用 ssg-sales-ops-branch-workflow skill 时�
 Windows PowerShell 5.1 用 -File 执行 .ps1 时按 ANSI(GBK) 解析无 BOM 的 UTF-8 脚本，脚本里内联的中文字面量会被打成乱码（2026-11-12 提 MR 时 GitLab 标题就是这样变成「浛樑寲」的）。解法：中文内容先写成独立 UTF-8 文件，脚本里用 [System.IO.File]::ReadAllText(path, [Text.Encoding]::UTF8) 读入再发请求；或用 pwsh 7。git commit -F 传 UTF-8 文件不受影响。
 §
 ssg-sales-ops admin-release 上 4 个 SQL 用例是历史红灯（HC 视图改用 ssg_hc_member_line 后断言没同步，8 失败/3 错误）：ChatbiEventQueryStatusSqlTest、ChatbiJobFamilyJiraFilterSqlTest、ChatbiReporterInternalSqlTest、ChatbiSessionActiveOptionSqlTest；另有 ChatbiHcServiceCascadeTest 曾经 stub 已删除的 hcMapper.listEffectiveByItcodes 导致 admin 模块 testCompile 直接失败（!517 改成 listLineByItcodes 后 6/6 通过）。在干净 origin/admin-release 副本上跑同一批用例结果完全一致，说明这些失败不是新改动引入的。
+§
+ssg-sales-ops 深度分析接口 GET /api/admin/chatbi/events/report/analytics/deep（ChatbiEventAnalyticsService）一次串行 10 条聚合，TST 服务端合计 1210ms、接口 1.35s，瓶颈是窗口函数 CPU（entryExit 332/path 227/funnel 209），不是往返也不是索引。已改成全局固定 6 线程并发取数（MR !518，2026-11-12）。实测否决的路线：合成一条 SQL 只快 8%（1107ms）、(user_id,event_time,id) 索引无效、PG 并行 worker 只快 4%。Druid maxActive=20。

@@ -156,6 +156,18 @@
         "label": "rxp",
         "at": "2026-11-12T05:03:10.212Z"
       }
+    },
+    {
+      "content": "ssg-sales-ops 深度分析接口 GET /api/admin/chatbi/events/report/analytics/deep（ChatbiEventAnalyticsService）一次串行 10 条聚合，TST 服务端合计 1210ms、接口 1.35s，瓶颈是窗口函数 CPU（entryExit 332/path 227/funnel 209），不是往返也不是索引。已改成全局固定 6 线程并发取数（MR !518，2026-11-12）。实测否决的路线：合成一条 SQL 只快 8%（1107ms）、(user_id,event_time,id) 索引无效、PG 并行 worker 只快 4%。Druid maxActive=20。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-12T06:06:21.005Z",
+      "updated_at": "2026-11-12T06:06:21.005Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-12T06:06:21.005Z"
+      }
     }
   ]
 }
