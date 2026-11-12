@@ -1,4 +1,76 @@
 {
   "version": 1,
-  "documents": []
+  "documents": [
+    {
+      "id": "114173fc-0b85-4307-b84e-887ba2faaea3",
+      "title": "admin 启动耗时排查：65 秒空窗定位与启动打点方案（ssg-sales-ops）",
+      "description": "ssg-sales-ops admin 服务启动 66.3 秒零日志空窗的排查证据、分段耗时、StartupWatchdog/StartupEventLogger 打点实现（MR !522/!523）与部署后读日志判断树。",
+      "status": "active",
+      "filename": "admin-65-ssg-sales-ops-114173fc.md",
+      "relativePath": "documents/active/admin-65-ssg-sales-ops-114173fc.md",
+      "sourcePaths": [
+        ".tmp/worktrees/startup-timing/smartop-service/admin/src/main/java/com/lenovo/admin/AdminApplication.java",
+        ".tmp/worktrees/startup-timing/smartop-service/admin/src/main/java/com/lenovo/admin/conf/StartupWatchdog.java",
+        ".tmp/worktrees/startup-timing/smartop-service/admin/src/main/java/com/lenovo/admin/conf/StartupEventLogger.java",
+        ".tmp/worktrees/startup-timing/smartop-service/admin/src/main/java/com/lenovo/admin/dataintegration/TrinoToPostgresSyncJobRecovery.java",
+        ".tmp/worktrees/startup-timing/smartop-service/admin/src/main/java/com/lenovo/admin/coc/schedule/CocFlagSyncTaskRegistrar.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-aa5bc996-82a1-4100-98cc-5f9f1f231548"
+      ],
+      "createdAt": "2026-11-12T10:12:20.402Z",
+      "updatedAt": "2026-11-12T10:12:20.402Z",
+      "lastAccessedAt": "2026-11-12T10:28:32.442Z",
+      "revision": 1,
+      "contentHash": "f6c67e17fc98e852dffbf6cb31b4967a2258f16fa68f2a07e381f05eee757756",
+      "sizeBytes": 10652,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "d6ae03bd-2e22-43c2-8884-a4cda6b516f3",
+      "title": "SSG 同步任务跨环境同步：LGFS 逻辑合并、cron 统一与 p49_g1189 列权限阻塞（ssg-sales-ops）",
+      "description": "ssg_sync_task 任务的跨环境同步记录：LGFS billing/asset 生产落库配置与 APPEND 理由、测试 cron 统一周三 10:00、生产 cron 现状、p49_g1189 列级 SELECT 权限阻塞与 APPEND 去重建议。",
+      "status": "active",
+      "filename": "ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md",
+      "relativePath": "documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md",
+      "sourcePaths": [
+        ".tmp/sync-groups/prod_lgfs_task5_backup.json",
+        ".tmp/sync-groups/tst_cron_backup_20261112.json"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-a12ce66b-f12a-4e69-92c7-e598be8e1691"
+      ],
+      "createdAt": "2026-11-12T10:21:57.504Z",
+      "updatedAt": "2026-11-12T10:21:57.504Z",
+      "lastAccessedAt": "2026-11-12T10:21:57.504Z",
+      "revision": 1,
+      "contentHash": "44d9dce11e3e7fcaddc7c5466a22afe0ff440326c2b4de9819369b746957a153",
+      "sizeBytes": 5803,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "38b9c4c0-0988-4206-9198-11f20587ae61",
+      "title": "ChatBI 报表页 Success Rate → Accuracy Rate（人工评审口径）设计方案与数据模型（ssg-sales-ops）",
+      "description": "把用户日志报表卡片的成功率改成人工评审口径的 Accuracy Rate：概念拆分、卡片与表格改法、ssg_chatbi_question_review 建表 SQL、3 个接口、抽样偏差等坑、P1–P3 分期与 6 项待拍板决策。",
+      "status": "active",
+      "filename": "chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md",
+      "relativePath": "documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md",
+      "sourcePaths": [
+        "ssg_sales_ops/src/views/Setting/reports/user-logs/components/views/QueryView.vue",
+        "ssg_sales_ops/src/views/Setting/reports/user-logs/api.ts",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/controller/ChatbiEventReportController.java",
+        "smartop-service/admin/src/main/resources/db/migration"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-3ca8ecc1-2250-454f-9b05-5ad4515ad309"
+      ],
+      "createdAt": "2026-11-12T10:27:28.174Z",
+      "updatedAt": "2026-11-12T10:27:28.174Z",
+      "lastAccessedAt": "2026-11-12T10:27:28.174Z",
+      "revision": 1,
+      "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
+      "sizeBytes": 8953,
+      "memoryBodyIds": []
+    }
+  ]
 }
