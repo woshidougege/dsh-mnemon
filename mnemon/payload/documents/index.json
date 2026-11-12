@@ -20,7 +20,7 @@
       ],
       "createdAt": "2026-11-12T10:12:20.402Z",
       "updatedAt": "2026-11-12T10:12:20.402Z",
-      "lastAccessedAt": "2026-11-12T11:50:52.347Z",
+      "lastAccessedAt": "2026-11-12T11:54:16.366Z",
       "revision": 1,
       "contentHash": "f6c67e17fc98e852dffbf6cb31b4967a2258f16fa68f2a07e381f05eee757756",
       "sizeBytes": 10652,
@@ -66,7 +66,7 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-12T11:50:52.347Z",
+      "lastAccessedAt": "2026-11-12T11:54:16.366Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
@@ -85,7 +85,7 @@
       ],
       "createdAt": "2026-11-12T10:53:23.644Z",
       "updatedAt": "2026-11-12T10:53:23.644Z",
-      "lastAccessedAt": "2026-11-12T11:50:52.347Z",
+      "lastAccessedAt": "2026-11-12T11:54:16.366Z",
       "revision": 1,
       "contentHash": "8bebf207094d8951fc1370436fb852f9134b4744b631f33c27ee97ebe1954f6d",
       "sizeBytes": 7845,
@@ -111,7 +111,7 @@
       ],
       "createdAt": "2026-11-12T11:13:36.272Z",
       "updatedAt": "2026-11-12T11:13:36.272Z",
-      "lastAccessedAt": "2026-11-12T11:50:52.347Z",
+      "lastAccessedAt": "2026-11-12T11:54:16.366Z",
       "revision": 1,
       "contentHash": "92bcf24e3650691fc2ab7aea7436bae3bfaeb39e08a2a9762868cc7258a27c33",
       "sizeBytes": 7400,
@@ -138,6 +138,30 @@
       "revision": 1,
       "contentHash": "b66e824e08441672ba740cd453063a628c1b6058367caa128b7e63d4b48d3e99",
       "sizeBytes": 7389,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "9d4099c3-825a-404d-90b5-83fed32a6e4a",
+      "title": "反馈导出文件名对齐菜单 + 状态列配色（MR !525，ssg-sales-ops）",
+      "description": "MR !525 实现交接：导出文件名改 Issue & Request-yyyyMMdd 且 Sheet 改名；Content-Disposition 必须加引号并补 RFC 5987 的原因；状态列复用 JiraStatusTag 色板与具体色值；去掉点踩整行红的取舍（115 红盖住 82 条 FAILED）；5 个测试断言、LibreOffice 缺失的验证缺口；前端兜底名与 TST jira 开关两个未决项。",
+      "status": "active",
+      "filename": "mr-525-ssg-sales-ops-9d4099c3.md",
+      "relativePath": "documents/active/mr-525-ssg-sales-ops-9d4099c3.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/usagefeedback/controller/UsageIssueFeedbackController.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/usagefeedback/service/UsageFeedbackExportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiPrettyExcelWriter.java",
+        "smartop-service/admin/src/test/java/com/lenovo/admin/usagefeedback/service/UsageFeedbackExportServiceTest.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-243c4d6c-0022-4135-9beb-f070cbde1a8a"
+      ],
+      "createdAt": "2026-11-12T11:54:46.012Z",
+      "updatedAt": "2026-11-12T11:54:46.012Z",
+      "lastAccessedAt": "2026-11-12T11:54:46.012Z",
+      "revision": 1,
+      "contentHash": "b98ab84bf724a3092e5f0bbdf9ded818c9b9e4a4b10feb50b1bd0448d707bd54",
+      "sizeBytes": 6274,
       "memoryBodyIds": []
     }
   ]
