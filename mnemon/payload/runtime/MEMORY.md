@@ -23,3 +23,9 @@ ssg-sales-ops TST 接口性能基线（2026-11-11 实测 216 场景/106 路径�
 MR 只能由用户点击合并：我用 ssg-sales-ops-branch-workflow skill 时只负责建分支、提交、push、用 GitLab API 建 MR 并回查 state/merge_status/has_conflicts，禁止调用 /merge 接口（即使上一句说“提MR 合并吧”也算越权，用户 2026-11-12 明确纠正：“你怎么总是帮我合并 你没看skill吗”）。合并、部署、发布一律先问，等用户明确说“合并”且确认到具体 iid 才动手。
 §
 ssg-sales-ops Flyway 版本盘账（2026-11-12 实测）：迁移脚本只在 smartop-service/admin/src/main/resources/db/migration（auth 模块 0 个）。admin-release 已用到 1.1.114，1.1.107/1.1.108 是缺号（service-portfolio 那对脚本先在 TST 以 1.1.107/1.1.108 跑过，后改号为 1.1.113/1.1.114，所以 TST flyway_schema_history 里两套都在，pre=1.1.111、prod=1.1.112）。查撞车方法：git merge-tree --write-tree <target> <source> 后数 db/migration 里重复的版本号；再对 10.62.79.148/221/215 的 flyway_schema_history 查是否已有该版本。Flyway 配置 validate-on-migrate=false + ignore-missing-migrations=true，但同版本两个不同脚本文件仍会让启动报 Found more than one migration。
+§
+Windows PowerShell 5.1 用 -File 执行 .ps1 时按 ANSI(GBK) 解析无 BOM 的 UTF-8 脚本，脚本里内联的中文字面量会被打成乱码（2026-11-12 提 MR 时 GitLab 标题就是这样变成「浛樑寲」的）。解法：中文内容先写成独立 UTF-8 文件，脚本里用 [System.IO.File]::ReadAllText(path, [Text.Encoding]::UTF8) 读入再发请求；或用 pwsh 7。git commit -F 传 UTF-8 文件不受影响。
+§
+共享数据库手工 DDL 必须用应用部署账号（ssg-sales-ops 的 a_appconnect），不能用个人账号 p_renxp4：CREATE OR REPLACE FUNCTION 只有 owner 能执行，个人账号建过函数后 Flyway 部署会报 42501 must be owner of function（2026-11-12 TST 部署 V1.1.116 就是这样挂的）。索引/表由表 owner 决定，问题只在函数/视图这类独立对象。修法：用 owner 账号 DROP 掉再用部署账号重建。PG 里迁移失败会整事务回滚，flyway_schema_history 不留 failed 行，无需 repair。
+§
+ssg-sales-ops 生产（ssgspark）无法注入环境变量：需要凭据的配置不要只留 ${ENV:} 空默认值，按项目既有约定用 jasypt ENC(...) 作为占位符默认值写进 application.yml（jasypt.encryptor.password=2c8d34a64e38ade6ba2c7441caf32377 就在同一文件顶部，算法 PBEWithMD5AndDES + NoIvGenerator）。yaml 打在 jar 内，改完必须重新构建部署才生效。UPP COC 凭据已按此方式入库：auth MR !516。
