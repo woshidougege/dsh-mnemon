@@ -66,7 +66,7 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-12T11:54:16.366Z",
+      "lastAccessedAt": "2026-11-12T13:16:42.247Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
@@ -111,7 +111,7 @@
       ],
       "createdAt": "2026-11-12T11:13:36.272Z",
       "updatedAt": "2026-11-12T11:13:36.272Z",
-      "lastAccessedAt": "2026-11-12T11:54:16.366Z",
+      "lastAccessedAt": "2026-11-12T13:16:42.247Z",
       "revision": 1,
       "contentHash": "92bcf24e3650691fc2ab7aea7436bae3bfaeb39e08a2a9762868cc7258a27c33",
       "sizeBytes": 7400,
@@ -158,10 +158,33 @@
       ],
       "createdAt": "2026-11-12T11:54:46.012Z",
       "updatedAt": "2026-11-12T11:54:46.012Z",
-      "lastAccessedAt": "2026-11-12T11:54:46.012Z",
+      "lastAccessedAt": "2026-11-12T13:16:42.247Z",
       "revision": 1,
       "contentHash": "b98ab84bf724a3092e5f0bbdf9ded818c9b9e4a4b10feb50b1bd0448d707bd54",
       "sizeBytes": 6274,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "4a6ba38c-451d-4a48-b625-05b6d75db712",
+      "title": "ChatBI 人工评审 JOIN 二义性 500 修复（MR !526，ssg-sales-ops）",
+      "description": "TST 部署后 /queries、/queries/summary、/feedback-records、/admin/downvoted-answers 全部 300：评审表 JOIN 进公共 FROM 导致 Postgres session_id/status 二义性；修法为派生表 + rv_ 前缀别名，MR !526（e4c15c4f9），含 TST 直连验证与回归缺口。",
+      "status": "active",
+      "filename": "chatbi-join-500-mr-526-ssg-sales-ops-4a6ba38c.md",
+      "relativePath": "documents/active/chatbi-join-500-mr-526-ssg-sales-ops-4a6ba38c.md",
+      "sourcePaths": [
+        "ssg-sales-ops-wt-review-admin/smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "ssg-sales-ops-wt-review-admin/smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiFeedbackRecordMapper.java",
+        "ssg-sales-ops-wt-review-admin/smartop-service/admin/src/main/java/com/lenovo/admin/usagefeedback/dao/AdminDownvotedAnswerMapper.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-51951d40-1585-4d5a-a002-7e9482103042"
+      ],
+      "createdAt": "2026-11-12T13:17:07.256Z",
+      "updatedAt": "2026-11-12T13:17:07.256Z",
+      "lastAccessedAt": "2026-11-12T13:17:07.256Z",
+      "revision": 1,
+      "contentHash": "3cf0bdee514ce74479933d026f6d95e411d864144fdf51981f978655d6c50b99",
+      "sizeBytes": 7480,
       "memoryBodyIds": []
     }
   ]
