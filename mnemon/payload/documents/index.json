@@ -20,7 +20,7 @@
       ],
       "createdAt": "2026-11-12T10:12:20.402Z",
       "updatedAt": "2026-11-12T10:12:20.402Z",
-      "lastAccessedAt": "2026-11-12T11:54:16.366Z",
+      "lastAccessedAt": "2026-11-12T15:34:16.142Z",
       "revision": 1,
       "contentHash": "f6c67e17fc98e852dffbf6cb31b4967a2258f16fa68f2a07e381f05eee757756",
       "sizeBytes": 10652,
@@ -42,7 +42,7 @@
       ],
       "createdAt": "2026-11-12T10:21:57.504Z",
       "updatedAt": "2026-11-12T10:21:57.504Z",
-      "lastAccessedAt": "2026-11-12T10:52:53.380Z",
+      "lastAccessedAt": "2026-11-12T15:34:16.142Z",
       "revision": 1,
       "contentHash": "44d9dce11e3e7fcaddc7c5466a22afe0ff440326c2b4de9819369b746957a153",
       "sizeBytes": 5803,
@@ -185,6 +185,28 @@
       "revision": 1,
       "contentHash": "3cf0bdee514ce74479933d026f6d95e411d864144fdf51981f978655d6c50b99",
       "sizeBytes": 7480,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "cdf9332c-d834-409e-a325-7bd98a09249e",
+      "title": "admin 启动耗时：8 份线程栈结论（SkyWalking 织入放大）与诊断回滚（ssg-sales-ops）",
+      "description": "192~195s 启动的 8 份 main=RUNNABLE 栈证据、fat jar×SkyWalking 插件×AspectJ 切点三重放大机制、65s 空窗被看门狗配额错过的原因、用户叫停后的回滚（MR !527）与恢复办法、未实施的提速清单。",
+      "status": "active",
+      "filename": "admin-8-skywalking-ssg-sales-ops-cdf9332c.md",
+      "relativePath": "documents/active/admin-8-skywalking-ssg-sales-ops-cdf9332c.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/AdminApplication.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/dataintegration/TrinoToPostgresSyncJobRecovery.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-05d74842-f54b-43c3-995b-1aed77b56a80"
+      ],
+      "createdAt": "2026-11-12T15:34:37.616Z",
+      "updatedAt": "2026-11-12T15:34:37.616Z",
+      "lastAccessedAt": "2026-11-12T15:34:37.616Z",
+      "revision": 1,
+      "contentHash": "32ba7028a7693aa3dbbbcf58a9008462fea284c6da11ba04074a65c2f1badce1",
+      "sizeBytes": 8336,
       "memoryBodyIds": []
     }
   ]
