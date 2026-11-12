@@ -144,6 +144,18 @@
         "label": "rxp",
         "at": "2026-11-11T15:47:03.893Z"
       }
+    },
+    {
+      "content": "MR 只能由用户点击合并：我用 ssg-sales-ops-branch-workflow skill 时只负责建分支、提交、push、用 GitLab API 建 MR 并回查 state/merge_status/has_conflicts，禁止调用 /merge 接口（即使上一句说“提MR 合并吧”也算越权，用户 2026-11-12 明确纠正：“你怎么总是帮我合并 你没看skill吗”）。合并、部署、发布一律先问，等用户明确说“合并”且确认到具体 iid 才动手。",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-11-12T01:55:16.859Z",
+      "updated_at": "2026-11-12T01:55:16.859Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-12T01:55:16.859Z"
+      }
     }
   ]
 }

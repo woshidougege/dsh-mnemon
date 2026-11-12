@@ -19,3 +19,5 @@ Service Portfolio 空态约定（2026-11-11 用户要求）：算不出来的不
 ssg-sales-ops 单测/编译 admin 模块必须带 -am：只用 -pl smartop-service/admin 会拿本地仓库里旧的 smartop-api，报 CocFlagSyncScheduleHandler 找不到 AuthFeignService.cocFlagSyncStatus() 而编译失败。
 §
 ssg-sales-ops TST 接口性能基线（2026-11-11 实测 216 场景/106 路径）：传输地板 /api/auth/user/info p50≈260ms（净业务=p50-260）。Top 慢点：①feedback-records 13.9s(size20)/17.1s(size50)，根因 enrichFeedbackTurnOutcome 逐会话调 querySessionsPage（FEEDBACK_TURN_LOOKUP_SESSIONS=200）+ 内联 querySessionSummary；②queries 带 keyword 19s~超时（11 个 ILIKE + 2 个相关子查询逐行求值，pg_trgm 已装但无索引）；③admin/feedback 850~1103ms（3 条 SQL 各重算 42,738 行 ssg_hc_member_effective，去 join 后 213ms→21ms）；④overview 708~806ms（7 条 SQL 全表扫）；⑤queries/summary 1.2~1.7s（4 条聚合）；⑥导出 xlsx 7.3s 同步生成（user-logs 已是异步）。报告/脚本：.tmp/api-perf-tst/report 与 results。
+§
+MR 只能由用户点击合并：我用 ssg-sales-ops-branch-workflow skill 时只负责建分支、提交、push、用 GitLab API 建 MR 并回查 state/merge_status/has_conflicts，禁止调用 /merge 接口（即使上一句说“提MR 合并吧”也算越权，用户 2026-11-12 明确纠正：“你怎么总是帮我合并 你没看skill吗”）。合并、部署、发布一律先问，等用户明确说“合并”且确认到具体 iid 才动手。
