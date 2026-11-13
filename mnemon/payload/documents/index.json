@@ -111,7 +111,7 @@
       ],
       "createdAt": "2026-11-12T11:13:36.272Z",
       "updatedAt": "2026-11-12T11:13:36.272Z",
-      "lastAccessedAt": "2026-11-13T06:28:21.348Z",
+      "lastAccessedAt": "2026-11-13T07:25:44.803Z",
       "revision": 1,
       "contentHash": "92bcf24e3650691fc2ab7aea7436bae3bfaeb39e08a2a9762868cc7258a27c33",
       "sizeBytes": 7400,
@@ -134,7 +134,7 @@
       ],
       "createdAt": "2026-11-12T11:51:08.108Z",
       "updatedAt": "2026-11-12T11:51:08.108Z",
-      "lastAccessedAt": "2026-11-13T04:55:05.525Z",
+      "lastAccessedAt": "2026-11-13T07:49:29.502Z",
       "revision": 1,
       "contentHash": "b66e824e08441672ba740cd453063a628c1b6058367caa128b7e63d4b48d3e99",
       "sizeBytes": 7389,
@@ -352,7 +352,7 @@
       ],
       "createdAt": "2026-11-13T02:50:47.661Z",
       "updatedAt": "2026-11-13T02:50:47.661Z",
-      "lastAccessedAt": "2026-11-13T04:55:05.525Z",
+      "lastAccessedAt": "2026-11-13T07:49:29.502Z",
       "revision": 1,
       "contentHash": "31e10307e0dc9610c40aeef42b0eb663c0aeddf748366e9e5c0866d10d851e50",
       "sizeBytes": 9320,
@@ -396,7 +396,7 @@
       ],
       "createdAt": "2026-11-13T03:24:27.265Z",
       "updatedAt": "2026-11-13T03:24:27.265Z",
-      "lastAccessedAt": "2026-11-13T03:24:27.265Z",
+      "lastAccessedAt": "2026-11-13T07:25:44.803Z",
       "revision": 1,
       "contentHash": "143de3f89f699f021e6c87065c23e923ea4be71f3bb45706cda41f946b2bb5b4",
       "sizeBytes": 7143,
@@ -482,7 +482,7 @@
       ],
       "createdAt": "2026-11-13T06:13:21.952Z",
       "updatedAt": "2026-11-13T06:13:21.952Z",
-      "lastAccessedAt": "2026-11-13T06:28:21.348Z",
+      "lastAccessedAt": "2026-11-13T07:25:44.803Z",
       "revision": 1,
       "contentHash": "5bf88f8df496af04abe01af34a4609667306d5e0879ff3c834165c551ef26c90",
       "sizeBytes": 5562,
@@ -506,10 +506,31 @@
       ],
       "createdAt": "2026-11-13T06:28:43.955Z",
       "updatedAt": "2026-11-13T06:28:43.955Z",
-      "lastAccessedAt": "2026-11-13T06:28:43.955Z",
+      "lastAccessedAt": "2026-11-13T07:25:44.803Z",
       "revision": 1,
       "contentHash": "392ca481d7aa5bfa13f89688dd8fde3254ddada9da823a6101995a7bf38df417",
       "sizeBytes": 7184,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "e5fe9ed8-0b73-44be-b883-f39a4972b6a9",
+      "title": "Bookings HW Qty 图表单位：单轴按量级压缩（方案 A）设计与效果验证",
+      "description": "HW Qty 图表为何不能用“按 BU 各一套单位”：单轴 4 线（PCSD/ISG/MBG/Total）约束、生产数据量级、A/B/C/D 方案对比、方案 A 的 miniTable.vue compactValue 落地细节与已交付对比效果图（.tmp/hwqty-mockup/）。",
+      "status": "active",
+      "filename": "bookings-hw-qty-a-e5fe9ed8.md",
+      "relativePath": "documents/active/bookings-hw-qty-a-e5fe9ed8.md",
+      "sourcePaths": [
+        ".tmp/hwqty-mockup/mockup.html"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-78e81db1-565a-48f8-8c9e-9803b39700aa"
+      ],
+      "createdAt": "2026-11-13T07:49:45.040Z",
+      "updatedAt": "2026-11-13T07:49:45.040Z",
+      "lastAccessedAt": "2026-11-13T07:49:45.040Z",
+      "revision": 1,
+      "contentHash": "7bcd9546f62737897aec1ecbc5a92bf4343059f73baec64103b6b734691d3b0a",
+      "sizeBytes": 5980,
       "memoryBodyIds": []
     }
   ]

@@ -23,3 +23,5 @@ Windows PowerShell 5.1 用 -File 执行 .ps1 时按 ANSI(GBK) 解析无 BOM 的 
 SSG SPARK 是英文平台：后端接口响应体里不允许出现中文（msg、subtitle、title 等文案字段全部用英文），业务校验提示也写英文。用户 2026-11-13 明确要求：“因为我们是英文平台 所以返回中文不合理”。代码注释、Swagger @Operation 不属响应体，仓库现状多为中文，可保留；新增/修改接口时文案一律英文。
 §
 ssg_sales_ops 前端：改既有 Admin settings 页面里的 UI（如 src/views/Setting/reports/components/QuestionReviewDrawer.vue）时，配色/卡片/按钮必须沿用页面既有体系（#fbfaff 画布、白卡片细边、紫色渐变主按钮、status chip 色），别把 /frontend-design 的强风格方案直接套上去——用户曾批评抽屉与页面「打开感觉是 2 个世界」。
+§
+ssg_sales_ops 前端分支流程（repo AGENTS.md / docs/gitlab-branch-workflow.md）：功能分支必须从最新 origin/master 创建；同一变更只用一个功能分支，先提 develop MR 发 tst，验证通过后再用同一分支提 master MR；不要为 develop/master 各开一个并行分支，也不要直接向环境分支提交。

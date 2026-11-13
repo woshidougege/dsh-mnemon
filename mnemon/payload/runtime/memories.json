@@ -168,6 +168,18 @@
         "label": "rxp",
         "at": "2026-11-13T06:17:54.433Z"
       }
+    },
+    {
+      "content": "ssg_sales_ops 前端分支流程（repo AGENTS.md / docs/gitlab-branch-workflow.md）：功能分支必须从最新 origin/master 创建；同一变更只用一个功能分支，先提 develop MR 发 tst，验证通过后再用同一分支提 master MR；不要为 develop/master 各开一个并行分支，也不要直接向环境分支提交。",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-11-13T07:25:00.201Z",
+      "updated_at": "2026-11-13T07:25:00.201Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-13T07:25:00.201Z"
+      }
     }
   ]
 }
