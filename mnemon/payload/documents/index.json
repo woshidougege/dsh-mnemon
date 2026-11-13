@@ -20,7 +20,7 @@
       ],
       "createdAt": "2026-11-12T10:12:20.402Z",
       "updatedAt": "2026-11-12T10:12:20.402Z",
-      "lastAccessedAt": "2026-11-12T15:34:16.142Z",
+      "lastAccessedAt": "2026-11-13T02:39:33.092Z",
       "revision": 1,
       "contentHash": "f6c67e17fc98e852dffbf6cb31b4967a2258f16fa68f2a07e381f05eee757756",
       "sizeBytes": 10652,
@@ -42,7 +42,7 @@
       ],
       "createdAt": "2026-11-12T10:21:57.504Z",
       "updatedAt": "2026-11-12T10:21:57.504Z",
-      "lastAccessedAt": "2026-11-12T15:34:16.142Z",
+      "lastAccessedAt": "2026-11-13T02:18:50.521Z",
       "revision": 1,
       "contentHash": "44d9dce11e3e7fcaddc7c5466a22afe0ff440326c2b4de9819369b746957a153",
       "sizeBytes": 5803,
@@ -66,7 +66,7 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-12T13:16:42.247Z",
+      "lastAccessedAt": "2026-11-13T02:50:01.737Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
@@ -85,7 +85,7 @@
       ],
       "createdAt": "2026-11-12T10:53:23.644Z",
       "updatedAt": "2026-11-12T10:53:23.644Z",
-      "lastAccessedAt": "2026-11-12T11:54:16.366Z",
+      "lastAccessedAt": "2026-11-13T02:36:03.287Z",
       "revision": 1,
       "contentHash": "8bebf207094d8951fc1370436fb852f9134b4744b631f33c27ee97ebe1954f6d",
       "sizeBytes": 7845,
@@ -111,7 +111,7 @@
       ],
       "createdAt": "2026-11-12T11:13:36.272Z",
       "updatedAt": "2026-11-12T11:13:36.272Z",
-      "lastAccessedAt": "2026-11-12T13:16:42.247Z",
+      "lastAccessedAt": "2026-11-13T02:50:01.737Z",
       "revision": 1,
       "contentHash": "92bcf24e3650691fc2ab7aea7436bae3bfaeb39e08a2a9762868cc7258a27c33",
       "sizeBytes": 7400,
@@ -134,7 +134,7 @@
       ],
       "createdAt": "2026-11-12T11:51:08.108Z",
       "updatedAt": "2026-11-12T11:51:08.108Z",
-      "lastAccessedAt": "2026-11-12T11:51:08.108Z",
+      "lastAccessedAt": "2026-11-13T02:39:33.092Z",
       "revision": 1,
       "contentHash": "b66e824e08441672ba740cd453063a628c1b6058367caa128b7e63d4b48d3e99",
       "sizeBytes": 7389,
@@ -158,7 +158,7 @@
       ],
       "createdAt": "2026-11-12T11:54:46.012Z",
       "updatedAt": "2026-11-12T11:54:46.012Z",
-      "lastAccessedAt": "2026-11-12T13:16:42.247Z",
+      "lastAccessedAt": "2026-11-13T02:36:03.287Z",
       "revision": 1,
       "contentHash": "b98ab84bf724a3092e5f0bbdf9ded818c9b9e4a4b10feb50b1bd0448d707bd54",
       "sizeBytes": 6274,
@@ -181,7 +181,7 @@
       ],
       "createdAt": "2026-11-12T13:17:07.256Z",
       "updatedAt": "2026-11-12T13:17:07.256Z",
-      "lastAccessedAt": "2026-11-12T13:17:07.256Z",
+      "lastAccessedAt": "2026-11-13T02:36:03.287Z",
       "revision": 1,
       "contentHash": "3cf0bdee514ce74479933d026f6d95e411d864144fdf51981f978655d6c50b99",
       "sizeBytes": 7480,
@@ -207,6 +207,155 @@
       "revision": 1,
       "contentHash": "32ba7028a7693aa3dbbbcf58a9008462fea284c6da11ba04074a65c2f1badce1",
       "sizeBytes": 8336,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "d7382448-aaf9-4003-971f-58f1f56da61b",
+      "title": "ChatBI 问数记录三列取值来源与粒度缺陷排查（Source report 会话级 vs 轮次级，TST 实测）",
+      "description": "问数记录页 Question / Session title / Source report 三列的取值链、四类根因（粒度错位、失败路由误用、sdq_reports 重名、口径扩散）、TST 实测数据缺口（23/6030 会话可对齐）、按 turn 取值的修复 SQL 与改法顺序。",
+      "status": "active",
+      "filename": "chatbi-source-report-vs-tst-d7382448.md",
+      "relativePath": "documents/active/chatbi-source-report-vs-tst-d7382448.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventExportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiAgentSessionMapper.java",
+        "ssg_sales_ops/src/views/Setting/reports/user-logs/components/views/QueryView.vue"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-f405baa7-94ae-46a8-8ec8-f4be6f4519ed"
+      ],
+      "createdAt": "2026-11-13T02:19:16.079Z",
+      "updatedAt": "2026-11-13T02:19:16.079Z",
+      "lastAccessedAt": "2026-11-13T02:50:01.737Z",
+      "revision": 1,
+      "contentHash": "afff8f6063cbca0bffc34ba6ab1c8d849b29f0204c81101f7eba57deea5fba10",
+      "sizeBytes": 8323,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "6353a23e-5302-4b9c-9301-049e028565d3",
+      "title": "ChatBI 人工评审改动留痕（append-only 审计流水）实施记录：V1.1.120 + MR !529/!981/!982",
+      "description": "评审被其他管理员改判/撤销时原先不留痕（upsert 覆盖 reviewer、DELETE 删行）；本次新增 append-only 流水表 ssg_chatbi_question_review_log（迁移 V1.1.120）、仅在结论/归因/备注真变化时写 SAVE、撤销写 CLEAR 并记录操作人，GET /queries/review 多返回 history 并在抽屉加 History 区块，三支 MR !529/!981/!982，含编译与 tst 回滚验证、部署注意事项。",
+      "status": "active",
+      "filename": "chatbi-append-only-v1-1-120-mr-529-981-982-6353a23e.md",
+      "relativePath": "documents/active/chatbi-append-only-v1-1-120-mr-529-981-982-6353a23e.md",
+      "sourcePaths": [
+        "ssg-sales-ops-wt-review-admin/smartop-service/admin/src/main/resources/db/migration/V1.1.120__Create_ssg_chatbi_question_review_log.sql",
+        "ssg-sales-ops-wt-review-admin/smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/controller/ChatbiEventReportController.java",
+        "ssg-sales-ops-wt-review-admin/smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiQuestionReviewMapper.java",
+        "ssg-sales-ops-wt-review-admin/smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiQuestionReviewService.java",
+        "ssg_sales_ops-wt-review-master/src/views/Setting/reports/components/QuestionReviewDrawer.vue",
+        "ssg_sales_ops-wt-review-master/src/views/Setting/reports/user-logs/api.ts",
+        "ssg_sales_ops-wt-review-master/src/views/Setting/reports/components/questionReview.ts"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-dd111372-1b8e-46cc-9b7d-4d10103887c2"
+      ],
+      "createdAt": "2026-11-13T02:23:29.336Z",
+      "updatedAt": "2026-11-13T02:23:29.336Z",
+      "lastAccessedAt": "2026-11-13T02:40:02.806Z",
+      "revision": 1,
+      "contentHash": "b44ad1193d52951ccf7a446b1759bf42c8d6c2180202cfc3c0c27492c8f45ad8",
+      "sizeBytes": 8278,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "a4bbbdfb-a8cf-4aca-987c-0e21370df51f",
+      "title": "三个导出取消 CSV、统一只产 Excel（MR !528 / !983 / !984，ssg-sales-ops）",
+      "description": "MR 交接：CSV 从前端弹窗到后端服务完整下线，三个导出只产 xlsx；超单 sheet 行数改自动分片；format 参数保留但忽略以兼容旧页面；17 个测试与两侧 vue-tsc 验证；文件名统一与 TST jira 开关两个未决项；关联 MR !525 文档。",
+      "status": "active",
+      "filename": "csv-excel-mr-528-983-984-ssg-sales-ops-a4bbbdfb.md",
+      "relativePath": "documents/active/csv-excel-mr-528-983-984-ssg-sales-ops-a4bbbdfb.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/controller/ChatbiEventReportController.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventExportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/usagefeedback/controller/UsageIssueFeedbackController.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/usagefeedback/service/UsageFeedbackExportService.java",
+        "smartop-service/admin/src/test/java/com/lenovo/admin/chatbi/service/ChatbiEventExportServiceEstimateTest.java",
+        "smartop-service/admin/src/test/java/com/lenovo/admin/usagefeedback/controller/UsageIssueFeedbackControllerExportTest.java",
+        "smartop-service/admin/src/test/java/com/lenovo/admin/usagefeedback/service/UsageFeedbackExportServiceTest.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-ea6748ba-5e40-4c3f-b1eb-273e41413bc2"
+      ],
+      "createdAt": "2026-11-13T02:36:41.083Z",
+      "updatedAt": "2026-11-13T02:36:41.083Z",
+      "lastAccessedAt": "2026-11-13T02:36:41.083Z",
+      "revision": 1,
+      "contentHash": "c194dd2b9a789cc97a859bf1c6933cbda60f90548dab32f8cdcbd9dbcd3718a9",
+      "sizeBytes": 7313,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "c7140f7c-24ae-4a3e-89ec-282af1331ae8",
+      "title": "Service Portfolio：OH 选择器树形筛选与财年绑定问题分析（前端反馈，ssg-sales-ops）",
+      "description": "前端反馈的 OH 树形多选与财年绑定问题根因：/oh 接口扁平化+全局 LIMIT 50 导致仅 GPS 有子节点、lifecycle 无 ohCodes 参数；含层级基数/脏数据实测、原型对齐目标、三项接口改法与 3 个待拍板决策。",
+      "status": "active",
+      "filename": "service-portfolio-oh-ssg-sales-ops-c7140f7c.md",
+      "relativePath": "documents/active/service-portfolio-oh-ssg-sales-ops-c7140f7c.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/controller/ServicePortfolioController.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/service/ServicePortfolioReadService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/dao/ServicePortfolioReadMapper.java",
+        "docs/service-portfolio-api.md"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-9722a195-c4c8-418b-8630-e739414d187a"
+      ],
+      "createdAt": "2026-11-13T02:39:49.332Z",
+      "updatedAt": "2026-11-13T02:39:49.332Z",
+      "lastAccessedAt": "2026-11-13T02:39:49.332Z",
+      "revision": 1,
+      "contentHash": "28cee5fbc3b0e6b72a48c735874550e296383833561079b8bc42c6427d0d98a7",
+      "sizeBytes": 6413,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "25fb29f1-f532-44dc-b110-618cf4796fdc",
+      "title": "ChatBI 问数记录 Source report 轮次级改造：生产数据复核、错标规模与实施方案",
+      "description": "生产库（10.62.79.215/ssg_ops_agent，2026-09~11）复核：7446 条问题行中 1628 行报表错标（21.9%）、782 会话受影响；轮级 LATERAL 取值、四态 routed/route_failed/not_routed/no_audit、按名归并重名报表、统计/筛选/导出/反馈统一、验收样本与工作量，待定 clarify 轮口径。",
+      "status": "active",
+      "filename": "chatbi-source-report-25fb29f1.md",
+      "relativePath": "documents/active/chatbi-source-report-25fb29f1.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventExportService.java",
+        "ssg_sales_ops/src/views/Setting/reports/user-logs/components/views/QueryView.vue"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-eddc4c8e-09e4-45fa-9332-dd0dd54f3733"
+      ],
+      "createdAt": "2026-11-13T02:40:28.126Z",
+      "updatedAt": "2026-11-13T02:40:28.126Z",
+      "lastAccessedAt": "2026-11-13T02:50:01.737Z",
+      "revision": 1,
+      "contentHash": "d99da0b2d5f319581417f02f8760c01521745a9034249e1e0dffc40139f6a269",
+      "sizeBytes": 10897,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "53c4bc18-6900-4cfa-9b75-d36a82197291",
+      "title": "ChatBI 问数记录「问题轮」口径契约与 clarify/补录轮处置决策（生产复核）",
+      "description": "问数记录页数字自洽契约：单一口径问题集（SESSION_WHERE 排除 clarify_answer/no_answer/巡检/内部员工）、8 条验收恒等式（3/10=30%）、补录轮无 question 根因（ChatbiSessionBackfillService.java:157/178）、生产复核实测 518=493+25（95.2%）、四态来源桶求和 518、实施顺序与悬置项。",
+      "status": "active",
+      "filename": "chatbi-clarify-53c4bc18.md",
+      "relativePath": "documents/active/chatbi-clarify-53c4bc18.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiSessionBackfillService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-df00d10a-f41f-4826-8e13-a73b7a914d74"
+      ],
+      "createdAt": "2026-11-13T02:50:47.661Z",
+      "updatedAt": "2026-11-13T02:50:47.661Z",
+      "lastAccessedAt": "2026-11-13T02:50:47.661Z",
+      "revision": 1,
+      "contentHash": "31e10307e0dc9610c40aeef42b0eb663c0aeddf748366e9e5c0866d10d851e50",
+      "sizeBytes": 9320,
       "memoryBodyIds": []
     }
   ]

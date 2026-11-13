@@ -180,6 +180,18 @@
         "label": "rxp",
         "at": "2026-11-12T10:27:29.617Z"
       }
+    },
+    {
+      "content": "SSG SPARK 是英文平台：后端接口响应体里不允许出现中文（msg、subtitle、title 等文案字段全部用英文），业务校验提示也写英文。用户 2026-11-13 明确要求：“因为我们是英文平台 所以返回中文不合理”。代码注释、Swagger @Operation 不属响应体，仓库现状多为中文，可保留；新增/修改接口时文案一律英文。",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-11-13T02:21:20.695Z",
+      "updated_at": "2026-11-13T02:21:20.695Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-13T02:21:20.695Z"
+      }
     }
   ]
 }
