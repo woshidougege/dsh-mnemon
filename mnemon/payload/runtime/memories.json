@@ -192,6 +192,18 @@
         "label": "rxp",
         "at": "2026-11-13T02:21:20.695Z"
       }
+    },
+    {
+      "content": "SSG 问数自动评审（2026-11-13 实现）：规则在 Admin settings → Operations → Review rules，默认开后端落库到 ssg_chatbi_question_review，review_source=AUTO（reviewer_itcode=system:auto / reviewer_name=Auto rule），人工保存覆盖为 HUMAN；人工撤销写 ssg_chatbi_question_review_dismissal 抑制任务回插。默认规则：最终失败且无结果卡→Wrong（tag 按 failed_step）、LUDP 无权限→NO_PERMISSION、反问 needs_input 默认关；窗口 90 天，排除 properties->>'source'='backfill'、巡检 PROBE_RUN_EXCLUDED_SQL、session_id 空。规则表 ssg_chatbi_question_review_setting 单行 id=1，缺行走代码默认值；保存后 deleteAutoReviews+insertCandidates 同步重建，另有 @Scheduled 每小时兜底。导出：Sessions/Feedback details 增 Review source、Comments 两列，评论单独 Review comments sheet（一条评论一行，Back 链回行），Query 导出按 500 会话分批读评论，失败降级空。迁移 V1.1.121。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-13T03:51:41.364Z",
+      "updated_at": "2026-11-13T03:51:41.364Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-13T03:51:41.364Z"
+      }
     }
   ]
 }
