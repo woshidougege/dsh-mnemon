@@ -1,10 +1,10 @@
 {
   "algorithm": "sha256",
   "files": {
-    "payload/runtime/memories.json": "5cc7749f6c03c41a257735eeb5d8f34ae22271c8003c2ccecf318689e0f4b64f",
+    "payload/runtime/memories.json": "1badade7a363a5f80b64dbb79ac720681d019805898b25607625503054a3468a",
     "payload/runtime/USER.md": "521c29f19a9f52b425b5a03e1f9c7790095e2dfe69a7fe92a99c6c90a5f340d1",
-    "payload/runtime/MEMORY.md": "2329980713e4ca0fc0eeb13affd294ee4709a77ee6a5da3206a121961b25feeb",
-    "payload/documents/index.json": "790aae18d0e92df81b0044f0371e82efa2eb687f550f097bcc934b0acad9762d",
+    "payload/runtime/MEMORY.md": "ba92617337d7f27a8c6e9c0c9bd24532ef63405228316ceeaf7e2630153d4ca1",
+    "payload/documents/index.json": "a30f0a45abf0a3ee898a570c6214f68f4c3f19eabcc634c64cc40bb685b6ac14",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -24,6 +24,9 @@
     "payload/documents/active/admin-inspection-report-mr-531-986-987-b117eb20.md": "d2f0362dc8e66aafe1a7fd2eade4a9c77416b060e0d5ae4aa386ac70698b8a15",
     "payload/documents/active/chatbi-v1-1-121-mr-535-991-992-750e10a9.md": "e0cd72c5f35f72e0bbba19d972b6db3f90b3dcb9d3e5a7342c85e83c2144eb01",
     "payload/documents/active/admin-500-ssg-ai-probe-run-select-mr-537-ssg-sal-f95e9809.md": "d7b5f749ab57af6989a86d95929a924165676e6cfb084c1503479d9ea81229f8",
+    "payload/documents/active/flyway-v1-1-121-deal-snapshot-v1-1-123-mr-538-561cc78d.md": "ce4ca89f2180ca4b1fddb2fe2c3039f26ab96b444d313a0c20696fe24629f36f",
+    "payload/documents/active/ssg-sales-ops-master-develop-mr-cherry-pick-997--6f91417f.md": "1968881438d84aa403f17ec00a454192cf06cd23a0254717f065d2f6fcac35eb",
+    "payload/documents/active/ssg-sales-ops-master-cherry-pick-mr-1005-df3142b1.md": "b6cf6d2eed97322d7536415b79a116b5b34e5a7b9fe5f0a48fa34af44f90799b",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
