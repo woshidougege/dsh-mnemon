@@ -2,18 +2,6 @@
   "version": 1,
   "entries": [
     {
-      "content": "调用任何付费外部大模型前，必须先告诉用户用哪个模型、为什么、预计多少 token，并等用户同意后才执行；小规模测试（单次约 ≤5K token、总调用 ≤3 次）可免申请直接跑，但事后仍需在结果里注明模型名与实际消耗 token。用户指定模型时严格用指定的，不得擅自替换。",
-      "target": "user",
-      "importance": "critical",
-      "created_at": "2026-11-03T08:58:44.613Z",
-      "updated_at": "2026-11-03T08:58:44.613Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-03T08:58:44.613Z"
-      }
-    },
-    {
       "content": "ssg-sales-ops 生产库 = 10.62.79.215:5432/ssg_ops_agent（表在 public schema；dev/tst=10.62.79.148、pre=10.62.79.221，见 smartop-service/admin/src/main/resources/application-lmp-*-prod.yml）。admin 服务 datasource 密码是 jasypt 密文，encryptor password 在同目录 application.yml 的 jasypt.encryptor.password（PBEWithMD5AndDES），可用 org.jasypt BasicTextEncryptor 解密；无 psql 时可用 .m2 里的 postgresql-42.5.4.jar 写临时 JDBC 查询类。菜单权限模型（2026-11-04 按 HEAD 代码复核，已改）：EffectivePermissionService.visibleMenuKeys 只认 ssg_user_menu.access_state='VISIBLE'（enabled=true，缺行=HIDDEN），管理员走 listAllEnabledMenuKeys 直通；ssg_role_menu / ssg_user_role / ssg_menu.default_access 不再参与生效计算（角色页仅展示 roleState）。菜单 key 形如 businessInsight:workspace（迁移 V1.1.70/71 seed 只有 businessInsight 及 :workspace/:bookings/:lgfs/:gpssus，tcv 靠线上手插）。管理员判定函数 public.ssg_is_active_admin(itcode)。",
       "target": "memory",
       "importance": "normal",
