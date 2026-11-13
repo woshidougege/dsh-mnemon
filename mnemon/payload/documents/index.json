@@ -85,7 +85,7 @@
       ],
       "createdAt": "2026-11-12T10:53:23.644Z",
       "updatedAt": "2026-11-12T10:53:23.644Z",
-      "lastAccessedAt": "2026-11-13T03:23:52.755Z",
+      "lastAccessedAt": "2026-11-13T04:55:05.525Z",
       "revision": 1,
       "contentHash": "8bebf207094d8951fc1370436fb852f9134b4744b631f33c27ee97ebe1954f6d",
       "sizeBytes": 7845,
@@ -134,7 +134,7 @@
       ],
       "createdAt": "2026-11-12T11:51:08.108Z",
       "updatedAt": "2026-11-12T11:51:08.108Z",
-      "lastAccessedAt": "2026-11-13T02:39:33.092Z",
+      "lastAccessedAt": "2026-11-13T04:55:05.525Z",
       "revision": 1,
       "contentHash": "b66e824e08441672ba740cd453063a628c1b6058367caa128b7e63d4b48d3e99",
       "sizeBytes": 7389,
@@ -181,7 +181,7 @@
       ],
       "createdAt": "2026-11-12T13:17:07.256Z",
       "updatedAt": "2026-11-12T13:17:07.256Z",
-      "lastAccessedAt": "2026-11-13T03:52:49.010Z",
+      "lastAccessedAt": "2026-11-13T04:55:05.525Z",
       "revision": 1,
       "contentHash": "3cf0bdee514ce74479933d026f6d95e411d864144fdf51981f978655d6c50b99",
       "sizeBytes": 7480,
@@ -352,7 +352,7 @@
       ],
       "createdAt": "2026-11-13T02:50:47.661Z",
       "updatedAt": "2026-11-13T02:50:47.661Z",
-      "lastAccessedAt": "2026-11-13T03:27:57.409Z",
+      "lastAccessedAt": "2026-11-13T04:55:05.525Z",
       "revision": 1,
       "contentHash": "31e10307e0dc9610c40aeef42b0eb663c0aeddf748366e9e5c0866d10d851e50",
       "sizeBytes": 9320,
@@ -422,6 +422,25 @@
       "revision": 1,
       "contentHash": "eb9832d7b07a46014748371063976a23b209a2466b83eb2b187ac7b3d9aecfc3",
       "sizeBytes": 6482,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "f95e9809-bf7c-429e-8688-35c16e88b7b7",
+      "title": "admin 巡检接口 500/超时根因：ssg_ai_probe_run 不再 select *（MR !537，ssg-sales-ops）",
+      "description": "TST 下 batches/report 三条 admin 接口 500 或 30s 超时，根因为 recentBatches/range/daily 全列查询把 raw_response 等大字段拉进 JVM（1277 行 101MB，大字段占 98MB，实际仅需 19KB）；修法为 AiProbeRunColumns.withoutHeavyColumns 裁六列，MR !537，含护栏测试、边界说明与复测待办。",
+      "status": "active",
+      "filename": "admin-500-ssg-ai-probe-run-select-mr-537-ssg-sal-f95e9809.md",
+      "relativePath": "documents/active/admin-500-ssg-ai-probe-run-select-mr-537-ssg-sal-f95e9809.md",
+      "sourcePaths": [],
+      "sessionIds": [
+        "mnemon-run-v1-72304458-2c2f-4b0f-847c-3b2cf2b053e0"
+      ],
+      "createdAt": "2026-11-13T04:55:23.906Z",
+      "updatedAt": "2026-11-13T04:55:23.906Z",
+      "lastAccessedAt": "2026-11-13T04:55:23.906Z",
+      "revision": 1,
+      "contentHash": "4924230e77600425f0795d7afdc4955ea85613270ee08d5bad5fe45d6bd38330",
+      "sizeBytes": 6828,
       "memoryBodyIds": []
     }
   ]
