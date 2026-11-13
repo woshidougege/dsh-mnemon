@@ -66,7 +66,7 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-13T18:53:14.470Z",
+      "lastAccessedAt": "2026-11-13T19:12:27.800Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
@@ -330,7 +330,7 @@
       ],
       "createdAt": "2026-11-13T02:40:28.126Z",
       "updatedAt": "2026-11-13T02:40:28.126Z",
-      "lastAccessedAt": "2026-11-13T18:25:12.872Z",
+      "lastAccessedAt": "2026-11-13T19:43:34.055Z",
       "revision": 1,
       "contentHash": "d99da0b2d5f319581417f02f8760c01521745a9034249e1e0dffc40139f6a269",
       "sizeBytes": 10897,
@@ -352,7 +352,7 @@
       ],
       "createdAt": "2026-11-13T02:50:47.661Z",
       "updatedAt": "2026-11-13T02:50:47.661Z",
-      "lastAccessedAt": "2026-11-13T17:57:29.269Z",
+      "lastAccessedAt": "2026-11-13T19:43:34.055Z",
       "revision": 1,
       "contentHash": "31e10307e0dc9610c40aeef42b0eb663c0aeddf748366e9e5c0866d10d851e50",
       "sizeBytes": 9320,
@@ -418,7 +418,7 @@
       ],
       "createdAt": "2026-11-13T03:53:13.190Z",
       "updatedAt": "2026-11-13T03:53:13.190Z",
-      "lastAccessedAt": "2026-11-13T18:53:14.470Z",
+      "lastAccessedAt": "2026-11-13T19:12:27.800Z",
       "revision": 1,
       "contentHash": "eb9832d7b07a46014748371063976a23b209a2466b83eb2b187ac7b3d9aecfc3",
       "sizeBytes": 6482,
@@ -692,7 +692,7 @@
       ],
       "createdAt": "2026-11-13T18:25:33.176Z",
       "updatedAt": "2026-11-13T18:25:33.176Z",
-      "lastAccessedAt": "2026-11-13T18:53:14.470Z",
+      "lastAccessedAt": "2026-11-13T19:43:34.055Z",
       "revision": 1,
       "contentHash": "e7d6d3419a9b22754f21b58576ec555a73b99b8f9891ad25009aab569b1c22cb",
       "sizeBytes": 5436,
@@ -715,10 +715,58 @@
       ],
       "createdAt": "2026-11-13T18:53:35.871Z",
       "updatedAt": "2026-11-13T18:53:35.871Z",
-      "lastAccessedAt": "2026-11-13T18:53:35.871Z",
+      "lastAccessedAt": "2026-11-13T19:43:34.055Z",
       "revision": 1,
       "contentHash": "5e4119de6b4be24b06b49dc0fbc610bc2de8d0a3462cb4ba325cae1ac25c2a7d",
       "sizeBytes": 7731,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "57ee466d-cf65-4938-a2d0-b78e04c7afaa",
+      "title": "ChatBI 用户日志报表：Include internal users 勾选框联动计数（MR !542 / !1021 / !1022）",
+      "description": "内部员工勾选框从纯布尔开关改为带计数联动：汇总接口新增 internalCount（复用 SESSION_FILTER 但强制 includeInternal=true 再叠加内部名单，否则 NOT EXISTS 使结果恒 0）；实测 8020 条内部员工会话 / 62 个 enabled 账号，Human 由 0→5；commit 2fbdf2fa8 / 69fa2f71 / b626d823；含 Accuracy Rate 恒 0% 的未决口径。",
+      "status": "active",
+      "filename": "chatbi-include-internal-users-mr-542-1021-1022-57ee466d.md",
+      "relativePath": "documents/active/chatbi-include-internal-users-mr-542-1021-1022-57ee466d.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "src/views/Setting/reports/user-logs/components/FilterBar.vue",
+        "src/views/Setting/reports/user-logs/index.vue"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-181092be-d659-454a-b52d-2db42ace2f58"
+      ],
+      "createdAt": "2026-11-13T19:12:45.375Z",
+      "updatedAt": "2026-11-13T19:12:45.375Z",
+      "lastAccessedAt": "2026-11-13T19:12:45.375Z",
+      "revision": 1,
+      "contentHash": "cc6115fa3d8f30fc903ada462d217b25462a8fcf154d49160c982eefc05af21d",
+      "sizeBytes": 4476,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "bb23dcc6-51fa-4326-866a-cd69c6d75e00",
+      "title": "ChatBI 用户日志报表：筛选下拉显示可筛条数（MR !544 / !1023 / !1024）",
+      "description": "级联下拉原用 DISTINCT 数不出条数的根因；后端改 GROUP BY user,mode + count(DISTINCT session_id) 下发 userCounts/modeCounts/bandCounts/jobFamilyCounts，L3/L4/L5 计数从人数改为会话条数；前端拼 ·N 与 onlyWithData 过滤；三仓 MR 与 6 个仍缺条数的维度；GitLab 建 MR 需 URL 编码 project。",
+      "status": "active",
+      "filename": "chatbi-mr-544-1023-1024-bb23dcc6.md",
+      "relativePath": "documents/active/chatbi-mr-544-1023-1024-bb23dcc6.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiHcService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java",
+        "src/views/Setting/reports/user-logs/components/FilterBar.vue",
+        "src/views/Setting/reports/user-logs/components/ManagerCombo.vue"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-7f9843b7-f2ce-4756-b3be-ceeb3ac9ca67"
+      ],
+      "createdAt": "2026-11-13T19:43:48.238Z",
+      "updatedAt": "2026-11-13T19:43:48.238Z",
+      "lastAccessedAt": "2026-11-13T19:43:48.238Z",
+      "revision": 1,
+      "contentHash": "c72024b90b2935346cbcdfd0d290e2c1a84bb489318cf8a882d91a8a2b2e88a2",
+      "sizeBytes": 5163,
       "memoryBodyIds": []
     }
   ]
