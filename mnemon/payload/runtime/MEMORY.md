@@ -25,3 +25,9 @@ SSG SPARK 是英文平台：后端接口响应体里不允许出现中文（msg�
 ssg_sales_ops 前端：改既有 Admin settings 页面里的 UI（如 src/views/Setting/reports/components/QuestionReviewDrawer.vue）时，配色/卡片/按钮必须沿用页面既有体系（#fbfaff 画布、白卡片细边、紫色渐变主按钮、status chip 色），别把 /frontend-design 的强风格方案直接套上去——用户曾批评抽屉与页面「打开感觉是 2 个世界」。
 §
 ssg_sales_ops 前端分支流程（repo AGENTS.md / docs/gitlab-branch-workflow.md）：功能分支必须从最新 origin/master 创建；同一变更只用一个功能分支，先提 develop MR 发 tst，验证通过后再用同一分支提 master MR；不要为 develop/master 各开一个并行分支，也不要直接向环境分支提交。
+§
+ssg-sales-ops 生产库（10.62.79.215）上 p_renxp4 对 ssg_user / ssg_user_role / ssg_role 只有 SELECT，这几张表的写权限只有 a_appconnect（改权限类操作每次都要先申请）。管理员身份是两处并存的：ssg_user.is_admin=true，以及 ssg_user_role→ssg_role.role_code='SUPER_ADMIN'（enabled=true），ssg_is_active_admin(itcode) 取两者 OR——降权或授权必须两处同时改，只改一处仍算管理员。2026-11-14 据此把 renxp4 在生产降为普通用户（is_admin=false + 删 SUPER_ADMIN 关联行），他名下 ssg_user_menu 无任何覆盖行，非管理员态下菜单会全部隐藏（缺行=HIDDEN，角色表不再参与生效计算）。
+§
+EffectivePermissionService.visibleMenuKeys 非管理员态有两次提升：祖先菜单自动可见 + is_entry=true 的入口页在父菜单可见时带出（不读该行 access_state）。这是设计而非缺陷：前端 /spark 的 redirect 就是 /spark/workspace，不带出入口页会让只有 bookings 的人点 Business Insights 被守卫弹到 /noAccess。所以只给 businessInsight:bookings 开 VISIBLE 时，正确生效集合就是 businessInsight + businessInsight:bookings + businessInsight:workspace（2026-11-14 生产实测，用户确认这样对）。PermissionEffectiveQueryService.collectAccessibleMenuIds 复刻同一口径。
+§
+SSG SPARK 登录态在 Redis（生产 reston-prod：sentinel 10.62.79.178/174/134:26379，master sentinel10.62.79.178，password SIRPzw4i3Rx%，db=1）：key=token_<itcode> 的 hash（token/user/thumbnail_photo，TTL 24h 滑动续期）。踢人下线 = DEL 该 key，下一请求即 401 跳登录。注意 TokenIntrospectController 返回的 isAdmin 读的是 Redis 里登录时写入的 user 快照，不是实时查库——改库降权后必须让用户重新登录；业务接口多数仍走 ssg_is_active_admin 实时查库。本机无 redis-cli，用 .m2 的 jedis-3.1.0 + commons-pool2 写 JedisSentinelPool（注意 3.1 的 sentinel 参数是 Set<String> 而非 HostAndPort）。
