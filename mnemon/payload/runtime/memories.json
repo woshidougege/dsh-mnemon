@@ -50,18 +50,6 @@
       }
     },
     {
-      "content": "ssg-sales-ops 同步表范围（2026-11-03 定，用户以其 Excel 为准）：16 张 public 目标表 ↔ 19 张 LUDP 源表（GPS&SUS 6 + Bookings 3 + LGFS 4 + I&C 2 + CFS&AFE 1，21 条对应关系）。GPS 6 张统一每天 07:00（Quartz 0 0 7 * * ?），测试环境现有 4 张仍是周三 05:00。改名映射：prd_upsell.Concord_Project_PN_Bkgs → public.gps_concord_project_pn_bkgs。prd_upsell.eaas_daas_tranche_comments 不存在；lgfs_lease_asset_summary 源表仍缺（17 列资产级，非 billing 那段 SQL）；prd_common.cml_account_dedup 的 crm_id / l2_idg_gtm_segment / l2_idg_gtm_sub_segment 无权限（仅测试 billing SQL 需要）。TrinoToPostgresSyncService.buildSourceColumnIndexes 按目标表列名逐列匹配，源 SQL 缺任一列即报“源查询缺少目标列”。清单文件 C:\\Users\\63588\\Downloads\\同步表清单_16目标表_20261103.xlsx。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-03T08:34:18.194Z",
-      "updated_at": "2026-11-03T08:34:18.194Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-03T08:34:18.194Z"
-      }
-    },
-    {
       "content": "ssg-sales-ops 的数据库迁移只改表结构，绝不塞数据（seed INSERT / 数据修正 UPDATE 都不要）：映射、开关这类运行期配置由管理员在 Admin Control 里维护或手工改库。用户原话（2026-11-06）：“sql版本 不要管理数据啊 只管理表结构 我们手动改库就行了呀”。项目 flyway 是 validate-on-migrate: false + VALIDATE_NOT_PRESENT，改已执行过的迁移内容不会报 checksum。",
       "target": "memory",
       "importance": "critical",
@@ -122,18 +110,6 @@
       }
     },
     {
-      "content": "Windows PowerShell 5.1 用 -File 执行 .ps1 时按 ANSI(GBK) 解析无 BOM 的 UTF-8 脚本，脚本里内联的中文字面量会被打成乱码（2026-11-12 提 MR 时 GitLab 标题就是这样变成「浛樑寲」的）。解法：中文内容先写成独立 UTF-8 文件，脚本里用 [System.IO.File]::ReadAllText(path, [Text.Encoding]::UTF8) 读入再发请求；或用 pwsh 7。git commit -F 传 UTF-8 文件不受影响。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-12T03:29:10.783Z",
-      "updated_at": "2026-11-12T03:29:10.783Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-12T03:29:10.783Z"
-      }
-    },
-    {
       "content": "SSG SPARK 是英文平台：后端接口响应体里不允许出现中文（msg、subtitle、title 等文案字段全部用英文），业务校验提示也写英文。用户 2026-11-13 明确要求：“因为我们是英文平台 所以返回中文不合理”。代码注释、Swagger @Operation 不属响应体，仓库现状多为中文，可保留；新增/修改接口时文案一律英文。",
       "target": "memory",
       "importance": "critical",
@@ -143,18 +119,6 @@
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
         "at": "2026-11-13T02:21:20.695Z"
-      }
-    },
-    {
-      "content": "ssg_sales_ops 前端：改既有 Admin settings 页面里的 UI（如 src/views/Setting/reports/components/QuestionReviewDrawer.vue）时，配色/卡片/按钮必须沿用页面既有体系（#fbfaff 画布、白卡片细边、紫色渐变主按钮、status chip 色），别把 /frontend-design 的强风格方案直接套上去——用户曾批评抽屉与页面「打开感觉是 2 个世界」。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-13T06:17:54.433Z",
-      "updated_at": "2026-11-13T06:17:54.433Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-13T06:17:54.433Z"
       }
     },
     {
@@ -170,39 +134,15 @@
       }
     },
     {
-      "content": "ssg-sales-ops 生产库（10.62.79.215）上 p_renxp4 对 ssg_user / ssg_user_role / ssg_role 只有 SELECT，这几张表的写权限只有 a_appconnect（改权限类操作每次都要先申请）。管理员身份是两处并存的：ssg_user.is_admin=true，以及 ssg_user_role→ssg_role.role_code='SUPER_ADMIN'（enabled=true），ssg_is_active_admin(itcode) 取两者 OR——降权或授权必须两处同时改，只改一处仍算管理员。2026-11-14 据此把 renxp4 在生产降为普通用户（is_admin=false + 删 SUPER_ADMIN 关联行），他名下 ssg_user_menu 无任何覆盖行，非管理员态下菜单会全部隐藏（缺行=HIDDEN，角色表不再参与生效计算）。",
+      "content": "ssg_sales_ops 前端本地联调（2026-11-14 实测跑通）：.env.development 的 VITE_API_BASE_URL 改空串，vite.config.ts 加 '/api/admin/chatbi' → http://127.0.0.1:8082（rewrite 去掉 /api/admin）+ '/api' → https://ssgspark-tst.lenovo.com，两条都 changeOrigin，只把 chatbi 报表接口指本地、菜单/用户仍走 tst（本地 admin 的 /menu/all 会返回 300）。后端启动：java -jar smartop-service/admin/target/admin.jar --spring.profiles.active=local,lmp-reston-dev --spring.flyway.enabled=false --server.port=8082；打包 mvn -o -T 4 -pl smartop-service/admin -am package -DskipTests（reactor 根跑 spring-boot:run 会报 No plugin found for prefix）。登录 token 从 tst Redis 取：10.62.79.203:6379 db1，key token_<itcode> 的 hash.token（KEYS 被禁用，要按名直取；jedis 4 需 gson-2.8.6 + commons-pool2 + slf4j）。本机 bsk daemon 起不来（IDE 外层 Job Object），浏览器自动化改用 Chrome headless --remote-debugging-port=9222 + Node 22 原生 WebSocket 手写 CDP（Network.setCookie 注入 Authorization，Emulation.setDeviceMetricsOverride 定宽，Page.captureScreenshot 截图）；classpath 过长时 java 要用 @argfile。",
       "target": "memory",
       "importance": "normal",
-      "created_at": "2026-11-13T16:46:19.373Z",
-      "updated_at": "2026-11-13T16:46:19.373Z",
+      "created_at": "2026-11-14T08:20:12.834Z",
+      "updated_at": "2026-11-14T08:20:12.834Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-13T16:46:19.373Z"
-      }
-    },
-    {
-      "content": "EffectivePermissionService.visibleMenuKeys 非管理员态有两次提升：祖先菜单自动可见 + is_entry=true 的入口页在父菜单可见时带出（不读该行 access_state）。这是设计而非缺陷：前端 /spark 的 redirect 就是 /spark/workspace，不带出入口页会让只有 bookings 的人点 Business Insights 被守卫弹到 /noAccess。所以只给 businessInsight:bookings 开 VISIBLE 时，正确生效集合就是 businessInsight + businessInsight:bookings + businessInsight:workspace（2026-11-14 生产实测，用户确认这样对）。PermissionEffectiveQueryService.collectAccessibleMenuIds 复刻同一口径。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-13T16:49:29.461Z",
-      "updated_at": "2026-11-13T16:51:47.198Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-13T16:51:47.198Z"
-      }
-    },
-    {
-      "content": "SSG SPARK 登录态在 Redis（生产 reston-prod：sentinel 10.62.79.178/174/134:26379，master sentinel10.62.79.178，password SIRPzw4i3Rx%，db=1）：key=token_<itcode> 的 hash（token/user/thumbnail_photo，TTL 24h 滑动续期）。踢人下线 = DEL 该 key，下一请求即 401 跳登录。注意 TokenIntrospectController 返回的 isAdmin 读的是 Redis 里登录时写入的 user 快照，不是实时查库——改库降权后必须让用户重新登录；业务接口多数仍走 ssg_is_active_admin 实时查库。本机无 redis-cli，用 .m2 的 jedis-3.1.0 + commons-pool2 写 JedisSentinelPool（注意 3.1 的 sentinel 参数是 Set<String> 而非 HostAndPort）。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-13T16:54:09.652Z",
-      "updated_at": "2026-11-13T16:54:09.652Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-13T16:54:09.652Z"
+        "at": "2026-11-14T08:20:12.834Z"
       }
     }
   ]
