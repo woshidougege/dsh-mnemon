@@ -66,7 +66,7 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-13T23:33:39.102Z",
+      "lastAccessedAt": "2026-11-14T00:51:48.364Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
@@ -181,7 +181,7 @@
       ],
       "createdAt": "2026-11-12T13:17:07.256Z",
       "updatedAt": "2026-11-12T13:17:07.256Z",
-      "lastAccessedAt": "2026-11-13T23:33:39.102Z",
+      "lastAccessedAt": "2026-11-14T00:51:48.364Z",
       "revision": 1,
       "contentHash": "3cf0bdee514ce74479933d026f6d95e411d864144fdf51981f978655d6c50b99",
       "sizeBytes": 7480,
@@ -715,7 +715,7 @@
       ],
       "createdAt": "2026-11-13T18:53:35.871Z",
       "updatedAt": "2026-11-13T18:53:35.871Z",
-      "lastAccessedAt": "2026-11-13T21:47:49.055Z",
+      "lastAccessedAt": "2026-11-14T00:51:48.364Z",
       "revision": 1,
       "contentHash": "5e4119de6b4be24b06b49dc0fbc610bc2de8d0a3462cb4ba325cae1ac25c2a7d",
       "sizeBytes": 7731,
@@ -763,7 +763,7 @@
       ],
       "createdAt": "2026-11-13T19:43:48.238Z",
       "updatedAt": "2026-11-13T19:43:48.238Z",
-      "lastAccessedAt": "2026-11-13T20:36:17.568Z",
+      "lastAccessedAt": "2026-11-14T00:51:48.364Z",
       "revision": 1,
       "contentHash": "c72024b90b2935346cbcdfd0d290e2c1a84bb489318cf8a882d91a8a2b2e88a2",
       "sizeBytes": 5163,
@@ -810,6 +810,31 @@
       "revision": 1,
       "contentHash": "a16b6cc4d7f109a6b75b5b36107d8aa943038cedb8d2c5285ea62de6f911302d",
       "sizeBytes": 6436,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "8541407e-42d7-4863-afaa-bf889252fa65",
+      "title": "ChatBI 反馈中心接口降级与筛选 facets（MR !551 / !1034 / !1035）",
+      "description": "feedback-records 300 的根因判定（测试环境镜像落后于 !548/!549 之间，非 SQL bug）；列表硬依赖 + 附加统计 runSafely/runOr 逐段降级原则；selectFacetStats 八维度 UNION ALL 与「不叠加自身勾选」口径；MapperSqlRender SQL 渲染测试契约；!551/!1034/!1035 交付与 TST 验收 curl。",
+      "status": "active",
+      "filename": "chatbi-facets-mr-551-1034-1035-8541407e.md",
+      "relativePath": "documents/active/chatbi-facets-mr-551-1034-1035-8541407e.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/usagefeedback/dao/AdminFeedbackTimelineMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/usagefeedback/service/UsageIssueFeedbackService.java",
+        "smartop-service/admin/src/test/java/com/lenovo/admin/usagefeedback/dao/AdminFeedbackTimelineMapperSqlTest.java",
+        "smartop-service/admin/src/test/java/com/lenovo/admin/chatbi/service/ChatbiEventReportServiceFallbackTest.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-6bd536d3-4c59-401d-820d-5eb8d0938bbe"
+      ],
+      "createdAt": "2026-11-14T00:52:09.428Z",
+      "updatedAt": "2026-11-14T00:52:09.428Z",
+      "lastAccessedAt": "2026-11-14T00:52:09.428Z",
+      "revision": 1,
+      "contentHash": "9a0223e0772f8f78b6793f8b7b054a23ca83dc5fab6673a0ca89c86ca31784c3",
+      "sizeBytes": 7633,
       "memoryBodyIds": []
     }
   ]
