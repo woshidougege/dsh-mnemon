@@ -66,7 +66,7 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-13T19:12:27.800Z",
+      "lastAccessedAt": "2026-11-13T23:33:39.102Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
@@ -181,7 +181,7 @@
       ],
       "createdAt": "2026-11-12T13:17:07.256Z",
       "updatedAt": "2026-11-12T13:17:07.256Z",
-      "lastAccessedAt": "2026-11-13T22:48:33.552Z",
+      "lastAccessedAt": "2026-11-13T23:33:39.102Z",
       "revision": 1,
       "contentHash": "3cf0bdee514ce74479933d026f6d95e411d864144fdf51981f978655d6c50b99",
       "sizeBytes": 7480,
@@ -255,7 +255,7 @@
       ],
       "createdAt": "2026-11-13T02:23:29.336Z",
       "updatedAt": "2026-11-13T02:23:29.336Z",
-      "lastAccessedAt": "2026-11-13T22:48:33.552Z",
+      "lastAccessedAt": "2026-11-13T23:33:39.102Z",
       "revision": 1,
       "contentHash": "b44ad1193d52951ccf7a446b1759bf42c8d6c2180202cfc3c0c27492c8f45ad8",
       "sizeBytes": 8278,
@@ -784,10 +784,32 @@
       ],
       "createdAt": "2026-11-13T21:05:56.984Z",
       "updatedAt": "2026-11-13T21:05:56.984Z",
-      "lastAccessedAt": "2026-11-13T22:48:33.552Z",
+      "lastAccessedAt": "2026-11-13T23:33:39.102Z",
       "revision": 1,
       "contentHash": "cb779e97823fc481229786cde7dbeb33cee73f3ab169229110a75a94d5942d84",
       "sizeBytes": 5527,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "e087714a-341f-42af-9178-50ee7d507f2c",
+      "title": "usage-issue-feedback 评审统计口径诊断：只覆盖点踩回答（42 vs 55）与 A/B 方案",
+      "description": "用户问「逻辑没同步到 usage-issue-feedback 页面吗」的根因调查：评审表主键 (session_id,turn_key) 而 ssg_usage_issue_feedback 无会话列，后端 AdminFeedbackTimelineMapper:424 只统计 kind='downvote'，前端 FILTER_SQL 使 issue 行被静默过滤；含两个修法（文案提示 vs 让 issue 进评审）的权衡与未完成交接。",
+      "status": "active",
+      "filename": "usage-issue-feedback-42-vs-55-a-b-e087714a.md",
+      "relativePath": "documents/active/usage-issue-feedback-42-vs-55-a-b-e087714a.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/usagefeedback/dao/AdminFeedbackTimelineMapper.java",
+        "smartop-service/admin/src/main/resources/db/migration/V1.1.52__Create_feedback_notification_center.sql"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-8befe3ea-add2-4485-ab87-afbb89c0a372"
+      ],
+      "createdAt": "2026-11-13T23:34:05.065Z",
+      "updatedAt": "2026-11-13T23:34:05.065Z",
+      "lastAccessedAt": "2026-11-13T23:34:05.065Z",
+      "revision": 1,
+      "contentHash": "a16b6cc4d7f109a6b75b5b36107d8aa943038cedb8d2c5285ea62de6f911302d",
+      "sizeBytes": 6436,
       "memoryBodyIds": []
     }
   ]
