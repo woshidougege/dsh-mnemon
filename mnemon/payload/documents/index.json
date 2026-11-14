@@ -715,7 +715,7 @@
       ],
       "createdAt": "2026-11-13T18:53:35.871Z",
       "updatedAt": "2026-11-13T18:53:35.871Z",
-      "lastAccessedAt": "2026-11-14T02:01:41.456Z",
+      "lastAccessedAt": "2026-11-14T04:50:22.238Z",
       "revision": 1,
       "contentHash": "5e4119de6b4be24b06b49dc0fbc610bc2de8d0a3462cb4ba325cae1ac25c2a7d",
       "sizeBytes": 7731,
@@ -763,7 +763,7 @@
       ],
       "createdAt": "2026-11-13T19:43:48.238Z",
       "updatedAt": "2026-11-13T19:43:48.238Z",
-      "lastAccessedAt": "2026-11-14T00:51:48.364Z",
+      "lastAccessedAt": "2026-11-14T04:50:22.238Z",
       "revision": 1,
       "contentHash": "c72024b90b2935346cbcdfd0d290e2c1a84bb489318cf8a882d91a8a2b2e88a2",
       "sizeBytes": 5163,
@@ -831,7 +831,7 @@
       ],
       "createdAt": "2026-11-14T00:52:09.428Z",
       "updatedAt": "2026-11-14T00:52:09.428Z",
-      "lastAccessedAt": "2026-11-14T02:01:41.456Z",
+      "lastAccessedAt": "2026-11-14T04:50:22.238Z",
       "revision": 1,
       "contentHash": "9a0223e0772f8f78b6793f8b7b054a23ca83dc5fab6673a0ca89c86ca31784c3",
       "sizeBytes": 7633,
@@ -853,10 +853,37 @@
       ],
       "createdAt": "2026-11-14T02:02:12.349Z",
       "updatedAt": "2026-11-14T02:02:12.349Z",
-      "lastAccessedAt": "2026-11-14T02:02:12.349Z",
+      "lastAccessedAt": "2026-11-14T04:50:22.238Z",
       "revision": 1,
       "contentHash": "b9841b52fa374afd88b6267fa1d6f77d58bcebdd95d82e8160eb8d654e2ae364",
       "sizeBytes": 5644,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "acae4a8d-59be-4ec8-b4ef-4a73d62d64af",
+      "title": "ChatBI 报表三页筛选下拉条数统一（MR !554 / !1039 / !1040）",
+      "description": "Data Inquiry Records / Feedback / Issue & Request 三页筛选下拉条数写法统一；后端补齐 listPagePathCounts / listPageViewPathCounts 与 listJiraStatusCounts（未建单归 __no_ticket__）；!553 与 !554 需同批合并；前端 master/develop 已分叉（29 vs 662 独有文件）故 →develop 必须重拉分支。",
+      "status": "active",
+      "filename": "chatbi-mr-554-1039-1040-acae4a8d.md",
+      "relativePath": "documents/active/chatbi-mr-554-1039-1040-acae4a8d.md",
+      "sourcePaths": [
+        "src/views/Setting/reports/user-logs/components/ManagerCombo.vue",
+        "src/views/Setting/reports/user-logs/components/FilterBar.vue",
+        "src/views/Setting/reports/user-logs/styles.less",
+        "src/views/Setting/reports/usage-issue-feedback/index.vue",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiFeedbackRecordMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-c9faa0fc-518c-4962-ae14-8c6316989d1b"
+      ],
+      "createdAt": "2026-11-14T04:50:40.762Z",
+      "updatedAt": "2026-11-14T04:50:40.762Z",
+      "lastAccessedAt": "2026-11-14T04:50:40.762Z",
+      "revision": 1,
+      "contentHash": "cec08a88b44e8859cff91ef46a69057b970d150f974b3e44d63561f1dad93549",
+      "sizeBytes": 6409,
       "memoryBodyIds": []
     }
   ]
