@@ -181,7 +181,7 @@
       ],
       "createdAt": "2026-11-12T13:17:07.256Z",
       "updatedAt": "2026-11-12T13:17:07.256Z",
-      "lastAccessedAt": "2026-11-14T00:51:48.364Z",
+      "lastAccessedAt": "2026-11-14T02:01:41.456Z",
       "revision": 1,
       "contentHash": "3cf0bdee514ce74479933d026f6d95e411d864144fdf51981f978655d6c50b99",
       "sizeBytes": 7480,
@@ -715,7 +715,7 @@
       ],
       "createdAt": "2026-11-13T18:53:35.871Z",
       "updatedAt": "2026-11-13T18:53:35.871Z",
-      "lastAccessedAt": "2026-11-14T00:51:48.364Z",
+      "lastAccessedAt": "2026-11-14T02:01:41.456Z",
       "revision": 1,
       "contentHash": "5e4119de6b4be24b06b49dc0fbc610bc2de8d0a3462cb4ba325cae1ac25c2a7d",
       "sizeBytes": 7731,
@@ -806,7 +806,7 @@
       ],
       "createdAt": "2026-11-13T23:34:05.065Z",
       "updatedAt": "2026-11-13T23:34:05.065Z",
-      "lastAccessedAt": "2026-11-13T23:34:05.065Z",
+      "lastAccessedAt": "2026-11-14T02:01:41.456Z",
       "revision": 1,
       "contentHash": "a16b6cc4d7f109a6b75b5b36107d8aa943038cedb8d2c5285ea62de6f911302d",
       "sizeBytes": 6436,
@@ -831,10 +831,32 @@
       ],
       "createdAt": "2026-11-14T00:52:09.428Z",
       "updatedAt": "2026-11-14T00:52:09.428Z",
-      "lastAccessedAt": "2026-11-14T00:52:09.428Z",
+      "lastAccessedAt": "2026-11-14T02:01:41.456Z",
       "revision": 1,
       "contentHash": "9a0223e0772f8f78b6793f8b7b054a23ca83dc5fab6673a0ca89c86ca31784c3",
       "sizeBytes": 7633,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "459c1dd6-22d5-433d-baa8-b9e2bc6b1ad1",
+      "title": "ChatBI 反馈列表 buildFeedbackReview NPE 根因与修复（MR !552）",
+      "description": "推翻「TST 镜像落后」结论：feedback-records 整页 300 的真实根因是 buildFeedbackReview 对 rv_source 空值做 toUpperCase 的 NPE（在 runOr 之外故整页崩）；含真实堆栈与行号、修复 diff、真实 mapper 探针前后对比、回归测试、!552/!1036/!1037 交付。",
+      "status": "active",
+      "filename": "chatbi-buildfeedbackreview-npe-mr-552-459c1dd6.md",
+      "relativePath": "documents/active/chatbi-buildfeedbackreview-npe-mr-552-459c1dd6.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java",
+        "smartop-service/admin/src/test/java/com/lenovo/admin/chatbi/service/ChatbiEventReportServiceFallbackTest.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-9e7e7f93-b336-4de9-8953-f0727000332d"
+      ],
+      "createdAt": "2026-11-14T02:02:12.349Z",
+      "updatedAt": "2026-11-14T02:02:12.349Z",
+      "lastAccessedAt": "2026-11-14T02:02:12.349Z",
+      "revision": 1,
+      "contentHash": "b9841b52fa374afd88b6267fa1d6f77d58bcebdd95d82e8160eb8d654e2ae364",
+      "sizeBytes": 5644,
       "memoryBodyIds": []
     }
   ]
