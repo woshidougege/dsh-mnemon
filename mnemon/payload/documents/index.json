@@ -306,7 +306,7 @@
       ],
       "createdAt": "2026-11-13T02:39:49.332Z",
       "updatedAt": "2026-11-13T02:39:49.332Z",
-      "lastAccessedAt": "2026-11-13T02:39:49.332Z",
+      "lastAccessedAt": "2026-11-14T09:25:31.133Z",
       "revision": 1,
       "contentHash": "28cee5fbc3b0e6b72a48c735874550e296383833561079b8bc42c6427d0d98a7",
       "sizeBytes": 6413,
@@ -763,7 +763,7 @@
       ],
       "createdAt": "2026-11-13T19:43:48.238Z",
       "updatedAt": "2026-11-13T19:43:48.238Z",
-      "lastAccessedAt": "2026-11-14T04:50:22.238Z",
+      "lastAccessedAt": "2026-11-14T10:00:11.301Z",
       "revision": 1,
       "contentHash": "c72024b90b2935346cbcdfd0d290e2c1a84bb489318cf8a882d91a8a2b2e88a2",
       "sizeBytes": 5163,
@@ -806,7 +806,7 @@
       ],
       "createdAt": "2026-11-13T23:34:05.065Z",
       "updatedAt": "2026-11-13T23:34:05.065Z",
-      "lastAccessedAt": "2026-11-14T02:01:41.456Z",
+      "lastAccessedAt": "2026-11-14T10:00:11.301Z",
       "revision": 1,
       "contentHash": "a16b6cc4d7f109a6b75b5b36107d8aa943038cedb8d2c5285ea62de6f911302d",
       "sizeBytes": 6436,
@@ -831,7 +831,7 @@
       ],
       "createdAt": "2026-11-14T00:52:09.428Z",
       "updatedAt": "2026-11-14T00:52:09.428Z",
-      "lastAccessedAt": "2026-11-14T04:50:22.238Z",
+      "lastAccessedAt": "2026-11-14T09:25:31.133Z",
       "revision": 1,
       "contentHash": "9a0223e0772f8f78b6793f8b7b054a23ca83dc5fab6673a0ca89c86ca31784c3",
       "sizeBytes": 7633,
@@ -880,10 +880,56 @@
       ],
       "createdAt": "2026-11-14T04:50:40.762Z",
       "updatedAt": "2026-11-14T04:50:40.762Z",
-      "lastAccessedAt": "2026-11-14T04:50:40.762Z",
+      "lastAccessedAt": "2026-11-14T10:00:11.301Z",
       "revision": 1,
       "contentHash": "cec08a88b44e8859cff91ef46a69057b970d150f974b3e44d63561f1dad93549",
       "sizeBytes": 6409,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "4bc2253b-d4c9-43b4-a6d8-8c0c111caa3e",
+      "title": "问题反馈页 Review source 取值修正（MANUAL→HUMAN）与评审四维只列有数据选项（MR !1039 / !1040 后续）",
+      "description": "ssg_chatbi_question_review.review_source 实际只有 AUTO/HUMAN，原 MANUAL 写法导致永远 0 条（01f997a6 / d60eaaa9）；按用户要求把 Review status/tag/reviewer/source 四维对齐 user-logs onlyWithData，只列有数据项（cdac56e7 / ef428847）；本地 8082+8090 无头 Chrome 实测条数；Reviewer 姓名尾部粘连 itcode 数字为上游数据问题，未决。",
+      "status": "active",
+      "filename": "review-source-manual-human-mr-1039-1040-4bc2253b.md",
+      "relativePath": "documents/active/review-source-manual-human-mr-1039-1040-4bc2253b.md",
+      "sourcePaths": [
+        "src/views/Setting/reports/usage-issue-feedback/index.vue"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-a44930c0-517d-4ae4-905d-3a9c3614a5df"
+      ],
+      "createdAt": "2026-11-14T09:25:49.901Z",
+      "updatedAt": "2026-11-14T09:25:49.901Z",
+      "lastAccessedAt": "2026-11-14T10:00:11.301Z",
+      "revision": 1,
+      "contentHash": "5b0bb61cf361a0fba041abe7b524664eb61e84494bf8733693ffb87162f897ae",
+      "sizeBytes": 5363,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "5bd335b0-f77d-4bbe-8c2d-69893f8b349b",
+      "title": "筛选下拉计数口径统一：固定枚举全列展示 + 0 条置灰（MR !1039 / !1040）",
+      "description": "把 user-logs 与 usage-issue-feedback 的筛选下拉统一为「固定枚举全列展示、0 条置灰、人名类不置灰」，删除 withCount/onlyWithData；记录 NaN===0 导致漏灰的根因与 num(...)||0 修法、本地 8090/8082 验证流程、各维度实测条数与两分支提交。",
+      "status": "active",
+      "filename": "0-mr-1039-1040-5bd335b0.md",
+      "relativePath": "documents/active/0-mr-1039-1040-5bd335b0.md",
+      "sourcePaths": [
+        "src/views/Setting/reports/user-logs/components/FilterBar.vue",
+        "src/views/Setting/reports/usage-issue-feedback/index.vue",
+        "vite.config.ts",
+        "src/views/UsageIssueFeedback/jiraStatusFilters.ts",
+        ".env.development"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-2fcb597e-d447-479f-9fec-92f89ca62786"
+      ],
+      "createdAt": "2026-11-14T10:00:29.762Z",
+      "updatedAt": "2026-11-14T10:00:29.762Z",
+      "lastAccessedAt": "2026-11-14T10:00:29.762Z",
+      "revision": 1,
+      "contentHash": "1c5a6b5eadf206c74f26c5cc5a009604dd96ec448163639f7c157278130c6166",
+      "sizeBytes": 6536,
       "memoryBodyIds": []
     }
   ]
