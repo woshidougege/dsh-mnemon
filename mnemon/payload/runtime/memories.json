@@ -156,6 +156,18 @@
         "label": "rxp",
         "at": "2026-11-16T03:03:52.922Z"
       }
+    },
+    {
+      "content": "用户中文名「相鹏」（itcode renxp4 / display name \"Xiangpeng XP4 Ren\"），不要写成「相朋」。",
+      "target": "user",
+      "importance": "normal",
+      "created_at": "2026-11-16T07:00:28.537Z",
+      "updated_at": "2026-11-16T07:00:28.537Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-16T07:00:28.537Z"
+      }
     }
   ]
 }

@@ -66,7 +66,7 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-16T03:16:47.230Z",
+      "lastAccessedAt": "2026-11-16T07:25:07.407Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
@@ -111,7 +111,7 @@
       ],
       "createdAt": "2026-11-12T11:13:36.272Z",
       "updatedAt": "2026-11-12T11:13:36.272Z",
-      "lastAccessedAt": "2026-11-16T03:04:33.887Z",
+      "lastAccessedAt": "2026-11-16T07:25:07.407Z",
       "revision": 1,
       "contentHash": "92bcf24e3650691fc2ab7aea7436bae3bfaeb39e08a2a9762868cc7258a27c33",
       "sizeBytes": 7400,
@@ -255,7 +255,7 @@
       ],
       "createdAt": "2026-11-13T02:23:29.336Z",
       "updatedAt": "2026-11-13T02:23:29.336Z",
-      "lastAccessedAt": "2026-11-16T01:48:52.955Z",
+      "lastAccessedAt": "2026-11-16T07:25:07.407Z",
       "revision": 1,
       "contentHash": "b44ad1193d52951ccf7a446b1759bf42c8d6c2180202cfc3c0c27492c8f45ad8",
       "sizeBytes": 8278,
@@ -418,7 +418,7 @@
       ],
       "createdAt": "2026-11-13T03:53:13.190Z",
       "updatedAt": "2026-11-13T03:53:13.190Z",
-      "lastAccessedAt": "2026-11-16T02:16:07.577Z",
+      "lastAccessedAt": "2026-11-16T07:25:07.407Z",
       "revision": 1,
       "contentHash": "eb9832d7b07a46014748371063976a23b209a2466b83eb2b187ac7b3d9aecfc3",
       "sizeBytes": 6482,
@@ -1107,10 +1107,58 @@
       ],
       "createdAt": "2026-11-16T03:17:07.909Z",
       "updatedAt": "2026-11-16T03:17:07.909Z",
-      "lastAccessedAt": "2026-11-16T03:59:24.216Z",
+      "lastAccessedAt": "2026-11-16T07:29:19.023Z",
       "revision": 1,
       "contentHash": "65127485a0918874d8826845cb32f06757fe8e1a467975a8b0661adfab3f52b1",
       "sizeBytes": 8411,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "c9e39da9-9d7e-4222-9082-b1cb80ef8447",
+      "title": "ChatBI 评审第三状态（Not applicable / N/A）方案建议与实施清单（ssg-sales-ops）",
+      "description": "把「无权限」「不在 scope」从 Wrong 的归因提升为独立第三状态的调研与方案：现状证据（枚举/DDL 两态约束）、推荐 NOT_APPLICABLE + reason 两级结构、5 处改动清单，以及 deleteLegacyAutoNoPermission 会误删新数据的风险。方案待用户拍板。",
+      "status": "active",
+      "filename": "chatbi-not-applicable-n-a-ssg-sales-ops-c9e39da9.md",
+      "relativePath": "documents/active/chatbi-not-applicable-n-a-ssg-sales-ops-c9e39da9.md",
+      "sourcePaths": [
+        "ssg_sales_ops/src/views/Setting/reports/components/questionReview.ts",
+        "ssg_sales_ops/src/views/Setting/reports/user-logs/api.ts",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiQuestionReviewService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiQuestionAutoReviewService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiQuestionAutoReviewMapper.java",
+        "smartop-service/admin/src/main/resources/db/migration/V1.1.119__Create_ssg_chatbi_question_review.sql"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-cab3a049-754f-4971-968c-bb5326eec273"
+      ],
+      "createdAt": "2026-11-16T07:25:31.241Z",
+      "updatedAt": "2026-11-16T07:25:31.241Z",
+      "lastAccessedAt": "2026-11-16T07:25:31.241Z",
+      "revision": 1,
+      "contentHash": "391439451af197f50420976c1549aa7bc6b1c745835404dfa4ba0f6ffb7775c0",
+      "sizeBytes": 6826,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "4105dfd5-d53c-49c4-b972-0c4138f5c8a0",
+      "title": "录屏转写 → 单文件 HTML 会议纪要：OpenCV 抽帧 + base64 内嵌 + CDP 校验流程",
+      "description": "把 71 分钟会议录屏做成单文件 HTML 纪要的可复用流程：本机无 ffmpeg 只能用 cv2；差分抽帧 th=0.1 + 最小间隔 25s + 章节补帧共 60 张；1000px webp(≈28KB) base64 内嵌得 2.4MB 单文件；lightbox/画面开关/搜索联动与 CDP 断言校验。关联文档 121d6b28-8c37-4caf-b9f6-8db4047c94a8。",
+      "status": "active",
+      "filename": "html-opencv-base64-cdp-4105dfd5.md",
+      "relativePath": "documents/active/html-opencv-base64-cdp-4105dfd5.md",
+      "sourcePaths": [
+        "outputs/service-portfolio-meeting-20261028.html",
+        ".tmp/sp-video/verify.mjs"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-c7380177-3e76-4754-a761-b781210e6eb4"
+      ],
+      "createdAt": "2026-11-16T07:29:39.681Z",
+      "updatedAt": "2026-11-16T07:29:39.681Z",
+      "lastAccessedAt": "2026-11-16T07:29:39.681Z",
+      "revision": 1,
+      "contentHash": "ebd078d735306091f2d3489eacfb47b51d5a869387d19e1e1046e6dc89e2f6f4",
+      "sizeBytes": 5771,
       "memoryBodyIds": []
     }
   ]
