@@ -2,6 +2,18 @@
   "version": 1,
   "entries": [
     {
+      "content": "用户中文名「相鹏」（itcode renxp4 / display name \"Xiangpeng XP4 Ren\"），不要写成「相朋」。",
+      "target": "user",
+      "importance": "normal",
+      "created_at": "2026-11-16T07:00:28.537Z",
+      "updated_at": "2026-11-16T07:00:28.537Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-16T07:00:28.537Z"
+      }
+    },
+    {
       "content": "ssg-sales-ops 生产库 = 10.62.79.215:5432/ssg_ops_agent（表在 public schema；dev/tst=10.62.79.148、pre=10.62.79.221，见 smartop-service/admin/src/main/resources/application-lmp-*-prod.yml）。admin 服务 datasource 密码是 jasypt 密文，encryptor password 在同目录 application.yml 的 jasypt.encryptor.password（PBEWithMD5AndDES），可用 org.jasypt BasicTextEncryptor 解密；无 psql 时可用 .m2 里的 postgresql-42.5.4.jar 写临时 JDBC 查询类。菜单权限模型（2026-11-04 按 HEAD 代码复核，已改）：EffectivePermissionService.visibleMenuKeys 只认 ssg_user_menu.access_state='VISIBLE'（enabled=true，缺行=HIDDEN），管理员走 listAllEnabledMenuKeys 直通；ssg_role_menu / ssg_user_role / ssg_menu.default_access 不再参与生效计算（角色页仅展示 roleState）。菜单 key 形如 businessInsight:workspace（迁移 V1.1.70/71 seed 只有 businessInsight 及 :workspace/:bookings/:lgfs/:gpssus，tcv 靠线上手插）。管理员判定函数 public.ssg_is_active_admin(itcode)。",
       "target": "memory",
       "importance": "normal",
@@ -86,18 +98,6 @@
       }
     },
     {
-      "content": "ssg-sales-ops 单测/编译 admin 模块必须带 -am：只用 -pl smartop-service/admin 会拿本地仓库里旧的 smartop-api，报 CocFlagSyncScheduleHandler 找不到 AuthFeignService.cocFlagSyncStatus() 而编译失败。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-11T09:55:00.593Z",
-      "updated_at": "2026-11-11T09:55:00.593Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-11T09:55:00.593Z"
-      }
-    },
-    {
       "content": "MR 只能由用户点击合并：我用 ssg-sales-ops-branch-workflow skill 时只负责建分支、提交、push、用 GitLab API 建 MR 并回查 state/merge_status/has_conflicts，禁止调用 /merge 接口（即使上一句说“提MR 合并吧”也算越权，用户 2026-11-12 明确纠正：“你怎么总是帮我合并 你没看skill吗”）。合并、部署、发布一律先问，等用户明确说“合并”且确认到具体 iid 才动手。",
       "target": "memory",
       "importance": "critical",
@@ -134,39 +134,27 @@
       }
     },
     {
-      "content": "ssg_sales_ops 前端本地联调（2026-11-14 实测跑通）：.env.development 的 VITE_API_BASE_URL 改空串，vite.config.ts 加 '/api/admin/chatbi' → http://127.0.0.1:8082（rewrite 去掉 /api/admin）+ '/api' → https://ssgspark-tst.lenovo.com，两条都 changeOrigin，只把 chatbi 报表接口指本地、菜单/用户仍走 tst（本地 admin 的 /menu/all 会返回 300）。后端启动：java -jar smartop-service/admin/target/admin.jar --spring.profiles.active=local,lmp-reston-dev --spring.flyway.enabled=false --server.port=8082；打包 mvn -o -T 4 -pl smartop-service/admin -am package -DskipTests（reactor 根跑 spring-boot:run 会报 No plugin found for prefix）。登录 token 从 tst Redis 取：10.62.79.203:6379 db1，key token_<itcode> 的 hash.token（KEYS 被禁用，要按名直取；jedis 4 需 gson-2.8.6 + commons-pool2 + slf4j）。本机 bsk daemon 起不来（IDE 外层 Job Object），浏览器自动化改用 Chrome headless --remote-debugging-port=9222 + Node 22 原生 WebSocket 手写 CDP（Network.setCookie 注入 Authorization，Emulation.setDeviceMetricsOverride 定宽，Page.captureScreenshot 截图）；classpath 过长时 java 要用 @argfile。",
+      "content": "WorkBuddy2API 网关（http://127.0.0.1:8788）判断模型是否支持视频的唯一判据：给 60 秒视频，看 prompt_tokens 增量。原生解码的（+18.5K 且随时长线性增长）：minimax-m3（约 2fps，能逐帧报时间点）、minimax-m3.1-flash（约 10s 一帧，更粗但 x0.08 更便宜）、space-bunny；其余 19 个（含 mimo-v2.6-pro）恒 +29，那是上游塞的 \"content has been filtered\" 提示。请求里加 modalities/input_modalities/supports_video/video_url.detail 全部无效，只有 model id 决定；input_video/video content type 被上游 400。平台 product-config-cn.json 58 个模型只有 supportsImages/disabledMultimodal/videoGeneration（生成），没有 supportsVideo。此前\"网关只开放 text+image、视频只能抽帧走 image_url\"的记载作废。",
       "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-14T08:20:12.834Z",
-      "updated_at": "2026-11-14T08:20:12.834Z",
+      "importance": "critical",
+      "created_at": "2026-11-16T08:41:48.434Z",
+      "updated_at": "2026-11-16T08:41:48.434Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-14T08:20:12.834Z"
+        "at": "2026-11-16T08:41:48.434Z"
       }
     },
     {
-      "content": "本机 DSH 的模型推理上游经 WorkBuddy2API 网关 http://127.0.0.1:8788（Desktop\\WorkBuddy-Portable），因此重启/停止该网关会掐断自己正在跑的工具调用（2026-11-16 实测：重启后 tool call aborted）。改动网关前先评估，验证尽量用只读请求。",
+      "content": "不改 WorkBuddy 网关（2026-11-16 用户原话：\"不魔改网关了 删掉吧 还是用我们原来的网关 让minimax-m3.1-flash去\"）：禁止在 8788 的 wb_proxy.py 上加抽帧补丁、也不要改 /v1/models 的能力声明；视频任务直接选 minimax-m3.1-flash（看细节用 minimax-m3）。曾在 Desktop\\WorkBuddy-Portable\\wb-proxy-test 用 8789 端口验证过\"视频→多帧图像\"补丁（wb_video_frames.py 走系统 python+cv2 抽帧，expand_video_content 在 _dispatch_chat_post 改写 video_url），方案已作废：8789 进程已停、测试目录与备份已删，wb-proxy 恢复原始 1,397,351 字节。",
       "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-16T03:03:52.922Z",
-      "updated_at": "2026-11-16T03:03:52.922Z",
+      "importance": "critical",
+      "created_at": "2026-11-16T08:41:48.452Z",
+      "updated_at": "2026-11-16T08:41:48.452Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-16T03:03:52.922Z"
-      }
-    },
-    {
-      "content": "用户中文名「相鹏」（itcode renxp4 / display name \"Xiangpeng XP4 Ren\"），不要写成「相朋」。",
-      "target": "user",
-      "importance": "normal",
-      "created_at": "2026-11-16T07:00:28.537Z",
-      "updated_at": "2026-11-16T07:00:28.537Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-16T07:00:28.537Z"
+        "at": "2026-11-16T08:41:48.452Z"
       }
     }
   ]

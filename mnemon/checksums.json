@@ -1,10 +1,10 @@
 {
   "algorithm": "sha256",
   "files": {
-    "payload/runtime/memories.json": "713b2e7ba5140de14d88b5ab9e470649e927dd11919c1ed5c411509974f0e452",
+    "payload/runtime/memories.json": "57ea62d8a6d5f14d20725ef9a72eaf4be1bc3b186eaead394e04958b2df31bb5",
     "payload/runtime/USER.md": "0f9db62bf8e0922dd9064cfcc50fb591db721758f98ee04ae0e4d331fd09805e",
-    "payload/runtime/MEMORY.md": "fd23f8d25f365e408f0e95ec05209192b6921253dcc3abf3de0b017c7d2b30ca",
-    "payload/documents/index.json": "120eca3ec4f1ca31913ec8e1c59fae199a1f7a2ba58ab3e7a1e3323584eef7c8",
+    "payload/runtime/MEMORY.md": "10add13d57355f24013e45978ba33ff0d15df8520ea422675b13bc5205730e21",
+    "payload/documents/index.json": "2c895c37c782d965129490236e292ce04fe5ea3c668a9f4961b75e006910e116",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -55,6 +55,12 @@
     "payload/documents/active/service-portfolio-lifecycle-by-offering-gps-sus--121d6b28.md": "0618161ab561dde6316a4503f887230ff78e00efe6a6e88e0a65ed3e3e4a3bb9",
     "payload/documents/active/chatbi-not-applicable-n-a-ssg-sales-ops-c9e39da9.md": "930f0763f334736321681d66396ab0af0883eacdc3e6b2d235f4629432c272f5",
     "payload/documents/active/html-opencv-base64-cdp-4105dfd5.md": "81494452b7e8d0601757c2ee92d1c685b8b5ba52daae2aa237b65cf81f2ffd8c",
+    "payload/documents/active/workbuddy-mimo-v2-6-pro-4d643612.md": "fbd24419d991ce2ae6e76ff4b01d6822ef4bb42267fe583900094cb2040a9aaf",
+    "payload/documents/active/workbuddy-47a01daf.md": "b98f2a2d0edd4951eed42094f23c570b46bfd9db7ce0c774f2301a623883d841",
+    "payload/documents/active/chatbi-not-applicable-2026-11-16-e6544a1f.md": "03585fc6371bb43c7127ba69206d2b62ea8ce8a9aab14f3a81eaea9898db8045",
+    "payload/documents/active/not-applicable-out-of-scope-ssg-sales-ops-7714286d.md": "975920c1398b008bef1b60e33fff0252cbfed155d9d4e095c055018af7071722",
+    "payload/documents/active/workbuddy-3-18-bb5c6bd1.md": "5b7a4b21483a3aae60aa2cf34b65468e7132c188d31152b1e2bbc4d0df0abe2e",
+    "payload/documents/active/openpangu-2-0-deepseek-v4-mimo-v2-6-2026-11-79a72f77.md": "6d96764a8a45f13f4865b199d6ece810f2aa32bc56e3087732d33b489e343c15",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
