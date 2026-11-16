@@ -255,7 +255,7 @@
       ],
       "createdAt": "2026-11-13T02:23:29.336Z",
       "updatedAt": "2026-11-13T02:23:29.336Z",
-      "lastAccessedAt": "2026-11-13T23:33:39.102Z",
+      "lastAccessedAt": "2026-11-16T01:48:52.955Z",
       "revision": 1,
       "contentHash": "b44ad1193d52951ccf7a446b1759bf42c8d6c2180202cfc3c0c27492c8f45ad8",
       "sizeBytes": 8278,
@@ -371,7 +371,7 @@
       ],
       "createdAt": "2026-11-13T03:21:51.485Z",
       "updatedAt": "2026-11-13T03:21:51.485Z",
-      "lastAccessedAt": "2026-11-13T03:27:57.409Z",
+      "lastAccessedAt": "2026-11-16T01:48:52.955Z",
       "revision": 1,
       "contentHash": "9b2fe0dedc3a38ce8f8b71f61c33544f3ea3c22f9c28f6f95e04601ac56f26a1",
       "sizeBytes": 9039,
@@ -396,7 +396,7 @@
       ],
       "createdAt": "2026-11-13T03:24:27.265Z",
       "updatedAt": "2026-11-13T03:24:27.265Z",
-      "lastAccessedAt": "2026-11-13T21:47:49.055Z",
+      "lastAccessedAt": "2026-11-16T02:16:07.577Z",
       "revision": 1,
       "contentHash": "143de3f89f699f021e6c87065c23e923ea4be71f3bb45706cda41f946b2bb5b4",
       "sizeBytes": 7143,
@@ -418,7 +418,7 @@
       ],
       "createdAt": "2026-11-13T03:53:13.190Z",
       "updatedAt": "2026-11-13T03:53:13.190Z",
-      "lastAccessedAt": "2026-11-13T22:48:33.552Z",
+      "lastAccessedAt": "2026-11-16T02:16:07.577Z",
       "revision": 1,
       "contentHash": "eb9832d7b07a46014748371063976a23b209a2466b83eb2b187ac7b3d9aecfc3",
       "sizeBytes": 6482,
@@ -437,7 +437,7 @@
       ],
       "createdAt": "2026-11-13T04:55:23.906Z",
       "updatedAt": "2026-11-13T04:55:23.906Z",
-      "lastAccessedAt": "2026-11-13T17:00:58.450Z",
+      "lastAccessedAt": "2026-11-16T01:48:52.955Z",
       "revision": 1,
       "contentHash": "4924230e77600425f0795d7afdc4955ea85613270ee08d5bad5fe45d6bd38330",
       "sizeBytes": 6828,
@@ -482,7 +482,7 @@
       ],
       "createdAt": "2026-11-13T06:13:21.952Z",
       "updatedAt": "2026-11-13T06:13:21.952Z",
-      "lastAccessedAt": "2026-11-13T21:05:17.084Z",
+      "lastAccessedAt": "2026-11-16T02:03:26.343Z",
       "revision": 1,
       "contentHash": "5bf88f8df496af04abe01af34a4609667306d5e0879ff3c834165c551ef26c90",
       "sizeBytes": 5562,
@@ -506,7 +506,7 @@
       ],
       "createdAt": "2026-11-13T06:28:43.955Z",
       "updatedAt": "2026-11-13T06:28:43.955Z",
-      "lastAccessedAt": "2026-11-13T10:43:42.123Z",
+      "lastAccessedAt": "2026-11-16T02:03:26.343Z",
       "revision": 1,
       "contentHash": "392ca481d7aa5bfa13f89688dd8fde3254ddada9da823a6101995a7bf38df417",
       "sizeBytes": 7184,
@@ -784,7 +784,7 @@
       ],
       "createdAt": "2026-11-13T21:05:56.984Z",
       "updatedAt": "2026-11-13T21:05:56.984Z",
-      "lastAccessedAt": "2026-11-13T23:33:39.102Z",
+      "lastAccessedAt": "2026-11-16T02:03:26.343Z",
       "revision": 1,
       "contentHash": "cb779e97823fc481229786cde7dbeb33cee73f3ab169229110a75a94d5942d84",
       "sizeBytes": 5527,
@@ -977,6 +977,78 @@
       "revision": 1,
       "contentHash": "c10840757a331ab26781761a0d38f39c5874bbd28d75b7ea285bfb9b6db356d4",
       "sizeBytes": 7289,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "e09863d9-d9a9-4086-8c3c-75ef110487a7",
+      "title": "多 Harness 指令文件覆盖矩阵与 AGENTS.md 单一事实源方案（ssg_sales_ops）",
+      "description": "ssg_sales_ops 仓库 master/develop 下 4 个 MD 文件的 blob hash 与作用、DSH 源码确认的 AGENTS.md/CLAUDE.md 读取规则、19+ harness 指令文件矩阵（是否直读 AGENTS.md、需不需要薄壳）、A/B 分档结论、单一事实源骨架与「复制全文 vs 一行指路」取舍、README 断链与 @import 空指针两个坑。调研完成但落地未执行。",
+      "status": "active",
+      "filename": "harness-agents-md-ssg-sales-ops-e09863d9.md",
+      "relativePath": "documents/active/harness-agents-md-ssg-sales-ops-e09863d9.md",
+      "sourcePaths": [
+        "AGENTS.md",
+        "CLAUDE.md",
+        "README.md",
+        "docs/gitlab-branch-workflow.md"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-b312fe64-8c1b-4be8-ab34-71e07bda5ed0"
+      ],
+      "createdAt": "2026-11-16T01:49:20.091Z",
+      "updatedAt": "2026-11-16T01:49:20.091Z",
+      "lastAccessedAt": "2026-11-16T02:16:07.577Z",
+      "revision": 1,
+      "contentHash": "85c038e1037cec8200ac1b27eea3f5e624249f4270d0a4f0a447317b4402a35b",
+      "sizeBytes": 8430,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "3061db0b-a4fe-469f-a461-91792b307add",
+      "title": "ssg_sales_ops：项目分支文档与本地 skill 的流程冲突——MR 实证分析与 AGENTS.md 重写方案",
+      "description": "docs/gitlab-branch-workflow.md 与本地 skill 在分支模型/一致性校验/冲突处理上的 4 点相互冲突；约 100 个已合并 MR 的实证（develop 领先 master 667、master 超前 37、两位同事漏提/同分支双 MR、!1041/!1043 顺序反、backfill MR !1005）；根因 4 条与「AGENTS.md 承载概览+双分支规则、docs 降为存根」方案；双分支 vs 单分支待用户拍板，未落地。",
+      "status": "active",
+      "filename": "ssg-sales-ops-skill-mr-agents-md-3061db0b.md",
+      "relativePath": "documents/active/ssg-sales-ops-skill-mr-agents-md-3061db0b.md",
+      "sourcePaths": [
+        "AGENTS.md",
+        "CLAUDE.md",
+        "docs/gitlab-branch-workflow.md",
+        "README.md"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-f8edffe4-79af-43ec-872e-5a3068897627"
+      ],
+      "createdAt": "2026-11-16T02:03:49.199Z",
+      "updatedAt": "2026-11-16T02:03:49.199Z",
+      "lastAccessedAt": "2026-11-16T02:16:07.577Z",
+      "revision": 1,
+      "contentHash": "bce23472ebd67693b4431a595d4dfaedb0fd12eaea4d9133a7bedffd6fbefb9c",
+      "sizeBytes": 7860,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "d20c058a-95b1-42c4-889f-e777a91088ab",
+      "title": "ssg_sales_ops 分支模型定稿：dev/<itcode> 个人分支 + 双 MR + patch-id 等价校验（落地记录）",
+      "description": "用户拍板推翻旧「一功能一分支」流程：每人一条 dev/<itcode>，每次交付提 →develop 与 →master 两个 MR，用 git patch-id 校验两边 diff 必须相等（单分支下不 cherry-pick，改为一对三点 diff）；四条硬约束（两 MR 建好才合、不勾删源分支、develop→master 顺序、禁止 merge origin/develop）、三个风险对策；AGENTS.md 20→129 行、docs 降为存根，工作区未提交，遗留通知当事人/清理旧分支/README 断链。",
+      "status": "active",
+      "filename": "ssg-sales-ops-dev-itcode-mr-patch-id-d20c058a.md",
+      "relativePath": "documents/active/ssg-sales-ops-dev-itcode-mr-patch-id-d20c058a.md",
+      "sourcePaths": [
+        "AGENTS.md",
+        "docs/gitlab-branch-workflow.md",
+        "CLAUDE.md",
+        "README.md"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-a7e35b24-3471-4939-86cd-48b4ae2600fe"
+      ],
+      "createdAt": "2026-11-16T02:16:25.461Z",
+      "updatedAt": "2026-11-16T02:16:25.461Z",
+      "lastAccessedAt": "2026-11-16T02:16:25.461Z",
+      "revision": 1,
+      "contentHash": "d10c28fc6a4b8c070c39bd78e38837e68de06e205057901beb24b9d7bfb774a2",
+      "sizeBytes": 7692,
       "memoryBodyIds": []
     }
   ]

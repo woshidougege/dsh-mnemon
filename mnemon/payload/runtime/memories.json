@@ -122,15 +122,15 @@
       }
     },
     {
-      "content": "ssg_sales_ops 前端分支流程（repo AGENTS.md / docs/gitlab-branch-workflow.md）：功能分支必须从最新 origin/master 创建；同一变更只用一个功能分支，先提 develop MR 发 tst，验证通过后再用同一分支提 master MR；不要为 develop/master 各开一个并行分支，也不要直接向环境分支提交。",
+      "content": "ssg_sales_ops 前端分支流程（2026-11-16 改版，唯一来源 repo AGENTS.md；docs/gitlab-branch-workflow.md 已改为废弃存根）：每人一条 dev/<itcode> 个人开发分支，所有开发在其上累积，不再为单个功能开分支；每轮交付前 reset --hard 到最新 origin/master（个人分支允许 --force-with-lease），一轮交付=一个可独立上线的功能；每次交付固定 2 个 MR（dev/<itcode>→develop、dev/<itcode>→master），同一 source→target 只允许 1 个 open MR，两个 MR 都建好后才合并第一个且不勾 Delete source branch，合并顺序 develop→master；交付前必须 git patch-id --stable 双校验（git diff origin/develop... 与 origin/master... 两行第一列必须相同）并 merge-tree 预检；个人分支禁止 git merge origin/develop（会污染 master MR 上生产），仅 →develop 冲突时用一次性 tmp/<topic>-develop 承接、合完即删。AGENTS.md+CLAUDE.md(@AGENTS.md) 两个文件覆盖 Codex/Cursor/Claude Code/DSH/Zed/Cline/Windsurf/Continue/Augment/Warp/ZCode，不覆盖 Gemini CLI、Trae、Qoder、CodeBuddy。",
       "target": "memory",
       "importance": "critical",
       "created_at": "2026-11-13T07:25:00.201Z",
-      "updated_at": "2026-11-13T07:25:00.201Z",
+      "updated_at": "2026-11-16T02:23:09.760Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-13T07:25:00.201Z"
+        "at": "2026-11-16T02:23:09.760Z"
       }
     },
     {

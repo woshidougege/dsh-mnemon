@@ -1,10 +1,10 @@
 {
   "algorithm": "sha256",
   "files": {
-    "payload/runtime/memories.json": "2d05cbbcb846b95424a42a92649495f02e8e87fef6b04c601d7b301b5bb8d79e",
+    "payload/runtime/memories.json": "6554a9061032adc3518313263fbdb4058142509656399e055293beb13e8da788",
     "payload/runtime/USER.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "payload/runtime/MEMORY.md": "5beca9779f0d30492867b2a95bd4e1de542664c2fcbd0c357456af02209278b0",
-    "payload/documents/index.json": "cf32a9b1c5e9ab17b934e12877d679c791f6ff010219fa6ab6fc0f7c273f1246",
+    "payload/runtime/MEMORY.md": "2c02a81da095eb7a1bd2e71486e5de073d1cc8d62dfda2c36ad4e626aa03545b",
+    "payload/documents/index.json": "fbb942f1f516df72f69d9eec17fa87a8c466b7e6d4e379af712c7aaf3f4f6273",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -47,6 +47,9 @@
     "payload/documents/active/0-mr-1039-1040-5bd335b0.md": "0f0198314af901540c4897ad5128b9c8c7cbd3bc5f420c055124ad91e88e14f6",
     "payload/documents/active/mr-1039-1040-1042-tst-424bade2.md": "f37efbc5b8735af61376d7bd3995a238b9c649a246ab0870a7c7bbe4ae428184",
     "payload/documents/active/ssg-sales-ops-mr-1042-00783d80.md": "187ca66ea8a428aa79349c64e591f69b3b5fc8ef822ba3da9a98f1909f402c7a",
+    "payload/documents/active/harness-agents-md-ssg-sales-ops-e09863d9.md": "04f0c0f171846994f2c667235f93081d31cab18c890547f264e43a7bdbd0dd59",
+    "payload/documents/active/ssg-sales-ops-skill-mr-agents-md-3061db0b.md": "b515e427984d76908cdd7a4ddd1bbb4d42222799115187a3b5e26808aa50828e",
+    "payload/documents/active/ssg-sales-ops-dev-itcode-mr-patch-id-d20c058a.md": "9973ec9f30d45f832fc012dc9206d61fc519a44063a1d94aebdc914c04b8e7ae",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
