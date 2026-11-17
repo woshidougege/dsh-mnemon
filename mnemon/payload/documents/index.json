@@ -418,7 +418,7 @@
       ],
       "createdAt": "2026-11-13T03:53:13.190Z",
       "updatedAt": "2026-11-13T03:53:13.190Z",
-      "lastAccessedAt": "2026-11-16T10:18:14.613Z",
+      "lastAccessedAt": "2026-11-17T01:40:05.433Z",
       "revision": 1,
       "contentHash": "eb9832d7b07a46014748371063976a23b209a2466b83eb2b187ac7b3d9aecfc3",
       "sizeBytes": 6482,
@@ -692,7 +692,7 @@
       ],
       "createdAt": "2026-11-13T18:25:33.176Z",
       "updatedAt": "2026-11-13T18:25:33.176Z",
-      "lastAccessedAt": "2026-11-16T08:07:45.308Z",
+      "lastAccessedAt": "2026-11-17T01:46:47.390Z",
       "revision": 1,
       "contentHash": "e7d6d3419a9b22754f21b58576ec555a73b99b8f9891ad25009aab569b1c22cb",
       "sizeBytes": 5436,
@@ -715,7 +715,7 @@
       ],
       "createdAt": "2026-11-13T18:53:35.871Z",
       "updatedAt": "2026-11-13T18:53:35.871Z",
-      "lastAccessedAt": "2026-11-16T10:42:23.225Z",
+      "lastAccessedAt": "2026-11-17T01:40:05.433Z",
       "revision": 1,
       "contentHash": "5e4119de6b4be24b06b49dc0fbc610bc2de8d0a3462cb4ba325cae1ac25c2a7d",
       "sizeBytes": 7731,
@@ -1352,7 +1352,7 @@
       ],
       "createdAt": "2026-11-16T09:42:11.972Z",
       "updatedAt": "2026-11-16T09:42:11.972Z",
-      "lastAccessedAt": "2026-11-16T10:42:23.225Z",
+      "lastAccessedAt": "2026-11-17T01:46:47.390Z",
       "revision": 1,
       "contentHash": "bc764b8098cd39dec8c8509432ab29dc2b8864b325df97d09f6f9ce994b7b572",
       "sizeBytes": 8491,
@@ -1402,7 +1402,7 @@
       ],
       "createdAt": "2026-11-16T10:18:46.206Z",
       "updatedAt": "2026-11-16T10:18:46.206Z",
-      "lastAccessedAt": "2026-11-16T10:42:23.225Z",
+      "lastAccessedAt": "2026-11-17T01:46:47.390Z",
       "revision": 1,
       "contentHash": "d1afd26cb1e15604422f04efd1f3558405fe50acfdb7dbaa194213925588243c",
       "sizeBytes": 7345,
@@ -1479,6 +1479,30 @@
       "revision": 1,
       "contentHash": "442609fc34d762d29398f5f21bd85028abec89049a7072adedc6fca43b41eda8",
       "sizeBytes": 4793,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "8c1b8812-9ddf-4f0a-a508-a29ac06e4f87",
+      "title": "生产自动评审无调度器诊断（136 条失败待评审）+ GPS SUS !556 摘除/恢复 MR !561/!562",
+      "description": "自动评审开关已开但无 @Scheduled、只有页面 backfill 入口；生产 5586 轮分类（136 失败 Pending / 5088 成功 / 37 无权限）；截图轮次三重排除原因；GPS SUS !556 经 revert 链摘除(!561)与恢复(!562)的发版顺序约束与 Git 教训。",
+      "status": "active",
+      "filename": "136-gps-sus-556-mr-561-562-8c1b8812.md",
+      "relativePath": "documents/active/136-gps-sus-556-mr-561-562-8c1b8812.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiQuestionAutoReviewMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiQuestionAutoReviewService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/gpssus/service/GpsSusService.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-624eba15-07d9-4182-90bd-6293f7006dc5"
+      ],
+      "createdAt": "2026-11-17T01:40:27.507Z",
+      "updatedAt": "2026-11-17T01:40:27.507Z",
+      "lastAccessedAt": "2026-11-17T01:46:47.390Z",
+      "revision": 1,
+      "contentHash": "8d87b91d93a371b54423fef8235f1e11e43abd275e67d46e7ce7401cf4cfc90e",
+      "sizeBytes": 6452,
       "memoryBodyIds": []
     }
   ]
