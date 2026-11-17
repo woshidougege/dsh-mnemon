@@ -1,10 +1,4 @@
-ssg-sales-ops 生产库 = 10.62.79.215:5432/ssg_ops_agent（表在 public schema；dev/tst=10.62.79.148、pre=10.62.79.221，见 smartop-service/admin/src/main/resources/application-lmp-*-prod.yml）。admin 服务 datasource 密码是 jasypt 密文，encryptor password 在同目录 application.yml 的 jasypt.encryptor.password（PBEWithMD5AndDES），可用 org.jasypt BasicTextEncryptor 解密；无 psql 时可用 .m2 里的 postgresql-42.5.4.jar 写临时 JDBC 查询类。菜单权限模型（2026-11-04 按 HEAD 代码复核，已改）：EffectivePermissionService.visibleMenuKeys 只认 ssg_user_menu.access_state='VISIBLE'（enabled=true，缺行=HIDDEN），管理员走 listAllEnabledMenuKeys 直通；ssg_role_menu / ssg_user_role / ssg_menu.default_access 不再参与生效计算（角色页仅展示 roleState）。菜单 key 形如 businessInsight:workspace（迁移 V1.1.70/71 seed 只有 businessInsight 及 :workspace/:bookings/:lgfs/:gpssus，tcv 靠线上手插）。管理员判定函数 public.ssg_is_active_admin(itcode)。
-§
 SPARK(Business Insights) 菜单权限只有 6 个：businessInsight 父 + workspace/bookings/lgfs/gpssus/tcv；HC list Sheet6 的 "ISG TCV"、"DaaS TCV" 两列都映射到同一个 businessInsight:tcv 菜单（任一为 Y 即需开通），实测 80 个非管理员 0 偏差。权限页对用户是 ssg_user_menu.access_state=VISIBLE/HIDDEN 覆盖，缺行=继承角色/菜单默认 HIDDEN。
-§
-dsmarket/pnpm 新版等待期：pnpm 11 只认 pnpm-workspace.yaml 的 minimumReleaseAge（实测 11.20.0 忽略 .npmrc 的 minimum-release-age）；已把 4 个 DSH profile（desktop/lanverify/tui/web）都设为 120 分钟；pnpm 显式装精确版本时会自动把该版本写进 minimumReleaseAgeExclude。
-§
-Metadata 审计补写约定（agent.pbi_meta_audit_change_sets / pbi_meta_audit_entity_versions）：删除 Sheet Catalog 需 1 条 change_set（source=maintenance|web, method=DELETE, path=/api/database/catalog/<id>, summary='delete KPI mapping #x; ...; delete Sheet Catalog #id', feature=pbi-metadata-editor）+ 每行实体 1 条 version（entity_type=kpi|rag|catalog, version_no=1, operation=delete, entity_key='<link_bi> / <name_bi> / <sheet_name>', before_data=整行, after_data=NULL, changed_fields=每列 {before,after:null}）。json 列需显式 %s::json，否则 psycopg3 报 type text 不能赋给 json。2026-11-03 实践：删 catalog 1626 后补 change_set id=5113 + 7 条 version。
 §
 ssg-sales-ops 的数据库迁移只改表结构，绝不塞数据（seed INSERT / 数据修正 UPDATE 都不要）：映射、开关这类运行期配置由管理员在 Admin Control 里维护或手工改库。用户原话（2026-11-06）：“sql版本 不要管理数据啊 只管理表结构 我们手动改库就行了呀”。项目 flyway 是 validate-on-migrate: false + VALIDATE_NOT_PRESENT，改已执行过的迁移内容不会报 checksum。
 §
@@ -22,10 +16,6 @@ WorkBuddy2API 网关（http://127.0.0.1:8788）判断模型是否支持视频的
 §
 不改 WorkBuddy 网关（2026-11-16 用户原话："不魔改网关了 删掉吧 还是用我们原来的网关 让minimax-m3.1-flash去"）：禁止在 8788 的 wb_proxy.py 上加抽帧补丁、也不要改 /v1/models 的能力声明；视频任务直接选 minimax-m3.1-flash（看细节用 minimax-m3）。曾在 Desktop\WorkBuddy-Portable\wb-proxy-test 用 8789 端口验证过"视频→多帧图像"补丁（wb_video_frames.py 走系统 python+cv2 抽帧，expand_video_content 在 _dispatch_chat_post 改写 video_url），方案已作废：8789 进程已停、测试目录与备份已删，wb-proxy 恢复原始 1,397,351 字节。
 §
-SSG admin 的 Band / 汇报线读取口径：凡「Vendor / 外部顾问也必须出值」的展示与筛选，必须读 public.ssg_hc_member_line（或点查函数 public.ssg_hc_member_line_lookup(itcode, 最新期)），不能直连 ssg_hc_snapshot / ssg_hc_member_effective —— 后两者只含正式员工，外部人员在里面没有行，四列全 NULL。2026-11-12 的 070b4145f 性能优化就栽在这（问数记录、点赞点踩两处 HC_JOIN 被退回快照，只有推送换了点查函数），2026-11-17 修好（MR !563，分支 fix/vendor-reporting-line-admin）：实测点查 18µs/行，整表 join 视图 346ms/1000 行，一页 20 行 0.36ms。
-§
-ssg-sales-ops worktree 里编译 smartop-service/admin：单模块 `-pl smartop-service/admin compile` 会因 .m2 里 smartop-api 是旧版本、缺 AuthFeignService.cocFlagSync(String)/cocFlagSyncStatus() 而报 CocFlagSyncScheduleHandler.java:[71,54]/[127,58] 找不到符号（与自身改动无关）；必须加 `-am`（实测 -o -T 4 -pl smartop-service/admin -am compile 约 4-5 分钟）。
-§
-ssg-sales-ops 主工作区 C:\Users\63588\lenovo\ssg-sales-ops 的 /outputs/ 已被 .gitignore 第 48 行忽略，交付文档写进去不会弄脏 git 状态。
-§
 不改别人模块的代码（用户 2026-11-17 原话：“最好不要动人家的代码。我们自己的业务模块里 可以复制他们的逻辑 不要改人家的哈”）：需要别的模块（如 gpssus）的现成逻辑时，在自己的业务模块里复制实现，不要回头改对方源码；同一条 MR 只含本业务模块 + 必要迁移。
+§
+或直接改写 redis user 字段里的 menuKeys（等价且不打断会话）；踢下线就是 DEL token_<itcode>，前端收到 401 后 removeUserInfo 并跳 /，重登时 setToken→admin /user/get→EffectivePermissionService 重算 menuKeys，权限立即生效。

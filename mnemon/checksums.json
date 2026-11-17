@@ -1,10 +1,10 @@
 {
   "algorithm": "sha256",
   "files": {
-    "payload/runtime/memories.json": "486d18b8560c97ed3b4ce8fc7b1765ae552836a7db786e14d20ae5bbc9e3efd8",
+    "payload/runtime/memories.json": "71de92d3bad64d1eb16129078dbfbd225c9d6f7dd080a4af43982e8688f56042",
     "payload/runtime/USER.md": "34e9c8d079fdd54d684a9b54e5c98e72c878104f90fef373648fe4516d0d05be",
-    "payload/runtime/MEMORY.md": "df99d08990629fdd0f92c799fd03ed4acfb59f64ca9bda7735a83d1893610cd6",
-    "payload/documents/index.json": "21943161dc741adfcbc7ec2fa9aae63f2af94877a0566034f91b27f25e6d65e4",
+    "payload/runtime/MEMORY.md": "a57fb9fe1d794d5b17234c9ff91d450cf6827a304e30b78183a676d791e27cb5",
+    "payload/documents/index.json": "699fbd1ca126b1e92012fb3124be2aebb7a0e074ea5ca0cbbdb561cc376a411f",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -79,6 +79,12 @@
     "payload/documents/active/service-portfolio-oh-4-hbb-cr-mr-564-admin-relea-a9793e48.md": "b951e3ea341fa1f1b62a4785318c96e4ca1bb9bf2d19fe40cc5d9c4d9ebe5d6b",
     "payload/documents/active/gps-sus-6-upsert-ssg-user-menu-48d981bf.md": "a1ce3e908c6f99c6df8f30b8327d3d8a288e0863edc66edd5de5205d67d69879",
     "payload/documents/active/wrong-jira-assignee-routing-2a95b6da.md": "c3feeb6d2bdc62c5dec6edf713086c3c4b97332fee115dc7cbd6e0a195dd8caf",
+    "payload/documents/active/jira-assignee-automation-mr-a66df2de.md": "94ac1f144a6131632aac0c85f24c4376142a0ff9a625c0dcee8dcc0bd2145e52",
+    "payload/documents/active/chatbi-jira-2026-11-17-e4ce57a0.md": "401479ea6b5fad124f42017a2274302ecd840bd5b5a6b14a55dc40d80830b522",
+    "payload/documents/active/bookings-trino-pg-ssg-sales-ops-00d44b32.md": "8f979fabbebd9b5500c3e584ca73e701e86b2c07bd035b0d78e9ff3a33d83799",
+    "payload/documents/active/chatbi-v1-1-129-3105b760.md": "8dd6b36dfb03ec3271b1ddbdf67553cf3c78667644920d60fea6dd0fa9d06fb9",
+    "payload/documents/active/s7-rng-vs-skt-html-22902414.md": "c85d8283ee544c80989ae615f971e0063673997d2c523673e7ad2c6ed695bae5",
+    "payload/documents/active/settingscontrols-less-page-focal-review-rules-233b7bf8.md": "ba9cc0f3c1ad51f806df28ba545f65030d896ab37c9f79efa33188c4dd033f3d",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
