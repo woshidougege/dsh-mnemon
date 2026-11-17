@@ -418,7 +418,7 @@
       ],
       "createdAt": "2026-11-13T03:53:13.190Z",
       "updatedAt": "2026-11-13T03:53:13.190Z",
-      "lastAccessedAt": "2026-11-17T03:44:55.698Z",
+      "lastAccessedAt": "2026-11-17T04:43:34.027Z",
       "revision": 1,
       "contentHash": "eb9832d7b07a46014748371063976a23b209a2466b83eb2b187ac7b3d9aecfc3",
       "sizeBytes": 6482,
@@ -715,7 +715,7 @@
       ],
       "createdAt": "2026-11-13T18:53:35.871Z",
       "updatedAt": "2026-11-13T18:53:35.871Z",
-      "lastAccessedAt": "2026-11-17T01:40:05.433Z",
+      "lastAccessedAt": "2026-11-17T04:43:34.027Z",
       "revision": 1,
       "contentHash": "5e4119de6b4be24b06b49dc0fbc610bc2de8d0a3462cb4ba325cae1ac25c2a7d",
       "sizeBytes": 7731,
@@ -1526,7 +1526,7 @@
       ],
       "createdAt": "2026-11-17T01:47:24.558Z",
       "updatedAt": "2026-11-17T01:47:24.558Z",
-      "lastAccessedAt": "2026-11-17T03:44:55.698Z",
+      "lastAccessedAt": "2026-11-17T04:43:34.027Z",
       "revision": 1,
       "contentHash": "b20e661c149ad39add631cbe931552c1354584d18b852d99a11ee10a68fa97c8",
       "sizeBytes": 8883,
@@ -1811,7 +1811,7 @@
       ],
       "createdAt": "2026-11-17T03:45:20.796Z",
       "updatedAt": "2026-11-17T03:45:20.796Z",
-      "lastAccessedAt": "2026-11-17T03:45:20.796Z",
+      "lastAccessedAt": "2026-11-17T04:43:34.027Z",
       "revision": 1,
       "contentHash": "d045951b0fa7ef8f2932cdfa8e6b66ad3f7a153f59d466f2e38a19871a4584e6",
       "sizeBytes": 6040,
@@ -1834,7 +1834,7 @@
       ],
       "createdAt": "2026-11-17T04:01:17.334Z",
       "updatedAt": "2026-11-17T04:01:17.334Z",
-      "lastAccessedAt": "2026-11-17T04:01:17.334Z",
+      "lastAccessedAt": "2026-11-17T04:15:46.105Z",
       "revision": 1,
       "contentHash": "ea15fae1aa86a8552dd1a2f4f144169ceb6ed421584e6a487ef3baa9f3b5ed23",
       "sizeBytes": 4259,
@@ -1863,6 +1863,32 @@
       "revision": 1,
       "contentHash": "710e1d0ffd0b857f59b30b8ee915d3518813b79aabafc518ac100de7d9315c2a",
       "sizeBytes": 5577,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "64ae3942-bdb8-4694-bb7e-9ef24b218c19",
+      "title": "ChatBI 自动评审规则改为 (Final result × Failure category) 可配 + V1.1.130 重建：交付记录",
+      "description": "规则从写死 8 条件改为按真实字段二元组配置、候选值取近 180 天去重(16 组)；取消空表回退(空表=不评审)与 Add suggested(14) 必点；V1.1.130 须重启 flyway、tst 旧表 0 行；注解 SQL 复用 XML 转义常量的 &lt;/&gt; 还原坑；后端 f153a7b3c、前端 ed274278，MR 待指令。",
+      "status": "active",
+      "filename": "chatbi-final-result-failure-category-v1-1-130-64ae3942.md",
+      "relativePath": "documents/active/chatbi-final-result-failure-category-v1-1-130-64ae3942.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/controller/ChatbiEventReportController.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiAutoReviewRuleMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiQuestionAutoReviewMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiAutoReviewRuleService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiQuestionAutoReviewService.java",
+        "smartop-service/admin/src/main/resources/db/migration/V1.1.130__Rework_chatbi_auto_review_rule.sql"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-3a5503d4-18b9-444d-9971-0036e7ee7e43"
+      ],
+      "createdAt": "2026-11-17T04:44:01.234Z",
+      "updatedAt": "2026-11-17T04:44:01.234Z",
+      "lastAccessedAt": "2026-11-17T04:44:01.234Z",
+      "revision": 1,
+      "contentHash": "c7a986a0fc710380567ccd903d7b798ff6716a2e915b09ebe968940e89a61ad6",
+      "sizeBytes": 7357,
       "memoryBodyIds": []
     }
   ]
