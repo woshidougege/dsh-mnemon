@@ -1,10 +1,10 @@
 {
   "algorithm": "sha256",
   "files": {
-    "payload/runtime/memories.json": "57ea62d8a6d5f14d20725ef9a72eaf4be1bc3b186eaead394e04958b2df31bb5",
-    "payload/runtime/USER.md": "0f9db62bf8e0922dd9064cfcc50fb591db721758f98ee04ae0e4d331fd09805e",
-    "payload/runtime/MEMORY.md": "10add13d57355f24013e45978ba33ff0d15df8520ea422675b13bc5205730e21",
-    "payload/documents/index.json": "518a466ad6d8b30ddca42285ba85fad30792da859bd0c86db92707e0cc3a7b1a",
+    "payload/runtime/memories.json": "486d18b8560c97ed3b4ce8fc7b1765ae552836a7db786e14d20ae5bbc9e3efd8",
+    "payload/runtime/USER.md": "34e9c8d079fdd54d684a9b54e5c98e72c878104f90fef373648fe4516d0d05be",
+    "payload/runtime/MEMORY.md": "df99d08990629fdd0f92c799fd03ed4acfb59f64ca9bda7735a83d1893610cd6",
+    "payload/documents/index.json": "21943161dc741adfcbc7ec2fa9aae63f2af94877a0566034f91b27f25e6d65e4",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -70,6 +70,15 @@
     "payload/documents/active/hw-kpi-mr-develop-98248233.md": "19ac100c531f0d62f865a403d725d9feca3d4c52bd3185666e3aa48a4a3108a7",
     "payload/documents/active/ssg-spark-admin-control-4-125-149052e7.md": "99ba7064a414009dcf4f4ba55bf4188eb6d06418b2b91a2b79b0d826a27763f7",
     "payload/documents/active/136-gps-sus-556-mr-561-562-8c1b8812.md": "9e467689ede96e069e3040de98453d60ab74c33259f5bebe8f1938a8198867cf",
+    "payload/documents/active/chatbi-455-2026-11-17-f60c9e73.md": "08bf4ae753d8b34f569921d297f3547a5828ddf5a791645b3baf72a83cb50826",
+    "payload/documents/active/service-portfolio-hbb-p0-by-offering-localstorag-936f3b21.md": "400e90b7086ac46f36b490164ec9b81357e573fcc0891dcc90377ea5d94d3f7e",
+    "payload/documents/active/chatbi-not-applicable-400-ssg-sales-ops-88550f5d.md": "f2cfdef68084b68f63da2ccc47499eb92f40b39ce5bb79fa99e0fd28586b028b",
+    "payload/documents/active/chatbi-n-a-400-api-ts-toast-ssg-sales-ops-2026-1-ae67f8c5.md": "7e17fbf33cc3002b8a54ced53b5a696d8d1d36c9330bbb64d65d277dd92c3d7c",
+    "payload/documents/active/ssg-chatbi-admin-band-ssg-hc-member-line-lookup-0e7d7e97.md": "0ddd11a8f7ae0a2e67f42a500f335b2c64f31bd10df30abe07b0642e18a7d06a",
+    "payload/documents/active/market-region-bookings-ssg-sales-ops-adc284dd.md": "5f6304aa19709d509f291651a3212d33badcfb1f079b074a6e3d7c72fe6871a7",
+    "payload/documents/active/service-portfolio-oh-4-hbb-cr-mr-564-admin-relea-a9793e48.md": "b951e3ea341fa1f1b62a4785318c96e4ca1bb9bf2d19fe40cc5d9c4d9ebe5d6b",
+    "payload/documents/active/gps-sus-6-upsert-ssg-user-menu-48d981bf.md": "a1ce3e908c6f99c6df8f30b8327d3d8a288e0863edc66edd5de5205d67d69879",
+    "payload/documents/active/wrong-jira-assignee-routing-2a95b6da.md": "c3feeb6d2bdc62c5dec6edf713086c3c4b97332fee115dc7cbd6e0a195dd8caf",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }

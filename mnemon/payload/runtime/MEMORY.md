@@ -21,3 +21,11 @@ ssg_sales_ops 前端分支流程（2026-11-16 改版，唯一来源 repo AGENTS.
 WorkBuddy2API 网关（http://127.0.0.1:8788）判断模型是否支持视频的唯一判据：给 60 秒视频，看 prompt_tokens 增量。原生解码的（+18.5K 且随时长线性增长）：minimax-m3（约 2fps，能逐帧报时间点）、minimax-m3.1-flash（约 10s 一帧，更粗但 x0.08 更便宜）、space-bunny；其余 19 个（含 mimo-v2.6-pro）恒 +29，那是上游塞的 "content has been filtered" 提示。请求里加 modalities/input_modalities/supports_video/video_url.detail 全部无效，只有 model id 决定；input_video/video content type 被上游 400。平台 product-config-cn.json 58 个模型只有 supportsImages/disabledMultimodal/videoGeneration（生成），没有 supportsVideo。此前"网关只开放 text+image、视频只能抽帧走 image_url"的记载作废。
 §
 不改 WorkBuddy 网关（2026-11-16 用户原话："不魔改网关了 删掉吧 还是用我们原来的网关 让minimax-m3.1-flash去"）：禁止在 8788 的 wb_proxy.py 上加抽帧补丁、也不要改 /v1/models 的能力声明；视频任务直接选 minimax-m3.1-flash（看细节用 minimax-m3）。曾在 Desktop\WorkBuddy-Portable\wb-proxy-test 用 8789 端口验证过"视频→多帧图像"补丁（wb_video_frames.py 走系统 python+cv2 抽帧，expand_video_content 在 _dispatch_chat_post 改写 video_url），方案已作废：8789 进程已停、测试目录与备份已删，wb-proxy 恢复原始 1,397,351 字节。
+§
+SSG admin 的 Band / 汇报线读取口径：凡「Vendor / 外部顾问也必须出值」的展示与筛选，必须读 public.ssg_hc_member_line（或点查函数 public.ssg_hc_member_line_lookup(itcode, 最新期)），不能直连 ssg_hc_snapshot / ssg_hc_member_effective —— 后两者只含正式员工，外部人员在里面没有行，四列全 NULL。2026-11-12 的 070b4145f 性能优化就栽在这（问数记录、点赞点踩两处 HC_JOIN 被退回快照，只有推送换了点查函数），2026-11-17 修好（MR !563，分支 fix/vendor-reporting-line-admin）：实测点查 18µs/行，整表 join 视图 346ms/1000 行，一页 20 行 0.36ms。
+§
+ssg-sales-ops worktree 里编译 smartop-service/admin：单模块 `-pl smartop-service/admin compile` 会因 .m2 里 smartop-api 是旧版本、缺 AuthFeignService.cocFlagSync(String)/cocFlagSyncStatus() 而报 CocFlagSyncScheduleHandler.java:[71,54]/[127,58] 找不到符号（与自身改动无关）；必须加 `-am`（实测 -o -T 4 -pl smartop-service/admin -am compile 约 4-5 分钟）。
+§
+ssg-sales-ops 主工作区 C:\Users\63588\lenovo\ssg-sales-ops 的 /outputs/ 已被 .gitignore 第 48 行忽略，交付文档写进去不会弄脏 git 状态。
+§
+不改别人模块的代码（用户 2026-11-17 原话：“最好不要动人家的代码。我们自己的业务模块里 可以复制他们的逻辑 不要改人家的哈”）：需要别的模块（如 gpssus）的现成逻辑时，在自己的业务模块里复制实现，不要回头改对方源码；同一条 MR 只含本业务模块 + 必要迁移。
