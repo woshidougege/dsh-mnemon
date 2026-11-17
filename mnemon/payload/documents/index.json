@@ -134,7 +134,7 @@
       ],
       "createdAt": "2026-11-12T11:51:08.108Z",
       "updatedAt": "2026-11-12T11:51:08.108Z",
-      "lastAccessedAt": "2026-11-17T10:20:03.958Z",
+      "lastAccessedAt": "2026-11-17T14:13:48.042Z",
       "revision": 1,
       "contentHash": "b66e824e08441672ba740cd453063a628c1b6058367caa128b7e63d4b48d3e99",
       "sizeBytes": 7389,
@@ -1551,7 +1551,7 @@
       ],
       "createdAt": "2026-11-17T01:58:49.335Z",
       "updatedAt": "2026-11-17T01:58:49.335Z",
-      "lastAccessedAt": "2026-11-17T10:20:03.958Z",
+      "lastAccessedAt": "2026-11-17T14:13:48.042Z",
       "revision": 1,
       "contentHash": "5ff6ccea79ca1b5b43bd5d7923656f9f6a836aef595e28154fed3aa7dd1a701a",
       "sizeBytes": 8033,
@@ -1667,7 +1667,7 @@
       ],
       "createdAt": "2026-11-17T02:58:18.277Z",
       "updatedAt": "2026-11-17T02:58:18.277Z",
-      "lastAccessedAt": "2026-11-17T09:49:38.517Z",
+      "lastAccessedAt": "2026-11-17T14:13:48.042Z",
       "revision": 1,
       "contentHash": "408ff89b0b73ad2436a60b6103759625aeaca0b0bb51ad0fc9caf3bddf96b12f",
       "sizeBytes": 6083,
@@ -1910,7 +1910,7 @@
       ],
       "createdAt": "2026-11-17T05:56:18.569Z",
       "updatedAt": "2026-11-17T05:56:18.569Z",
-      "lastAccessedAt": "2026-11-17T10:19:28.908Z",
+      "lastAccessedAt": "2026-11-17T13:25:39.959Z",
       "revision": 1,
       "contentHash": "e38dc3996924fa57d907c3056c4d00e54b83d752a5df152c17631693f74c3c65",
       "sizeBytes": 8266,
@@ -1967,7 +1967,7 @@
       ],
       "createdAt": "2026-11-17T06:25:14.946Z",
       "updatedAt": "2026-11-17T06:25:14.946Z",
-      "lastAccessedAt": "2026-11-17T10:19:28.908Z",
+      "lastAccessedAt": "2026-11-17T13:25:39.959Z",
       "revision": 1,
       "contentHash": "07b2e858d3cada4e3b5ebf4bb7f061de79ac400e70d1d14a2af24c0f14f2c899",
       "sizeBytes": 6688,
@@ -2034,7 +2034,7 @@
       ],
       "createdAt": "2026-11-17T08:24:11.705Z",
       "updatedAt": "2026-11-17T08:24:11.705Z",
-      "lastAccessedAt": "2026-11-17T09:49:38.517Z",
+      "lastAccessedAt": "2026-11-17T13:33:14.727Z",
       "revision": 1,
       "contentHash": "999367460b76f2ba76cfe266e4165debc134baeab4dddf5a7d6a74629af1b2c3",
       "sizeBytes": 4870,
@@ -2123,7 +2123,7 @@
       ],
       "createdAt": "2026-11-17T09:50:05.668Z",
       "updatedAt": "2026-11-17T09:50:05.668Z",
-      "lastAccessedAt": "2026-11-17T10:20:03.958Z",
+      "lastAccessedAt": "2026-11-17T13:33:14.727Z",
       "revision": 1,
       "contentHash": "ca2f6df22f6d3745e506847fecf64dd2773d0ef1c5552bfc25f7ebf7951ac451",
       "sizeBytes": 6819,
@@ -2142,7 +2142,7 @@
       ],
       "createdAt": "2026-11-17T09:51:03.083Z",
       "updatedAt": "2026-11-17T09:51:03.083Z",
-      "lastAccessedAt": "2026-11-17T10:19:28.908Z",
+      "lastAccessedAt": "2026-11-17T13:25:39.959Z",
       "revision": 1,
       "contentHash": "e322b884afd648ecfcd58eb1df1e74660f46a4375cff5e95b5d5a781221c5e36",
       "sizeBytes": 6843,
@@ -2161,7 +2161,7 @@
       ],
       "createdAt": "2026-11-17T10:19:48.569Z",
       "updatedAt": "2026-11-17T10:19:48.569Z",
-      "lastAccessedAt": "2026-11-17T10:19:48.569Z",
+      "lastAccessedAt": "2026-11-17T13:25:39.959Z",
       "revision": 1,
       "contentHash": "de5660bc855e1c4afd6e5163719abd7c54035150bfdc3dd29c3bc8981efb8039",
       "sizeBytes": 6002,
@@ -2185,7 +2185,7 @@
       ],
       "createdAt": "2026-11-17T10:20:33.535Z",
       "updatedAt": "2026-11-17T10:20:33.535Z",
-      "lastAccessedAt": "2026-11-17T10:20:33.535Z",
+      "lastAccessedAt": "2026-11-17T13:33:14.727Z",
       "revision": 1,
       "contentHash": "cd861c6d04cbea8e5ce0fb7714af951f50ed852dbc73bd70891634683de85e5d",
       "sizeBytes": 7641,
@@ -2265,6 +2265,73 @@
       "revision": 1,
       "contentHash": "a06805842131c5559db2ce571da8453581028c5065b4b63b9e0435b93599d344",
       "sizeBytes": 5309,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "17c7ec24-408c-407c-9984-699cacb1be0c",
+      "title": "ChatBI 评审模板导入 400 根因与修复（MR !574）+ 导入页改版 A/B 方案",
+      "description": "评审模板四层表头导致导入 400 的根因、findHeaderRow 修复与 Excel 真实行号改造；空 Session ID 行必然 invalid 的原因与导出过滤建议；导入页整页工作区（A）vs 放大弹窗（B）方案对比、估时与待确认项。",
+      "status": "active",
+      "filename": "chatbi-400-mr-574-a-b-17c7ec24.md",
+      "relativePath": "documents/active/chatbi-400-mr-574-a-b-17c7ec24.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiReviewImportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiPrettyExcelWriter.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventExportService.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-7e8173d9-c797-4164-96a1-b760fecb332c"
+      ],
+      "createdAt": "2026-11-17T13:25:59.419Z",
+      "updatedAt": "2026-11-17T13:25:59.419Z",
+      "lastAccessedAt": "2026-11-17T13:25:59.419Z",
+      "revision": 1,
+      "contentHash": "dc4e0fb73e05b1150d1b0f42486eff9cdd10a9cc976a73f7e5b17fd458aa6c5e",
+      "sizeBytes": 7214,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "1cc5f22b-e6ea-4ae2-80ed-7009516b6317",
+      "title": "Service Portfolio 展示页 TST 部署验收（roadmap 接项目卡，MR !569，ssg-sales-ops）",
+      "description": "2026-11-17 TST 验收：前端路由前缀是 /spark/portfolio（/portfolio、/service-portfolio 均 404）；匿名访问接口 401 需借已登录会话 cookie Authorization；/roadmap 四季度内容与 banner 均取项目卡，project-cards/eol-panels/overview-modules/lifecycle 全部 200；遗留 KPI 只渲染 1/8 与项目卡 Sample data 硬编码标签。",
+      "status": "active",
+      "filename": "service-portfolio-tst-roadmap-mr-569-ssg-sales-o-1cc5f22b.md",
+      "relativePath": "documents/active/service-portfolio-tst-roadmap-mr-569-ssg-sales-o-1cc5f22b.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/controller/ServicePortfolioController.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/service/ServicePortfolioReadService.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-ec362648-cea1-4a6c-90ca-1362f4e9baa0"
+      ],
+      "createdAt": "2026-11-17T13:33:25.648Z",
+      "updatedAt": "2026-11-17T13:33:25.648Z",
+      "lastAccessedAt": "2026-11-17T14:13:48.042Z",
+      "revision": 1,
+      "contentHash": "9a69a3230182b6e52d635b47aba12f4a9ae6b3e5c025800f64015301bcafc559",
+      "sizeBytes": 5075,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "e64a20e2-b44a-4c2e-a9ba-dfd6aaf9ee20",
+      "title": "Service Portfolio KPI 卡配置落地：会议口径裁定、8 行目标配置与 TST 写权限阻塞（ssg-sales-ops）",
+      "description": "KPI 只有 1 张卡的根因是 sp_sp_kpi_card 只配了 1 行可见卡 + 2 行联调残留；据 2026-10-28 需求评审录屏裁定走配置方案 A（链接必须后台可维护、否决 defaultsOfKpi 兜底）；给出 8 行目标配置与 OH_CODES 误配 1617K 的修正；TST 个人账号仅有 SELECT、表 owner 是服务账号 a_appconnect，写入被拒，待授权。",
+      "status": "active",
+      "filename": "service-portfolio-kpi-8-tst-ssg-sales-ops-e64a20e2.md",
+      "relativePath": "documents/active/service-portfolio-kpi-8-tst-ssg-sales-ops-e64a20e2.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/service/ServicePortfolioReadService.java",
+        ".tmp/pqprobe/kpi-fix.sql"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-4738018a-9b7f-438b-8f2f-09891fdaa8e9"
+      ],
+      "createdAt": "2026-11-17T14:14:09.384Z",
+      "updatedAt": "2026-11-17T14:14:09.384Z",
+      "lastAccessedAt": "2026-11-17T14:14:09.384Z",
+      "revision": 1,
+      "contentHash": "f040fffc716cb3d8932b27b2402031e7013d7ef212582f8e7bc2022b1635a779",
+      "sizeBytes": 7943,
       "memoryBodyIds": []
     }
   ]
