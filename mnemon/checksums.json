@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "fec12943bc431c5223b539d480a01c7c4e37cbb465d58b97f2dded971e153c1f",
     "payload/runtime/USER.md": "34e9c8d079fdd54d684a9b54e5c98e72c878104f90fef373648fe4516d0d05be",
     "payload/runtime/MEMORY.md": "f67bf49568d95220ab51c1d28ad22399aa21405a0fa19e5c2c81cd925bd1522f",
-    "payload/documents/index.json": "74f0c341259569da1d342cace7f3ac05bc06825364e11dc732dd5be216678e25",
+    "payload/documents/index.json": "87e6ba6566ffcbe2a8904a2bfc5c163be502c8c9b9d3481dd5c70131c44bc286",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -100,6 +100,8 @@
     "payload/documents/active/chatbi-excel-indirect-mr-571-226d219c.md": "dcd08b5fa8dcc527e6b1bbfe54b16a39e036b8e53b320225debbab2582d309a9",
     "payload/documents/active/roadmap-service-portfolio-mr-569-33820175.md": "1eb9d747af40cf59a41e78e493a25b5986fa532733a5746b9493b0dcde2850c3",
     "payload/documents/active/hw-kpi-b-1000-inset-mr-937ea76a.md": "654ff8ebdabeafc43761e5a33d43a74afcbfeb5a2f02dfadac402e435bb685a3",
+    "payload/documents/active/hw-kpi-inset-1e9-mr-573-1070-1071-a4f0e3cb.md": "a4736647e92b7444f1fbc9270d0412b9c7d8693e580a2f25a8e46cfab9a56403",
+    "payload/documents/active/hw-kpi-mr-0200947d.md": "aa90715de83cd0f30fe3af2d246f20af73603b955b6f6aa823468cf9ba9463e2",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
