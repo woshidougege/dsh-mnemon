@@ -19,3 +19,7 @@ WorkBuddy2API 网关（http://127.0.0.1:8788）判断模型是否支持视频的
 不改别人模块的代码（用户 2026-11-17 原话：“最好不要动人家的代码。我们自己的业务模块里 可以复制他们的逻辑 不要改人家的哈”）：需要别的模块（如 gpssus）的现成逻辑时，在自己的业务模块里复制实现，不要回头改对方源码；同一条 MR 只含本业务模块 + 必要迁移。
 §
 或直接改写 redis user 字段里的 menuKeys（等价且不打断会话）；踢下线就是 DEL token_<itcode>，前端收到 401 后 removeUserInfo 并跳 /，重登时 setToken→admin /user/get→EffectivePermissionService 重算 menuKeys，权限立即生效。
+§
+用户要求「分析/看看」类请求时只做分析：未经明确同意不要改代码、建分支或提 MR；先给结论、证据和方案选项，等用户点头再动手（2026-11-17 因擅自改代码开 MR 被明确纠正）。
+§
+PowerShell 5.1 用 -File 执行 .ps1 时，若文件是 UTF-8 无 BOM，脚本内的中文字面量会按 GBK 解析成乱码（GitLab MR !568 标题就是这样坏的：「璺緞绛涢€夊弬鏁扮粦瀹氫慨澶」）；含中文的 .ps1 必须存为 UTF-8 with BOM，或直接用 Node fetch 调 API。运行期从文件按 UTF-8 读入的中文（[IO.File]::ReadAllText(...UTF8)）不受影响，所以同一个脚本里「描述正常、标题乱码」很典型。

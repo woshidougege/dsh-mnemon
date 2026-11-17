@@ -156,6 +156,30 @@
         "label": "rxp",
         "at": "2026-11-17T03:26:52.232Z"
       }
+    },
+    {
+      "content": "用户要求「分析/看看」类请求时只做分析：未经明确同意不要改代码、建分支或提 MR；先给结论、证据和方案选项，等用户点头再动手（2026-11-17 因擅自改代码开 MR 被明确纠正）。",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-11-17T08:18:59.568Z",
+      "updated_at": "2026-11-17T08:18:59.568Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-17T08:18:59.568Z"
+      }
+    },
+    {
+      "content": "PowerShell 5.1 用 -File 执行 .ps1 时，若文件是 UTF-8 无 BOM，脚本内的中文字面量会按 GBK 解析成乱码（GitLab MR !568 标题就是这样坏的：「璺緞绛涢€夊弬鏁扮粦瀹氫慨澶」）；含中文的 .ps1 必须存为 UTF-8 with BOM，或直接用 Node fetch 调 API。运行期从文件按 UTF-8 读入的中文（[IO.File]::ReadAllText(...UTF8)）不受影响，所以同一个脚本里「描述正常、标题乱码」很典型。",
+      "target": "memory",
+      "importance": "critical",
+      "created_at": "2026-11-17T09:07:49.677Z",
+      "updated_at": "2026-11-17T09:07:49.677Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-17T09:07:49.677Z"
+      }
     }
   ]
 }

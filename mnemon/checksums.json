@@ -1,10 +1,10 @@
 {
   "algorithm": "sha256",
   "files": {
-    "payload/runtime/memories.json": "71de92d3bad64d1eb16129078dbfbd225c9d6f7dd080a4af43982e8688f56042",
+    "payload/runtime/memories.json": "f1ae7b3324ab5d5f273fad5f9a7449c8915b042bfa4e1e69294ac8a8785232e9",
     "payload/runtime/USER.md": "34e9c8d079fdd54d684a9b54e5c98e72c878104f90fef373648fe4516d0d05be",
-    "payload/runtime/MEMORY.md": "a57fb9fe1d794d5b17234c9ff91d450cf6827a304e30b78183a676d791e27cb5",
-    "payload/documents/index.json": "90ba8790df02cda009d81e44192aba6c27bd0df66739c5647761b0c6ddfe0add",
+    "payload/runtime/MEMORY.md": "9f441b73f843283e6cc62ccb4941da257bfd22706be07562237305cc45fd05c8",
+    "payload/documents/index.json": "c9d8d862571ae9e8c24e378eba6b8461493abcbfca14626e8e18ffa004d4cf8e",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -91,6 +91,9 @@
     "payload/documents/active/chatbi-mr-566-1063-1064-2026-11-17-559c3ec9.md": "2ea9b925eff4d4ed68a954bd830c9ff77e0efbd969a5a742263a11a3cb381fa8",
     "payload/documents/active/admincontrol-settings-968-mapperscan-bbcceb8a.md": "46dbdb2b17a7c3fb5752b33dbb8d1407085f2e5dc17fad18073b22a832fd2df3",
     "payload/documents/active/mr-2026-11-17-1065-1066-756cf74d.md": "958e2ccab8d504c67e8a622dc4d7a0f0eaa4f1a941396c95ceb25512014c34b1",
+    "payload/documents/active/service-portfolio-lifecycle-mybatis-foreach-bug--35cd7d23.md": "1d3895d0567f74d6a3b4aad5a8e8118afea508a9476d2b0ad7e76c4ce4b2c3f1",
+    "payload/documents/active/jira-455-ssgai-xpaas-jira-11-3-12-bb58fc3f.md": "5ca52b0273a2b65cd9878082f0ce91ab18df415d5ad9ddb9c38078b630976579",
+    "payload/documents/active/ssgai-455-review-wrong-2026-11-17-c883d9b9.md": "0d6dad385b2d458d9e08cda471b39d6e17fa1b1ce3f13fd3e7778d75b79fd4b1",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
