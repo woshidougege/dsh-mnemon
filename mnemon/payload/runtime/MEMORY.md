@@ -23,3 +23,9 @@ WorkBuddy2API 网关（http://127.0.0.1:8788）判断模型是否支持视频的
 用户要求「分析/看看」类请求时只做分析：未经明确同意不要改代码、建分支或提 MR；先给结论、证据和方案选项，等用户点头再动手（2026-11-17 因擅自改代码开 MR 被明确纠正）。
 §
 PowerShell 5.1 用 -File 执行 .ps1 时，若文件是 UTF-8 无 BOM，脚本内的中文字面量会按 GBK 解析成乱码（GitLab MR !568 标题就是这样坏的：「璺緞绛涢€夊弬鏁扮粦瀹氫慨澶」）；含中文的 .ps1 必须存为 UTF-8 with BOM，或直接用 Node fetch 调 API。运行期从文件按 UTF-8 读入的中文（[IO.File]::ReadAllText(...UTF8)）不受影响，所以同一个脚本里「描述正常、标题乱码」很典型。
+§
+SSG SPARK 前端域名：生产 https://ssgspark.lenovo.com、UAT ssgspark-uat.lenovo.com、TST ssgspark-tst.lenovo.com（.env.production/.env.release/.env.test）。前端 axios baseURL=VITE_API_BASE_URL，所有后端接口统一走 /api/admin 前缀（src/services/request.ts:26）；匿名 GET https://ssgspark-tst.lenovo.com/api/admin/bookings/hw-kpi-summary 返回 401，未带 /api/admin 的路径会落到 SPA index.html（200 但返回 HTML）。
+§
+browser-skill（bsk）在 DSH 里报 "cannot start an independent Windows daemon … belongs to a Job Object" 时的解法：用 pwsh run_in_background 跑 `bsk daemon start --foreground`（常驻 job），等 3~5 秒 bsk status --json 显示 browsers 已连接，再 bsk_session({action:'start', browser:<instance_id>}) 正常可用。已连接实例 62af6ee9（chrome）。踩坑：bsk_session sync 返回的 observation_id 在顶层（不是 observation.observation_id），wheel/evaluate 必须同时传 contextId + observationId；截图临时文件在 session stop 后会被清掉，要留证据须当场复制，或从 C:\Users\63588\.dsh\attachments\v1\objects\<sha前2位>\<sha> 复制归一化副本。
+§
+POI 5.5.1 的 SXSSFSheet 支持 Excel 数据校验（下拉）：addValidationData 直接委托内部 XSSFSheet，getDataValidationHelper() 返回 XSSFDataValidationHelper（非 null），流式写出后读回仍可见（type=list、sqref 正常）。做下拉必须 setSuppressDropDownArrow(true)——OOXML 的 showDropDown 语义与名字相反（true=隐藏箭头），文件里写成 showDropDown="false"。另：.m2 里 commons-io 多版本共存（1.4/2.6/…/2.22），写 POI 探针要用 2.21.0，2.6 缺 UnsynchronizedByteArrayOutputStream 会 NoClassDefFoundError。

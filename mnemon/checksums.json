@@ -1,10 +1,10 @@
 {
   "algorithm": "sha256",
   "files": {
-    "payload/runtime/memories.json": "f1ae7b3324ab5d5f273fad5f9a7449c8915b042bfa4e1e69294ac8a8785232e9",
+    "payload/runtime/memories.json": "3bc0785222db319f9bb0ec028526e961936ec3cc132a4fcd14a2d2f17877612d",
     "payload/runtime/USER.md": "34e9c8d079fdd54d684a9b54e5c98e72c878104f90fef373648fe4516d0d05be",
-    "payload/runtime/MEMORY.md": "9f441b73f843283e6cc62ccb4941da257bfd22706be07562237305cc45fd05c8",
-    "payload/documents/index.json": "c9d8d862571ae9e8c24e378eba6b8461493abcbfca14626e8e18ffa004d4cf8e",
+    "payload/runtime/MEMORY.md": "8566f52971dfd60ff2065fcdadd1fc5298edac96001761c17d025d81cbc91c80",
+    "payload/documents/index.json": "4a0111b6e9f5a7a44af61e8fa75ebc53ba11469368ab9669849e6f7564f4e654",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -94,6 +94,9 @@
     "payload/documents/active/service-portfolio-lifecycle-mybatis-foreach-bug--35cd7d23.md": "1d3895d0567f74d6a3b4aad5a8e8118afea508a9476d2b0ad7e76c4ce4b2c3f1",
     "payload/documents/active/jira-455-ssgai-xpaas-jira-11-3-12-bb58fc3f.md": "5ca52b0273a2b65cd9878082f0ce91ab18df415d5ad9ddb9c38078b630976579",
     "payload/documents/active/ssgai-455-review-wrong-2026-11-17-c883d9b9.md": "0d6dad385b2d458d9e08cda471b39d6e17fa1b1ce3f13fd3e7778d75b79fd4b1",
+    "payload/documents/active/hw-kpi-inset-bookings-m-f5b15acb.md": "955ccbbfa2c08d32ba8d7d12a52091d0f4f797342b09bdf0b25f553b1628369f",
+    "payload/documents/active/service-portfolio-mr-569-ssg-sales-ops-e7cdd3c7.md": "19bb7eb9d3e52c3d060f3754509b8f64c49708788b1c84ed67209d7a362f0c1e",
+    "payload/documents/active/chatbi-poi-mr-570-ssg-sales-ops-fe2a04fc.md": "791b6f7bbb402b0b1bc058ae5640e043638195f3d0961367b1f21308ccaed41c",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }

@@ -180,6 +180,42 @@
         "label": "rxp",
         "at": "2026-11-17T09:07:49.677Z"
       }
+    },
+    {
+      "content": "SSG SPARK 前端域名：生产 https://ssgspark.lenovo.com、UAT ssgspark-uat.lenovo.com、TST ssgspark-tst.lenovo.com（.env.production/.env.release/.env.test）。前端 axios baseURL=VITE_API_BASE_URL，所有后端接口统一走 /api/admin 前缀（src/services/request.ts:26）；匿名 GET https://ssgspark-tst.lenovo.com/api/admin/bookings/hw-kpi-summary 返回 401，未带 /api/admin 的路径会落到 SPA index.html（200 但返回 HTML）。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-17T09:39:22.751Z",
+      "updated_at": "2026-11-17T09:39:22.751Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-17T09:39:22.751Z"
+      }
+    },
+    {
+      "content": "browser-skill（bsk）在 DSH 里报 \"cannot start an independent Windows daemon … belongs to a Job Object\" 时的解法：用 pwsh run_in_background 跑 `bsk daemon start --foreground`（常驻 job），等 3~5 秒 bsk status --json 显示 browsers 已连接，再 bsk_session({action:'start', browser:<instance_id>}) 正常可用。已连接实例 62af6ee9（chrome）。踩坑：bsk_session sync 返回的 observation_id 在顶层（不是 observation.observation_id），wheel/evaluate 必须同时传 contextId + observationId；截图临时文件在 session stop 后会被清掉，要留证据须当场复制，或从 C:\\Users\\63588\\.dsh\\attachments\\v1\\objects\\<sha前2位>\\<sha> 复制归一化副本。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-17T09:39:22.773Z",
+      "updated_at": "2026-11-17T09:39:22.773Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-17T09:39:22.773Z"
+      }
+    },
+    {
+      "content": "POI 5.5.1 的 SXSSFSheet 支持 Excel 数据校验（下拉）：addValidationData 直接委托内部 XSSFSheet，getDataValidationHelper() 返回 XSSFDataValidationHelper（非 null），流式写出后读回仍可见（type=list、sqref 正常）。做下拉必须 setSuppressDropDownArrow(true)——OOXML 的 showDropDown 语义与名字相反（true=隐藏箭头），文件里写成 showDropDown=\"false\"。另：.m2 里 commons-io 多版本共存（1.4/2.6/…/2.22），写 POI 探针要用 2.21.0，2.6 缺 UnsynchronizedByteArrayOutputStream 会 NoClassDefFoundError。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-17T09:49:50.258Z",
+      "updated_at": "2026-11-17T09:49:50.258Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-17T09:49:50.258Z"
+      }
     }
   ]
 }
