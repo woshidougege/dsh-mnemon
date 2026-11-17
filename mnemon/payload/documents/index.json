@@ -1107,7 +1107,7 @@
       ],
       "createdAt": "2026-11-16T03:17:07.909Z",
       "updatedAt": "2026-11-16T03:17:07.909Z",
-      "lastAccessedAt": "2026-11-17T09:49:38.517Z",
+      "lastAccessedAt": "2026-11-17T16:15:21.154Z",
       "revision": 1,
       "contentHash": "65127485a0918874d8826845cb32f06757fe8e1a467975a8b0661adfab3f52b1",
       "sizeBytes": 8411,
@@ -1551,7 +1551,7 @@
       ],
       "createdAt": "2026-11-17T01:58:49.335Z",
       "updatedAt": "2026-11-17T01:58:49.335Z",
-      "lastAccessedAt": "2026-11-17T14:13:48.042Z",
+      "lastAccessedAt": "2026-11-17T16:15:21.154Z",
       "revision": 1,
       "contentHash": "5ff6ccea79ca1b5b43bd5d7923656f9f6a836aef595e28154fed3aa7dd1a701a",
       "sizeBytes": 8033,
@@ -1667,7 +1667,7 @@
       ],
       "createdAt": "2026-11-17T02:58:18.277Z",
       "updatedAt": "2026-11-17T02:58:18.277Z",
-      "lastAccessedAt": "2026-11-17T14:13:48.042Z",
+      "lastAccessedAt": "2026-11-17T15:37:20.117Z",
       "revision": 1,
       "contentHash": "408ff89b0b73ad2436a60b6103759625aeaca0b0bb51ad0fc9caf3bddf96b12f",
       "sizeBytes": 6083,
@@ -2034,7 +2034,7 @@
       ],
       "createdAt": "2026-11-17T08:24:11.705Z",
       "updatedAt": "2026-11-17T08:24:11.705Z",
-      "lastAccessedAt": "2026-11-17T13:33:14.727Z",
+      "lastAccessedAt": "2026-11-17T15:37:20.117Z",
       "revision": 1,
       "contentHash": "999367460b76f2ba76cfe266e4165debc134baeab4dddf5a7d6a74629af1b2c3",
       "sizeBytes": 4870,
@@ -2123,7 +2123,7 @@
       ],
       "createdAt": "2026-11-17T09:50:05.668Z",
       "updatedAt": "2026-11-17T09:50:05.668Z",
-      "lastAccessedAt": "2026-11-17T13:33:14.727Z",
+      "lastAccessedAt": "2026-11-17T16:15:21.154Z",
       "revision": 1,
       "contentHash": "ca2f6df22f6d3745e506847fecf64dd2773d0ef1c5552bfc25f7ebf7951ac451",
       "sizeBytes": 6819,
@@ -2185,7 +2185,7 @@
       ],
       "createdAt": "2026-11-17T10:20:33.535Z",
       "updatedAt": "2026-11-17T10:20:33.535Z",
-      "lastAccessedAt": "2026-11-17T13:33:14.727Z",
+      "lastAccessedAt": "2026-11-17T16:15:21.154Z",
       "revision": 1,
       "contentHash": "cd861c6d04cbea8e5ce0fb7714af951f50ed852dbc73bd70891634683de85e5d",
       "sizeBytes": 7641,
@@ -2332,6 +2332,53 @@
       "revision": 1,
       "contentHash": "f040fffc716cb3d8932b27b2402031e7013d7ef212582f8e7bc2022b1635a779",
       "sizeBytes": 7943,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "d573f2fe-4bf1-4151-b287-c802c881c27b",
+      "title": "Service Portfolio v17.0 交付盘点：原型可信边界、会议 50 条需求落地状态、待业务方输入（ssg-sales-ops）",
+      "description": "对照 v17.0 原型、13 章会议录屏与 TST 线上页面：四模块状态、6 件必做、前端 3 条断链、原型静态 vs 脚本渲染判定与死代码、后端 44 接口与 7 张零种子配置表、50 条需求落地状态（22/12/14/2）、需业务方提供的 4 项硬输入、报告路径。缺口细节引用既有文档 936f3b21。",
+      "status": "active",
+      "filename": "service-portfolio-v17-0-50-ssg-sales-ops-d573f2fe.md",
+      "relativePath": "documents/active/service-portfolio-v17-0-50-ssg-sales-ops-d573f2fe.md",
+      "sourcePaths": [
+        "outputs/service-portfolio-gap-report.html"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-dab6f05e-9193-47a9-94ed-f75c9a09ada8"
+      ],
+      "createdAt": "2026-11-17T15:37:43.301Z",
+      "updatedAt": "2026-11-17T15:37:43.301Z",
+      "lastAccessedAt": "2026-11-17T15:37:43.301Z",
+      "revision": 1,
+      "contentHash": "83eee007dc6157659f2b00d492c663ef5fb2e1ac4171768eee25eed321291be1",
+      "sizeBytes": 9367,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "81785272-03ae-4941-bd30-ef5a6ea06067",
+      "title": "Service Portfolio vs GPS/SUS 取数口径差异与 Concord/Lifecycle 真实数据核对（TST 实测）",
+      "description": "TST 实库核对结论：SP 全量 332,138 PN vs GPS 口径 312,061（+6.4%）、Concord 113 vs 46 行；两个 Tab 主干数据逐项对上、无重复计算；in_scope / Big Events KPI / All HBB 三个待拍板口径；SUS 单复数、1,419 空财年、FY25/26 批量作废 35,340 等数据质量隐患；前端仍静态的四处。",
+      "status": "active",
+      "filename": "service-portfolio-vs-gps-sus-concord-lifecycle-t-81785272.md",
+      "relativePath": "documents/active/service-portfolio-vs-gps-sus-concord-lifecycle-t-81785272.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/dao/ServicePortfolioReadMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/service/ServicePortfolioReadService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/serviceportfolio/constants/ServicePortfolioConstants.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/gpssus/dao/GpsSusNewProductMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/gpssus/dao/GpsSusActivePnMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/gpssus/service/GpsSusService.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-a78f2b6a-1a9c-4f0e-b3c4-f6653c15e84c"
+      ],
+      "createdAt": "2026-11-17T16:15:47.650Z",
+      "updatedAt": "2026-11-17T16:15:47.650Z",
+      "lastAccessedAt": "2026-11-17T16:15:47.650Z",
+      "revision": 1,
+      "contentHash": "8efcb5637e9ef11297b5c5fc83778c25461c98ce65fffb219e1bd5332626952e",
+      "sizeBytes": 8691,
       "memoryBodyIds": []
     }
   ]

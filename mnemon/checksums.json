@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "fec12943bc431c5223b539d480a01c7c4e37cbb465d58b97f2dded971e153c1f",
     "payload/runtime/USER.md": "34e9c8d079fdd54d684a9b54e5c98e72c878104f90fef373648fe4516d0d05be",
     "payload/runtime/MEMORY.md": "f67bf49568d95220ab51c1d28ad22399aa21405a0fa19e5c2c81cd925bd1522f",
-    "payload/documents/index.json": "4e52440ae843a98b4419aa00e00fc0b6d85e7941ae63c97f86362f20964113fc",
+    "payload/documents/index.json": "f9eea8f44d19e11e1397a3d24eb935a9bbb49a1f3e23af1a45c63554b155819b",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -105,6 +105,8 @@
     "payload/documents/active/chatbi-400-mr-574-a-b-17c7ec24.md": "bc63023a1591ecf8fc0025a5a8926c538a4ddf6b96c506dd9a109f9df5d0f699",
     "payload/documents/active/service-portfolio-tst-roadmap-mr-569-ssg-sales-o-1cc5f22b.md": "a3f1a32e7982a3f25c38b2d0d4e31bc4a4cd6866b1b3f7e3254508dc1e6c57ac",
     "payload/documents/active/service-portfolio-kpi-8-tst-ssg-sales-ops-e64a20e2.md": "149094b48a6e50dabdc1934e0fad159d48c4fe1ba272455d277417399eee87fd",
+    "payload/documents/active/service-portfolio-v17-0-50-ssg-sales-ops-d573f2fe.md": "03304da5f000731ef2d14b79a90875473629bed9d433ba639dd9b9e5365e8aa9",
+    "payload/documents/active/service-portfolio-vs-gps-sus-concord-lifecycle-t-81785272.md": "e635d49d3f72c0a2691e22ae304b08cc098c4fb7184a43ce9362e35383d80cac",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
