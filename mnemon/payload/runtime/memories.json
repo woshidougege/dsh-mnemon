@@ -26,15 +26,27 @@
       }
     },
     {
-      "content": "SPARK(Business Insights) 菜单权限只有 6 个：businessInsight 父 + workspace/bookings/lgfs/gpssus/tcv；HC list Sheet6 的 \"ISG TCV\"、\"DaaS TCV\" 两列都映射到同一个 businessInsight:tcv 菜单（任一为 Y 即需开通），实测 80 个非管理员 0 偏差。权限页对用户是 ssg_user_menu.access_state=VISIBLE/HIDDEN 覆盖，缺行=继承角色/菜单默认 HIDDEN。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-02T08:33:32.279Z",
-      "updated_at": "2026-11-02T08:33:32.279Z",
+      "content": "向我提问或让我解释原理时，要先直接回答问题，不要顺手改代码；动手改代码/提交要等我说清或确认。",
+      "target": "user",
+      "importance": "critical",
+      "created_at": "2026-11-18T06:50:07.799Z",
+      "updated_at": "2026-11-18T06:50:07.799Z",
       "origin": {
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
-        "at": "2026-11-02T08:33:32.279Z"
+        "at": "2026-11-18T06:50:07.799Z"
+      }
+    },
+    {
+      "content": "用户提问时（如「PBI 是咋做的」「能不能做 Auto 模式」）要先回答结论和原理，再问是否动手；不要用直接改代码代替回答，他会明确抗议。",
+      "target": "user",
+      "importance": "normal",
+      "created_at": "2026-11-18T06:57:47.820Z",
+      "updated_at": "2026-11-18T06:57:47.820Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-18T06:57:47.820Z"
       }
     },
     {
@@ -170,66 +182,6 @@
       }
     },
     {
-      "content": "PowerShell 5.1 用 -File 执行 .ps1 时，若文件是 UTF-8 无 BOM，脚本内的中文字面量会按 GBK 解析成乱码（GitLab MR !568 标题就是这样坏的：「璺緞绛涢€夊弬鏁扮粦瀹氫慨澶」）；含中文的 .ps1 必须存为 UTF-8 with BOM，或直接用 Node fetch 调 API。运行期从文件按 UTF-8 读入的中文（[IO.File]::ReadAllText(...UTF8)）不受影响，所以同一个脚本里「描述正常、标题乱码」很典型。",
-      "target": "memory",
-      "importance": "critical",
-      "created_at": "2026-11-17T09:07:49.677Z",
-      "updated_at": "2026-11-17T09:07:49.677Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-17T09:07:49.677Z"
-      }
-    },
-    {
-      "content": "SSG SPARK 前端域名：生产 https://ssgspark.lenovo.com、UAT ssgspark-uat.lenovo.com、TST ssgspark-tst.lenovo.com（.env.production/.env.release/.env.test）。前端 axios baseURL=VITE_API_BASE_URL，所有后端接口统一走 /api/admin 前缀（src/services/request.ts:26）；匿名 GET https://ssgspark-tst.lenovo.com/api/admin/bookings/hw-kpi-summary 返回 401，未带 /api/admin 的路径会落到 SPA index.html（200 但返回 HTML）。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-17T09:39:22.751Z",
-      "updated_at": "2026-11-17T09:39:22.751Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-17T09:39:22.751Z"
-      }
-    },
-    {
-      "content": "browser-skill（bsk）在 DSH 里报 \"cannot start an independent Windows daemon … belongs to a Job Object\" 时的解法：用 pwsh run_in_background 跑 `bsk daemon start --foreground`（常驻 job），等 3~5 秒 bsk status --json 显示 browsers 已连接，再 bsk_session({action:'start', browser:<instance_id>}) 正常可用。已连接实例 62af6ee9（chrome）。踩坑：bsk_session sync 返回的 observation_id 在顶层（不是 observation.observation_id），wheel/evaluate 必须同时传 contextId + observationId；截图临时文件在 session stop 后会被清掉，要留证据须当场复制，或从 C:\\Users\\63588\\.dsh\\attachments\\v1\\objects\\<sha前2位>\\<sha> 复制归一化副本。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-17T09:39:22.773Z",
-      "updated_at": "2026-11-17T09:39:22.773Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-17T09:39:22.773Z"
-      }
-    },
-    {
-      "content": "POI 5.5.1 的 SXSSFSheet 支持 Excel 数据校验（下拉）：addValidationData 直接委托内部 XSSFSheet，getDataValidationHelper() 返回 XSSFDataValidationHelper（非 null），流式写出后读回仍可见（type=list、sqref 正常）。做下拉必须 setSuppressDropDownArrow(true)——OOXML 的 showDropDown 语义与名字相反（true=隐藏箭头），文件里写成 showDropDown=\"false\"。另：.m2 里 commons-io 多版本共存（1.4/2.6/…/2.22），写 POI 探针要用 2.21.0，2.6 缺 UnsynchronizedByteArrayOutputStream 会 NoClassDefFoundError。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-17T09:49:50.258Z",
-      "updated_at": "2026-11-17T09:49:50.258Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-17T09:49:50.258Z"
-      }
-    },
-    {
-      "content": "ssg-sales-ops 后端验证：本机 PATH 无 mvn/mvnd，用 IDEA 自带 Maven `C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.1.3\\plugins\\maven-plugin\\lib\\maven3\\bin\\mvn.cmd`，且必须 `$env:JAVA_HOME='C:\\Program Files\\Java\\jdk-17.0.19'`（用 JBR 25 会让 lombok 失效，报找不到 log/getter）；改了 smartop-api 后要先 `-o -T 4 -pl smartop-api -am install -DskipTests` 再跑 admin 单测，否则报 AuthFeignService 方法找不到。PowerShell 传 mvn 参数要加引号（'-Dtest=X'），否则 -D 里的点号被拆成 lifecycle phase。",
-      "target": "memory",
-      "importance": "normal",
-      "created_at": "2026-11-17T10:20:33.656Z",
-      "updated_at": "2026-11-17T10:20:33.656Z",
-      "origin": {
-        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
-        "label": "rxp",
-        "at": "2026-11-17T10:20:33.656Z"
-      }
-    },
-    {
       "content": "本机没有 psql/psycopg，查 ssg-sales-ops 生产库的可用通道：写 .tmp/PgQ.java（JDK17 单文件源码模式 + org/postgresql/postgresql/42.5.4 驱动，java --class-path 运行），SQL 放文件传参；JDK 在 C:\\Program Files\\Java\\jdk-17.0.19。",
       "target": "memory",
       "importance": "low",
@@ -239,6 +191,18 @@
         "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
         "label": "rxp",
         "at": "2026-11-18T01:51:39.584Z"
+      }
+    },
+    {
+      "content": "auth 的 token 滑动续期只覆盖服务端：ProviderAuthRestInterceptor.preHandle 校验通过后调 TokenServiceRedisImpl.renewToken，每请求 EXPIRE token_<itcode> 24h；但浏览器 Authorization cookie 只在 ADFS 回调 AdfsController.java:179-186 写一次（AdfsConstants.COOKIE_MAX_AGE_SECONDS=86400，不刷新），密码登录走 js-cookie 无 expires=session cookie。故活跃用户登录满 24h 仍被踢；前端 request.ts:89 的 401 分支在 getToken() 为空时不跳登录只弹裸报错。生产 100% ADFS 登录、login_degraded_users=0、evicted_keys=0，TTL+idle≈86400 证明服务端续期正常。",
+      "target": "memory",
+      "importance": "normal",
+      "created_at": "2026-11-18T08:10:37.333Z",
+      "updated_at": "2026-11-18T08:10:37.333Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-18T08:10:37.333Z"
       }
     }
   ]

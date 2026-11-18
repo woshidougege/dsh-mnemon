@@ -1,10 +1,10 @@
 {
   "algorithm": "sha256",
   "files": {
-    "payload/runtime/memories.json": "6d7bdf9999c8637405881464c947b945de7a8592d4dfd88760c6be1144d7501d",
-    "payload/runtime/USER.md": "34e9c8d079fdd54d684a9b54e5c98e72c878104f90fef373648fe4516d0d05be",
-    "payload/runtime/MEMORY.md": "eb7398aad2f0eee73e1bf649a092e8e0f35c951fa71a0fc491a910c8705e3574",
-    "payload/documents/index.json": "d497c9af66f017f21db7b7319c3fb8c4c5bfece95a764a4925f0da668f2154f5",
+    "payload/runtime/memories.json": "5dc031f8bc059f807df5b55637757edbff1d9f2879d98b8125c788846a97ca87",
+    "payload/runtime/USER.md": "90d148d53bfb77bdc3c55c6e69f0685fbfef9aa8965b012efed5a4f33672fcfb",
+    "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
+    "payload/documents/index.json": "3df3e129ec62322837c115cb20e26f3fce315be5113fe5231f28cc779218ff97",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -116,6 +116,12 @@
     "payload/documents/active/hw-kpi-inset-mr-00abc05a.md": "107a84bd972686fcf8b9d85fc29f0f3e51b6012282cbb7eba42fc8b4f423f69b",
     "payload/documents/active/bookings-isg-handoff-063dbd84.md": "caccd30bbb8713b575a61f51fd40ffd97aa5cfc1e4835256509c9aae5653327a",
     "payload/documents/active/hw-kpi-1307beef.md": "8045203b923e510cf38783d32523fa8e9a22fd16468803e07ce78dce7a6ef299",
+    "payload/documents/active/hw-qty-bookings-tooltip-085a5e2b.md": "a961a877194327b5136d7049fbaa160ddfec18a0218f42f2bbd90805e8dcc7b5",
+    "payload/documents/active/service-portfolio-kpi-ssg-sales-ops-2026-11-18-358e5584.md": "8a58e375a5f0f0125c0109a473517172c609d213040d71caccdb018803f6d3ba",
+    "payload/documents/active/hw-kpi-pbi-auto-99b396c1.md": "635be97a3752c6dfa32ffd47ff835b9fa16de085c6cfa2b2a568cf1653670067",
+    "payload/documents/active/admin-control-access-control-sql-explain-mr1-mr3-5e8a14c4.md": "b0ba7bf5050fc2aac648ce3794b731dd2c5f914da4007777ed7e63fd9e3b797f",
+    "payload/documents/active/hw-kpi-datasetindex-cf1cbe31.md": "97e9f272a1692e665e7eeae291914ff3473200ac537bf6c43ac6b9ce3c10315c",
+    "payload/documents/active/ssg-sales-ops-token-redis-24h-vs-cookie-24h-3e165d1b.md": "e5074b659e0d3680be021a04558433cb90cbe1d6be3b7b2c00015b0b6e643fc5",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }

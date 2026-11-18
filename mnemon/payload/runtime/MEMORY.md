@@ -1,5 +1,3 @@
-SPARK(Business Insights) 菜单权限只有 6 个：businessInsight 父 + workspace/bookings/lgfs/gpssus/tcv；HC list Sheet6 的 "ISG TCV"、"DaaS TCV" 两列都映射到同一个 businessInsight:tcv 菜单（任一为 Y 即需开通），实测 80 个非管理员 0 偏差。权限页对用户是 ssg_user_menu.access_state=VISIBLE/HIDDEN 覆盖，缺行=继承角色/菜单默认 HIDDEN。
-§
 ssg-sales-ops 的数据库迁移只改表结构，绝不塞数据（seed INSERT / 数据修正 UPDATE 都不要）：映射、开关这类运行期配置由管理员在 Admin Control 里维护或手工改库。用户原话（2026-11-06）：“sql版本 不要管理数据啊 只管理表结构 我们手动改库就行了呀”。项目 flyway 是 validate-on-migrate: false + VALIDATE_NOT_PRESENT，改已执行过的迁移内容不会报 checksum。
 §
 数据库访问规则（dev-requirements Skill 第 0 条，2026-11-12 改版）：默认用个人账号 p_renxp4 / K7~pL2=zR9;vT4_；服务账号 a_appconnect 必须逐次申请、用户明确同意后才能连，只读也要先说明用途；应用自启动/flyway 用项目配置不属人工连库、无需申请。各环境 a_appconnect 明文密码已写进 Skill（入口 10.62.79.215 生产 sIN0dTD%Js56｜10.62.79.221 预发 xhZt31tTr#Hz｜10.62.79.148 tst VK0C:XFWf8RV｜10.196.155.93 ops_agent GjYE%NUOW3lH），三套 PG 已实测登录成功。LUDP Trino 源 p49_g1189/Ai_portal@@，keystore abcd-1234。jasypt：password=2c8d34a64e38ade6ba2c7441caf32377、PBEWithMD5AndDES、NoIvGenerator，jasypt-1.9.3.jar 的 StandardPBEStringEncryptor 可解；生产 ENC(hb7JlW3K/RyADKFniNrPeJvrqnIgSMcj)=sIN0dTD%Js56。密码含 ~ = ; _ % :，psql 用单引号 PGPASSWORD，JDBC 必须 Properties 传参不能拼 URL。
@@ -22,14 +20,6 @@ WorkBuddy2API 网关（http://127.0.0.1:8788）判断模型是否支持视频的
 §
 用户要求「分析/看看」类请求时只做分析：未经明确同意不要改代码、建分支或提 MR；先给结论、证据和方案选项，等用户点头再动手（2026-11-17 因擅自改代码开 MR 被明确纠正）。
 §
-PowerShell 5.1 用 -File 执行 .ps1 时，若文件是 UTF-8 无 BOM，脚本内的中文字面量会按 GBK 解析成乱码（GitLab MR !568 标题就是这样坏的：「璺緞绛涢€夊弬鏁扮粦瀹氫慨澶」）；含中文的 .ps1 必须存为 UTF-8 with BOM，或直接用 Node fetch 调 API。运行期从文件按 UTF-8 读入的中文（[IO.File]::ReadAllText(...UTF8)）不受影响，所以同一个脚本里「描述正常、标题乱码」很典型。
-§
-SSG SPARK 前端域名：生产 https://ssgspark.lenovo.com、UAT ssgspark-uat.lenovo.com、TST ssgspark-tst.lenovo.com（.env.production/.env.release/.env.test）。前端 axios baseURL=VITE_API_BASE_URL，所有后端接口统一走 /api/admin 前缀（src/services/request.ts:26）；匿名 GET https://ssgspark-tst.lenovo.com/api/admin/bookings/hw-kpi-summary 返回 401，未带 /api/admin 的路径会落到 SPA index.html（200 但返回 HTML）。
-§
-browser-skill（bsk）在 DSH 里报 "cannot start an independent Windows daemon … belongs to a Job Object" 时的解法：用 pwsh run_in_background 跑 `bsk daemon start --foreground`（常驻 job），等 3~5 秒 bsk status --json 显示 browsers 已连接，再 bsk_session({action:'start', browser:<instance_id>}) 正常可用。已连接实例 62af6ee9（chrome）。踩坑：bsk_session sync 返回的 observation_id 在顶层（不是 observation.observation_id），wheel/evaluate 必须同时传 contextId + observationId；截图临时文件在 session stop 后会被清掉，要留证据须当场复制，或从 C:\Users\63588\.dsh\attachments\v1\objects\<sha前2位>\<sha> 复制归一化副本。
-§
-POI 5.5.1 的 SXSSFSheet 支持 Excel 数据校验（下拉）：addValidationData 直接委托内部 XSSFSheet，getDataValidationHelper() 返回 XSSFDataValidationHelper（非 null），流式写出后读回仍可见（type=list、sqref 正常）。做下拉必须 setSuppressDropDownArrow(true)——OOXML 的 showDropDown 语义与名字相反（true=隐藏箭头），文件里写成 showDropDown="false"。另：.m2 里 commons-io 多版本共存（1.4/2.6/…/2.22），写 POI 探针要用 2.21.0，2.6 缺 UnsynchronizedByteArrayOutputStream 会 NoClassDefFoundError。
-§
-ssg-sales-ops 后端验证：本机 PATH 无 mvn/mvnd，用 IDEA 自带 Maven `C:\Program Files\JetBrains\IntelliJ IDEA 2026.1.3\plugins\maven-plugin\lib\maven3\bin\mvn.cmd`，且必须 `$env:JAVA_HOME='C:\Program Files\Java\jdk-17.0.19'`（用 JBR 25 会让 lombok 失效，报找不到 log/getter）；改了 smartop-api 后要先 `-o -T 4 -pl smartop-api -am install -DskipTests` 再跑 admin 单测，否则报 AuthFeignService 方法找不到。PowerShell 传 mvn 参数要加引号（'-Dtest=X'），否则 -D 里的点号被拆成 lifecycle phase。
-§
 本机没有 psql/psycopg，查 ssg-sales-ops 生产库的可用通道：写 .tmp/PgQ.java（JDK17 单文件源码模式 + org/postgresql/postgresql/42.5.4 驱动，java --class-path 运行），SQL 放文件传参；JDK 在 C:\Program Files\Java\jdk-17.0.19。
+§
+auth 的 token 滑动续期只覆盖服务端：ProviderAuthRestInterceptor.preHandle 校验通过后调 TokenServiceRedisImpl.renewToken，每请求 EXPIRE token_<itcode> 24h；但浏览器 Authorization cookie 只在 ADFS 回调 AdfsController.java:179-186 写一次（AdfsConstants.COOKIE_MAX_AGE_SECONDS=86400，不刷新），密码登录走 js-cookie 无 expires=session cookie。故活跃用户登录满 24h 仍被踢；前端 request.ts:89 的 401 分支在 getToken() 为空时不跳登录只弹裸报错。生产 100% ADFS 登录、login_degraded_users=0、evicted_keys=0，TTL+idle≈86400 证明服务端续期正常。
