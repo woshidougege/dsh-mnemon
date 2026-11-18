@@ -228,7 +228,7 @@
       ],
       "createdAt": "2026-11-13T02:19:16.079Z",
       "updatedAt": "2026-11-13T02:19:16.079Z",
-      "lastAccessedAt": "2026-11-18T01:59:12.887Z",
+      "lastAccessedAt": "2026-11-18T03:10:19.635Z",
       "revision": 1,
       "contentHash": "afff8f6063cbca0bffc34ba6ab1c8d849b29f0204c81101f7eba57deea5fba10",
       "sizeBytes": 8323,
@@ -330,7 +330,7 @@
       ],
       "createdAt": "2026-11-13T02:40:28.126Z",
       "updatedAt": "2026-11-13T02:40:28.126Z",
-      "lastAccessedAt": "2026-11-18T01:59:12.887Z",
+      "lastAccessedAt": "2026-11-18T03:10:19.635Z",
       "revision": 1,
       "contentHash": "d99da0b2d5f319581417f02f8760c01521745a9034249e1e0dffc40139f6a269",
       "sizeBytes": 10897,
@@ -624,7 +624,7 @@
       ],
       "createdAt": "2026-11-13T17:01:13.848Z",
       "updatedAt": "2026-11-13T17:01:13.848Z",
-      "lastAccessedAt": "2026-11-17T03:29:17.857Z",
+      "lastAccessedAt": "2026-11-18T02:48:26.222Z",
       "revision": 1,
       "contentHash": "45162472fdcf883c0377bcfeb6d0a81479703457d6a100e8544f74ad7f5978f2",
       "sizeBytes": 5592,
@@ -648,7 +648,7 @@
       ],
       "createdAt": "2026-11-13T17:45:39.896Z",
       "updatedAt": "2026-11-13T17:45:39.896Z",
-      "lastAccessedAt": "2026-11-17T03:29:17.857Z",
+      "lastAccessedAt": "2026-11-18T02:48:26.222Z",
       "revision": 1,
       "contentHash": "234c21590eb17eeaf6297c5fdbafdd8abf4e1c0d885a40387e7eb44a69bcd5ca",
       "sizeBytes": 5530,
@@ -673,7 +673,7 @@
       ],
       "createdAt": "2026-11-13T17:57:57.239Z",
       "updatedAt": "2026-11-13T17:57:57.239Z",
-      "lastAccessedAt": "2026-11-17T03:29:17.857Z",
+      "lastAccessedAt": "2026-11-18T02:48:26.222Z",
       "revision": 1,
       "contentHash": "a435e0974ae83c5c3a6d45415dd7b1ea20a88a14f136fc3edb9b34344a96370c",
       "sizeBytes": 7345,
@@ -763,7 +763,7 @@
       ],
       "createdAt": "2026-11-13T19:43:48.238Z",
       "updatedAt": "2026-11-13T19:43:48.238Z",
-      "lastAccessedAt": "2026-11-16T02:52:52.130Z",
+      "lastAccessedAt": "2026-11-18T03:10:19.635Z",
       "revision": 1,
       "contentHash": "c72024b90b2935346cbcdfd0d290e2c1a84bb489318cf8a882d91a8a2b2e88a2",
       "sizeBytes": 5163,
@@ -1691,7 +1691,7 @@
       ],
       "createdAt": "2026-11-17T03:06:04.633Z",
       "updatedAt": "2026-11-17T03:06:04.633Z",
-      "lastAccessedAt": "2026-11-17T03:29:17.857Z",
+      "lastAccessedAt": "2026-11-18T02:48:26.222Z",
       "revision": 1,
       "contentHash": "a56fb52a77b7c7135991449fbcc9527edc20a7e58cfafd6b3e4e5c0f336fb4d4",
       "sizeBytes": 6641,
@@ -1811,7 +1811,7 @@
       ],
       "createdAt": "2026-11-17T03:45:20.796Z",
       "updatedAt": "2026-11-17T03:45:20.796Z",
-      "lastAccessedAt": "2026-11-17T05:55:56.337Z",
+      "lastAccessedAt": "2026-11-18T02:33:15.557Z",
       "revision": 1,
       "contentHash": "d045951b0fa7ef8f2932cdfa8e6b66ad3f7a153f59d466f2e38a19871a4584e6",
       "sizeBytes": 6040,
@@ -2397,10 +2397,77 @@
       ],
       "createdAt": "2026-11-18T01:59:51.405Z",
       "updatedAt": "2026-11-18T01:59:51.405Z",
-      "lastAccessedAt": "2026-11-18T01:59:51.405Z",
+      "lastAccessedAt": "2026-11-18T02:33:15.557Z",
       "revision": 1,
       "contentHash": "945b766e288a86b6ca4361b64a48ef3b59b68387c48151133fcd035d7900694e",
       "sizeBytes": 9237,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "03324a5b-e25e-4f46-9002-5f8cbddf3bb5",
+      "title": "ChatBI Source report 五步归因规则：准确率实测与两处补丁（30 天生产数据）",
+      "description": "五步归因规则在 4903 轮生产数据上的逐步命中量与可验证准确率：route 3683/exec 516/resolve 146/carried 423/none 135，可验证集 3048→3047=99.97%；补丁 1（carried 要求本轮有查询动作，423→100）与补丁 2（exec 优先于 route，消除唯一错例）后确定 4345(88.6%)+推断 100(2.0%)+无报表 458(9.3%)，Not routed 1201→458，残余 704 轮无客观真值需抽检。",
+      "status": "active",
+      "filename": "chatbi-source-report-30-03324a5b.md",
+      "relativePath": "documents/active/chatbi-source-report-30-03324a5b.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventExportService.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-b00be74b-fea9-430e-9f88-2ef421df1759"
+      ],
+      "createdAt": "2026-11-18T02:33:42.929Z",
+      "updatedAt": "2026-11-18T02:33:42.929Z",
+      "lastAccessedAt": "2026-11-18T03:10:19.635Z",
+      "revision": 1,
+      "contentHash": "ddca2c1a297a1750b40f9acb945062adb820e161fe463a08c826ffb914419078",
+      "sizeBytes": 6915,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "7de0588d-2d49-4153-b601-b8fffe61d472",
+      "title": "生产 SPARK 菜单开通执行记录：4 人 × 3 菜单写入、生产 Redis 生效判据与审计缺口",
+      "description": "ssg_ops_agent 生产环境为 4 个 itcode 写入 12 行 ssg_user_menu（VISIBLE × 3 含入口页 workspace）、p_renxp4 只读需 a_appconnect、两套 Redis 中只有 reston 10.62.79.178:6379/db=1 持有 token 的定位判据与 DEL 踢下线、直改库绕过 ssg_permission_audit_log 的补录缺口。",
+      "status": "active",
+      "filename": "spark-4-3-redis-7de0588d.md",
+      "relativePath": "documents/active/spark-4-3-redis-7de0588d.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/permission/dao/PermissionAuditDao.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/permission/service/EffectivePermissionService.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-b19a5285-b46d-4a45-8afd-80bf1a65d9a4"
+      ],
+      "createdAt": "2026-11-18T02:48:49.318Z",
+      "updatedAt": "2026-11-18T02:48:49.318Z",
+      "lastAccessedAt": "2026-11-18T02:48:49.318Z",
+      "revision": 1,
+      "contentHash": "942cfcac1f053528c849033cf25a738c939423397b741468f1e00ad46bc0e033",
+      "sizeBytes": 6402,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "6c0e9cea-ef5e-4642-bf38-1aba552f7258",
+      "title": "ChatBI 问数记录 Source report 七态口径落地与三 MR 交付（含生产分布与性能代价）",
+      "description": "四态→七态（routed/exec/resolve/carried/route_failed/none/no_audit）的最终判定与显示规则、文案须与后端 SOURCE_LABEL_SQL 逐字一致、生产 4909 轮分布（Not routed 24%→8.9%）、全量统计 +343ms 与弃用的 4 路 UNION、前后端 5 文件改动、!577/!1076/!1077 三个 MR 与分支提交、遗留的 tool_audit_logs 索引与 stash/中文标题工程经验。",
+      "status": "active",
+      "filename": "chatbi-source-report-mr-6c0e9cea.md",
+      "relativePath": "documents/active/chatbi-source-report-mr-6c0e9cea.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventExportService.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-e186830b-cb52-4772-bc9d-a5c4c6cc71c5"
+      ],
+      "createdAt": "2026-11-18T03:10:39.768Z",
+      "updatedAt": "2026-11-18T03:10:39.768Z",
+      "lastAccessedAt": "2026-11-18T03:10:39.768Z",
+      "revision": 1,
+      "contentHash": "b8361a2f509ce91a50aefb1491c56d8eb979b6531174b124b6a674bd7ec2787a",
+      "sizeBytes": 7169,
       "memoryBodyIds": []
     }
   ]
