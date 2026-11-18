@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "6d7bdf9999c8637405881464c947b945de7a8592d4dfd88760c6be1144d7501d",
     "payload/runtime/USER.md": "34e9c8d079fdd54d684a9b54e5c98e72c878104f90fef373648fe4516d0d05be",
     "payload/runtime/MEMORY.md": "eb7398aad2f0eee73e1bf649a092e8e0f35c951fa71a0fc491a910c8705e3574",
-    "payload/documents/index.json": "6dba0c42dad37b5f4f924eb0426c7b726834988458f8a0d720ba9b296c7bd0b8",
+    "payload/documents/index.json": "11cb27a64758096d31284e0f189ceae8f653c068c9e64026ad5d3cf6f9a4a8c9",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -111,6 +111,10 @@
     "payload/documents/active/chatbi-source-report-30-03324a5b.md": "9711dc754fb9a6168090277678774fd6f9fedf01588036d31b4b10f5278f20b2",
     "payload/documents/active/spark-4-3-redis-7de0588d.md": "e243b9fe4411719d098b0c5bda4ddd86c41c816a3bedf94c79824d494037c06b",
     "payload/documents/active/chatbi-source-report-mr-6c0e9cea.md": "1ddd108e5306c881439c5cbb8d7524ed46d097368b9fd16046227c034311e1f2",
+    "payload/documents/active/service-portfolio-tst-mr-1075-eol-by-offering-bu-39c41e27.md": "008721a6a0d8fd600a49dcbee4608dd2eeca016210b9108c51738167fa1e951f",
+    "payload/documents/active/ssg-ops-agent-token-sql-0496ed04.md": "8a3233f0b5fc14e774c86005a7f184081d9e93963be7f1b446dacca6e7374247",
+    "payload/documents/active/hw-kpi-inset-mr-00abc05a.md": "107a84bd972686fcf8b9d85fc29f0f3e51b6012282cbb7eba42fc8b4f423f69b",
+    "payload/documents/active/bookings-isg-handoff-063dbd84.md": "caccd30bbb8713b575a61f51fd40ffd97aa5cfc1e4835256509c9aae5653327a",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
