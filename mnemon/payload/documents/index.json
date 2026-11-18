@@ -2743,7 +2743,7 @@
       ],
       "createdAt": "2026-11-18T08:20:58.980Z",
       "updatedAt": "2026-11-18T08:20:58.980Z",
-      "lastAccessedAt": "2026-11-18T11:38:35.884Z",
+      "lastAccessedAt": "2026-11-18T15:51:25.048Z",
       "revision": 1,
       "contentHash": "31f4b77ee0fa12c5ded5f69047c85b057d21b646695cc449c9e3bb3c02ff87cf",
       "sizeBytes": 6622,
@@ -2875,7 +2875,7 @@
       ],
       "createdAt": "2026-11-18T10:43:20.082Z",
       "updatedAt": "2026-11-18T10:43:20.082Z",
-      "lastAccessedAt": "2026-11-18T11:38:35.884Z",
+      "lastAccessedAt": "2026-11-18T15:51:25.048Z",
       "revision": 1,
       "contentHash": "be21502676217a4ad909457707bde8b8f5f1656da26f5a16d0eca32e977b4be9",
       "sizeBytes": 7884,
@@ -2904,7 +2904,7 @@
       ],
       "createdAt": "2026-11-18T11:39:08.135Z",
       "updatedAt": "2026-11-18T11:39:08.135Z",
-      "lastAccessedAt": "2026-11-18T11:39:08.135Z",
+      "lastAccessedAt": "2026-11-18T15:51:25.048Z",
       "revision": 1,
       "contentHash": "a2d847872805c98560678bc867d6c587aa17da450d41865c7ddd111f87a239f8",
       "sizeBytes": 10377,
@@ -2930,10 +2930,36 @@
       ],
       "createdAt": "2026-11-18T11:52:02.654Z",
       "updatedAt": "2026-11-18T11:52:02.654Z",
-      "lastAccessedAt": "2026-11-18T11:52:02.654Z",
+      "lastAccessedAt": "2026-11-18T15:51:25.048Z",
       "revision": 1,
       "contentHash": "0476f879437873ebc7c60d8afa34fe840cc0519327c1f53f33f91e255715adf2",
       "sizeBytes": 8853,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "4ad84c6f-035c-4e07-9b52-19438e2f5f5b",
+      "title": "Admin Control 注解 SQL 全量 XML 化（419 条 / 110 DAO）与真实接口比对交付记录",
+      "description": "admin 模块注解 SQL 639→0 的完成记录：419 条 statement 迁入 121 XML、110 DAO，Java 净删 3454 行；三层验证（文本比对 419/419、起始动词扫描、18082/18083 双服务真实接口比对 243 端点 241 一致 + 2 处时间戳证伪）；真实接口比对抓到的三个缺陷（CTE 常量未展开、FILTER_SQL 同名覆盖、文本块 \\\\. 转义丢失使 bookingPerActivePns 变 0.00）与「迁移/校验共用解析器导致假阴性」教训；同 MR 移除 tk.mybatis、删 datacenter/dict、MP 3.5.12 与 Druid 1.2.27 升级、README 持久层约定；commit b5024d3af / MR !578 未合并与 xxl-job 停用等遗留。",
+      "status": "active",
+      "filename": "admin-control-sql-xml-419-110-dao-4ad84c6f.md",
+      "relativePath": "documents/active/admin-control-sql-xml-419-110-dao-4ad84c6f.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/resources/mapper/gpssus/GpsSusActivePnMapper.xml",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/gpssus/dao/GpsSusActivePnMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/gpssus/pojo/dto/GpsSusActivePnRow.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/gpssus/service/GpsSusService.java",
+        "README.md",
+        "pom.xml"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-26acad0a-aa2b-42e7-b54c-ea6905d17a2f"
+      ],
+      "createdAt": "2026-11-18T15:52:15.935Z",
+      "updatedAt": "2026-11-18T15:52:15.935Z",
+      "lastAccessedAt": "2026-11-18T15:52:15.935Z",
+      "revision": 1,
+      "contentHash": "ec0d05ebfe3fbb36493daa500db347bda44040a25ff169bb2ad881fd784be397",
+      "sizeBytes": 7398,
       "memoryBodyIds": []
     }
   ]
