@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "5dc031f8bc059f807df5b55637757edbff1d9f2879d98b8125c788846a97ca87",
     "payload/runtime/USER.md": "90d148d53bfb77bdc3c55c6e69f0685fbfef9aa8965b012efed5a4f33672fcfb",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "66e92620bada6fd40f715a2b975ab4228aae6634b3d9682a4bd960b4701405ef",
+    "payload/documents/index.json": "aece74cc993fe6bf5d987448d832421d2a07545267e1d699f01da6e5600a27f1",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -132,6 +132,7 @@
     "payload/documents/active/admin-mybatis-plus-3-5-12-boot-3-starter-druid-1-d96c6326.md": "d2e479cbe21627fd9dfc4ada403adf11fbfb8b71aa3a6071e295dc1b81d7ad72",
     "payload/documents/active/admin-control-sql-xml-419-110-dao-4ad84c6f.md": "1f32394a3973268f2d8d442dfbcedd9f7b8a8bb6fc96c85a7a37a8659405b978",
     "payload/documents/active/admin-control-sql-488-496-options-mr-f88cb5b5.md": "541853ca5ee4f1e8d3ea8977334fbd02e800414c537d7eaab706d6dfd977a67b",
+    "payload/documents/active/admin-dev-vs-tst-488-31-diff-pom-mr-588-38622843.md": "ef1a42bf85f8affffc31fd0e2d1b5bf35da65a9779c033e049d2f1bc12b9d775",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }

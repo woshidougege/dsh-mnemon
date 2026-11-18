@@ -2795,7 +2795,7 @@
       ],
       "createdAt": "2026-11-18T08:50:15.354Z",
       "updatedAt": "2026-11-18T08:50:15.354Z",
-      "lastAccessedAt": "2026-11-18T08:50:15.354Z",
+      "lastAccessedAt": "2026-11-18T20:55:10.248Z",
       "revision": 1,
       "contentHash": "82254cec98b08d7e3057889517ecb679b53ee136ab67b8644a13253b78bd7ef0",
       "sizeBytes": 9463,
@@ -2823,7 +2823,7 @@
       ],
       "createdAt": "2026-11-18T09:23:57.932Z",
       "updatedAt": "2026-11-18T09:23:57.932Z",
-      "lastAccessedAt": "2026-11-18T11:51:42.934Z",
+      "lastAccessedAt": "2026-11-18T20:55:10.248Z",
       "revision": 1,
       "contentHash": "2926c6b1d2e0691bde3813e7f63908cd25bbfd1d078f63154eb57e39e7cc82fe",
       "sizeBytes": 11476,
@@ -2956,7 +2956,7 @@
       ],
       "createdAt": "2026-11-18T15:52:15.935Z",
       "updatedAt": "2026-11-18T15:52:15.935Z",
-      "lastAccessedAt": "2026-11-18T20:16:54.702Z",
+      "lastAccessedAt": "2026-11-18T20:55:10.248Z",
       "revision": 1,
       "contentHash": "ec0d05ebfe3fbb36493daa500db347bda44040a25ff169bb2ad881fd784be397",
       "sizeBytes": 7398,
@@ -2978,10 +2978,32 @@
       ],
       "createdAt": "2026-11-18T20:17:17.919Z",
       "updatedAt": "2026-11-18T20:17:17.919Z",
-      "lastAccessedAt": "2026-11-18T20:17:17.919Z",
+      "lastAccessedAt": "2026-11-18T20:55:10.248Z",
       "revision": 1,
       "contentHash": "2a1a52b50c444fd90533ccf3436574c7dd0e8d1bcd62061de9c0cdcd433520d7",
       "sizeBytes": 10253,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "38622843-363f-4bc2-ad74-dbdaba9e027d",
+      "title": "Admin 本地 dev vs tst 跨环境 488 端点对照（31 DIFF 归因）、库回滚加固与 POM 警告清理 MR !588",
+      "description": "本地 dev profile 对测试环境 tst profile 的 488 端点对照：457 一致 31 差异分布六类（dev 缺 kmverse.ask.admins 致 6 个端点 300、dispatch 开关、时间戳/随机、锁顺序副作用、JSR-303 校验顺序与 locale、超时、并发快照需串行复测）；DbRestore3 因 pk_ssg_chatbi_question_cluster 并发写冲突中断后的 ON CONFLICT DO NOTHING + 单表 try/catch 加固与 48/49 表复原、cluster 多 24 行属采集新写入；两条历史 POM 警告（sqljdbc4 写成 scope=4.0、admin 重复声明 smartop-api）修复为 MR !588；create-mr.ps1 需 URL 编码 project 否则 404、参数是 -DescFile；!578 描述 4 处口径错误待用户决定是否回改。",
+      "status": "active",
+      "filename": "admin-dev-vs-tst-488-31-diff-pom-mr-588-38622843.md",
+      "relativePath": "documents/active/admin-dev-vs-tst-488-31-diff-pom-mr-588-38622843.md",
+      "sourcePaths": [
+        "smartop-common/smartop-common-datasource/pom.xml",
+        "smartop-service/admin/pom.xml"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-1dea3710-9d2d-4b4f-b899-fac9abfc06d6"
+      ],
+      "createdAt": "2026-11-18T20:55:44.747Z",
+      "updatedAt": "2026-11-18T20:55:44.747Z",
+      "lastAccessedAt": "2026-11-18T20:55:44.747Z",
+      "revision": 1,
+      "contentHash": "00e027ba4100eac0d69ad0c848e4c96649c962d863403bb6b08ff3072872c8f1",
+      "sizeBytes": 9050,
       "memoryBodyIds": []
     }
   ]
