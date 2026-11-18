@@ -1373,7 +1373,7 @@
       ],
       "createdAt": "2026-11-16T09:59:48.430Z",
       "updatedAt": "2026-11-16T09:59:48.430Z",
-      "lastAccessedAt": "2026-11-18T04:16:35.400Z",
+      "lastAccessedAt": "2026-11-18T06:00:51.735Z",
       "revision": 1,
       "contentHash": "d71d82dcb47eb80bd580bc5d924e5d8a5d4d1ec2eab32e197d2b1629885c2479",
       "sizeBytes": 6914,
@@ -2261,7 +2261,7 @@
       ],
       "createdAt": "2026-11-17T11:57:49.910Z",
       "updatedAt": "2026-11-17T11:57:49.910Z",
-      "lastAccessedAt": "2026-11-18T04:16:35.400Z",
+      "lastAccessedAt": "2026-11-18T06:00:51.735Z",
       "revision": 1,
       "contentHash": "a06805842131c5559db2ce571da8453581028c5065b4b63b9e0435b93599d344",
       "sizeBytes": 5309,
@@ -2530,7 +2530,7 @@
       ],
       "createdAt": "2026-11-18T03:53:05.243Z",
       "updatedAt": "2026-11-18T03:53:05.243Z",
-      "lastAccessedAt": "2026-11-18T04:16:35.400Z",
+      "lastAccessedAt": "2026-11-18T06:00:51.735Z",
       "revision": 1,
       "contentHash": "cb6216343273659071b0c4f705a018d961b92db7cff8ff5bda817a3f55bd95f0",
       "sizeBytes": 5552,
@@ -2551,10 +2551,31 @@
       ],
       "createdAt": "2026-11-18T04:17:07.367Z",
       "updatedAt": "2026-11-18T04:17:07.367Z",
-      "lastAccessedAt": "2026-11-18T04:17:07.367Z",
+      "lastAccessedAt": "2026-11-18T06:00:51.735Z",
       "revision": 1,
       "contentHash": "829cd2d431d1fa4eae8ad130bc94a838d8395e75507a8a45f42a0d1e1f0b9bf2",
       "sizeBytes": 6634,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "1307beef-abaa-4421-b44a-5a18bc9a2cde",
+      "title": "HW KPI 数值标签终态（单位同字紧贴）与数字避线四方案调研",
+      "description": "miniTable.vue 数值标签自绘 plugin 的终态参数（数值/单位同为 600 10px、unitGap 2、offset 13、取消单位淡化）、master !1070 / develop !1084 提交状态与 cherry-pick 冲突教训，以及\"数字避线\"调研：PBI 不做避线、白色描边的业界做法、描边与真避线的实现成本，和 ①现状/②描边/③避所有线/④只避其他线 四方案实测标签数与压线数对比与推荐。",
+      "status": "active",
+      "filename": "hw-kpi-1307beef.md",
+      "relativePath": "documents/active/hw-kpi-1307beef.md",
+      "sourcePaths": [
+        "src/views/Bookings/components/miniTable.vue"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-8852168e-3518-45ed-b43d-8454978bc7ae"
+      ],
+      "createdAt": "2026-11-18T06:01:11.074Z",
+      "updatedAt": "2026-11-18T06:01:11.074Z",
+      "lastAccessedAt": "2026-11-18T06:01:11.074Z",
+      "revision": 1,
+      "contentHash": "10c7c3c9339fb54f96372d0f2c6e27536560317dbc77922b40bd710f12510a69",
+      "sizeBytes": 6301,
       "memoryBodyIds": []
     }
   ]
