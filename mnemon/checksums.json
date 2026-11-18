@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "5dc031f8bc059f807df5b55637757edbff1d9f2879d98b8125c788846a97ca87",
     "payload/runtime/USER.md": "90d148d53bfb77bdc3c55c6e69f0685fbfef9aa8965b012efed5a4f33672fcfb",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "3df3e129ec62322837c115cb20e26f3fce315be5113fe5231f28cc779218ff97",
+    "payload/documents/index.json": "24f575fe831ea3c80b94b7af10ce3dca45ae8cb23a691035b9e2f6115d4d8f55",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -122,6 +122,9 @@
     "payload/documents/active/admin-control-access-control-sql-explain-mr1-mr3-5e8a14c4.md": "b0ba7bf5050fc2aac648ce3794b731dd2c5f914da4007777ed7e63fd9e3b797f",
     "payload/documents/active/hw-kpi-datasetindex-cf1cbe31.md": "97e9f272a1692e665e7eeae291914ff3473200ac537bf6c43ac6b9ce3c10315c",
     "payload/documents/active/ssg-sales-ops-token-redis-24h-vs-cookie-24h-3e165d1b.md": "e5074b659e0d3680be021a04558433cb90cbe1d6be3b7b2c00015b0b6e643fc5",
+    "payload/documents/active/admin-control-access-control-mr3-permission-sql--5ed1a09b.md": "1ff63256411a7c070fb8dc05a672f5e9e7162483d98a7f03be19a5144f41be7b",
+    "payload/documents/active/ssg-sales-ops-token-checkandrenew-set-cookie-mr-3ea6d59b.md": "337cc6682960dc60888658d8ecc8d6dd347a28eaf7aca855148c986bf8d8e509",
+    "payload/documents/active/admin-control-permission-xml-mr-578-listusers-sr-68e95ff1.md": "a26fa1232afd61d0b87d77c36a90fff311b53aed12612d52ada049e05ac67c76",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
