@@ -1941,7 +1941,7 @@
       ],
       "createdAt": "2026-11-17T06:17:48.582Z",
       "updatedAt": "2026-11-17T06:17:48.582Z",
-      "lastAccessedAt": "2026-11-18T10:42:52.140Z",
+      "lastAccessedAt": "2026-11-18T20:16:54.702Z",
       "revision": 1,
       "contentHash": "dc51f6b28760a5c456340f5ffb55862b73f7a9c8b251d62def46187ec40f7313",
       "sizeBytes": 16619,
@@ -2743,7 +2743,7 @@
       ],
       "createdAt": "2026-11-18T08:20:58.980Z",
       "updatedAt": "2026-11-18T08:20:58.980Z",
-      "lastAccessedAt": "2026-11-18T15:51:25.048Z",
+      "lastAccessedAt": "2026-11-18T20:16:54.702Z",
       "revision": 1,
       "contentHash": "31f4b77ee0fa12c5ded5f69047c85b057d21b646695cc449c9e3bb3c02ff87cf",
       "sizeBytes": 6622,
@@ -2904,7 +2904,7 @@
       ],
       "createdAt": "2026-11-18T11:39:08.135Z",
       "updatedAt": "2026-11-18T11:39:08.135Z",
-      "lastAccessedAt": "2026-11-18T15:51:25.048Z",
+      "lastAccessedAt": "2026-11-18T20:16:54.702Z",
       "revision": 1,
       "contentHash": "a2d847872805c98560678bc867d6c587aa17da450d41865c7ddd111f87a239f8",
       "sizeBytes": 10377,
@@ -2956,10 +2956,32 @@
       ],
       "createdAt": "2026-11-18T15:52:15.935Z",
       "updatedAt": "2026-11-18T15:52:15.935Z",
-      "lastAccessedAt": "2026-11-18T15:52:15.935Z",
+      "lastAccessedAt": "2026-11-18T20:16:54.702Z",
       "revision": 1,
       "contentHash": "ec0d05ebfe3fbb36493daa500db347bda44040a25ff169bb2ad881fd784be397",
       "sizeBytes": 7398,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "f88cb5b5-3f66-444e-9cc6-f27525525c52",
+      "title": "Admin Control SQL 迁移：增删改查全量回归（488/496）、@Options 元数据缺陷与 MR 遗留口径修正",
+      "description": "承接 419 条 XML 迁移的写操作回归：496 端点 488 实测 473 一致，15 差异逐条证伪；抓到 NotificationCustomRuleMapper 漏 useGeneratedKeys 致 id 恒为 0（文本比对盲区）；两个破坏性设计（rebuild 先清后建无事务、全删全插空 body 清表）；51 表恢复的 autocommit 与外键顺序坑；MR v6「已知遗留」数字口径修正（${} 105/48、List<Map> 621/114、startPage 14/9、lower(itcode) 6 处）与分层处置建议。",
+      "status": "active",
+      "filename": "admin-control-sql-488-496-options-mr-f88cb5b5.md",
+      "relativePath": "documents/active/admin-control-sql-488-496-options-mr-f88cb5b5.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/resources/mapper/user/UserDao.xml",
+        "smartop-service/admin/src/main/resources/mapper/menu/MenusDao.xml"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-367263fc-8247-4f02-848a-c1e2ddbe0b76"
+      ],
+      "createdAt": "2026-11-18T20:17:17.919Z",
+      "updatedAt": "2026-11-18T20:17:17.919Z",
+      "lastAccessedAt": "2026-11-18T20:17:17.919Z",
+      "revision": 1,
+      "contentHash": "2a1a52b50c444fd90533ccf3436574c7dd0e8d1bcd62061de9c0cdcd433520d7",
+      "sizeBytes": 10253,
       "memoryBodyIds": []
     }
   ]
