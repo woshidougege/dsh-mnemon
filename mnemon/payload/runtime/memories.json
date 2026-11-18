@@ -228,6 +228,18 @@
         "label": "rxp",
         "at": "2026-11-17T10:20:33.656Z"
       }
+    },
+    {
+      "content": "本机没有 psql/psycopg，查 ssg-sales-ops 生产库的可用通道：写 .tmp/PgQ.java（JDK17 单文件源码模式 + org/postgresql/postgresql/42.5.4 驱动，java --class-path 运行），SQL 放文件传参；JDK 在 C:\\Program Files\\Java\\jdk-17.0.19。",
+      "target": "memory",
+      "importance": "low",
+      "created_at": "2026-11-18T01:51:39.584Z",
+      "updated_at": "2026-11-18T01:51:39.584Z",
+      "origin": {
+        "machine": "3f2bfee4-3775-4b7c-add1-7f40b171cb0f",
+        "label": "rxp",
+        "at": "2026-11-18T01:51:39.584Z"
+      }
     }
   ]
 }

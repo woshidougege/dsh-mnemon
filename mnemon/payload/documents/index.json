@@ -66,7 +66,7 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-17T09:50:38.319Z",
+      "lastAccessedAt": "2026-11-18T01:59:12.887Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
@@ -228,7 +228,7 @@
       ],
       "createdAt": "2026-11-13T02:19:16.079Z",
       "updatedAt": "2026-11-13T02:19:16.079Z",
-      "lastAccessedAt": "2026-11-17T02:44:44.842Z",
+      "lastAccessedAt": "2026-11-18T01:59:12.887Z",
       "revision": 1,
       "contentHash": "afff8f6063cbca0bffc34ba6ab1c8d849b29f0204c81101f7eba57deea5fba10",
       "sizeBytes": 8323,
@@ -330,7 +330,7 @@
       ],
       "createdAt": "2026-11-13T02:40:28.126Z",
       "updatedAt": "2026-11-13T02:40:28.126Z",
-      "lastAccessedAt": "2026-11-17T02:44:44.842Z",
+      "lastAccessedAt": "2026-11-18T01:59:12.887Z",
       "revision": 1,
       "contentHash": "d99da0b2d5f319581417f02f8760c01521745a9034249e1e0dffc40139f6a269",
       "sizeBytes": 10897,
@@ -1425,7 +1425,7 @@
       ],
       "createdAt": "2026-11-16T10:26:10.750Z",
       "updatedAt": "2026-11-16T10:26:10.750Z",
-      "lastAccessedAt": "2026-11-17T06:24:36.030Z",
+      "lastAccessedAt": "2026-11-18T01:59:12.887Z",
       "revision": 1,
       "contentHash": "fab51afaf109a1099caf330a0ea812b1226170df62b83e78818d11a8bd756eb4",
       "sizeBytes": 8813,
@@ -2379,6 +2379,28 @@
       "revision": 1,
       "contentHash": "8efcb5637e9ef11297b5c5fc83778c25461c98ce65fffb219e1bd5332626952e",
       "sizeBytes": 8691,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "f1d199f9-9322-4c39-b7f1-ca8160e6fc52",
+      "title": "ChatBI Not routed 成因分类与\"沿用上轮路由\"可行性裁决（生产实测）",
+      "description": "Not routed 只表示本轮未再调 route_report：30 天 4912 轮中 1201 未路由（追问 1026/全会话未路由 175/关联假阴性 219），其中 686 轮实际出数；revise_query 经 planned_state.py:112/114/161/665 锁定同报表，与上次路由一致率 731/732=99.86%，故读本轮工具输出 report_id（87.3% 自带）优于跨轮回退；含五层分层规则与三处改动位置。",
+      "status": "active",
+      "filename": "chatbi-not-routed-f1d199f9.md",
+      "relativePath": "documents/active/chatbi-not-routed-f1d199f9.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventExportService.java"
+      ],
+      "sessionIds": [
+        "mnemon-run-v1-c037a933-4b43-46bc-8ebd-07cc9ad0eb20"
+      ],
+      "createdAt": "2026-11-18T01:59:51.405Z",
+      "updatedAt": "2026-11-18T01:59:51.405Z",
+      "lastAccessedAt": "2026-11-18T01:59:51.405Z",
+      "revision": 1,
+      "contentHash": "945b766e288a86b6ca4361b64a48ef3b59b68387c48151133fcd035d7900694e",
+      "sizeBytes": 9237,
       "memoryBodyIds": []
     }
   ]

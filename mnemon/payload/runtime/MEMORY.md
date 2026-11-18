@@ -31,3 +31,5 @@ browser-skill（bsk）在 DSH 里报 "cannot start an independent Windows daemon
 POI 5.5.1 的 SXSSFSheet 支持 Excel 数据校验（下拉）：addValidationData 直接委托内部 XSSFSheet，getDataValidationHelper() 返回 XSSFDataValidationHelper（非 null），流式写出后读回仍可见（type=list、sqref 正常）。做下拉必须 setSuppressDropDownArrow(true)——OOXML 的 showDropDown 语义与名字相反（true=隐藏箭头），文件里写成 showDropDown="false"。另：.m2 里 commons-io 多版本共存（1.4/2.6/…/2.22），写 POI 探针要用 2.21.0，2.6 缺 UnsynchronizedByteArrayOutputStream 会 NoClassDefFoundError。
 §
 ssg-sales-ops 后端验证：本机 PATH 无 mvn/mvnd，用 IDEA 自带 Maven `C:\Program Files\JetBrains\IntelliJ IDEA 2026.1.3\plugins\maven-plugin\lib\maven3\bin\mvn.cmd`，且必须 `$env:JAVA_HOME='C:\Program Files\Java\jdk-17.0.19'`（用 JBR 25 会让 lombok 失效，报找不到 log/getter）；改了 smartop-api 后要先 `-o -T 4 -pl smartop-api -am install -DskipTests` 再跑 admin 单测，否则报 AuthFeignService 方法找不到。PowerShell 传 mvn 参数要加引号（'-Dtest=X'），否则 -D 里的点号被拆成 lifecycle phase。
+§
+本机没有 psql/psycopg，查 ssg-sales-ops 生产库的可用通道：写 .tmp/PgQ.java（JDK17 单文件源码模式 + org/postgresql/postgresql/42.5.4 驱动，java --class-path 运行），SQL 放文件传参；JDK 在 C:\Program Files\Java\jdk-17.0.19。
