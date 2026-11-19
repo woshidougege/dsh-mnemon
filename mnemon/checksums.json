@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "5dc031f8bc059f807df5b55637757edbff1d9f2879d98b8125c788846a97ca87",
     "payload/runtime/USER.md": "90d148d53bfb77bdc3c55c6e69f0685fbfef9aa8965b012efed5a4f33672fcfb",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "aece74cc993fe6bf5d987448d832421d2a07545267e1d699f01da6e5600a27f1",
+    "payload/documents/index.json": "10d49f17f21a0ce552d5c59ab0fe906744ef0764dc8d8c547760213b6b469571",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -133,6 +133,11 @@
     "payload/documents/active/admin-control-sql-xml-419-110-dao-4ad84c6f.md": "1f32394a3973268f2d8d442dfbcedd9f7b8a8bb6fc96c85a7a37a8659405b978",
     "payload/documents/active/admin-control-sql-488-496-options-mr-f88cb5b5.md": "541853ca5ee4f1e8d3ea8977334fbd02e800414c537d7eaab706d6dfd977a67b",
     "payload/documents/active/admin-dev-vs-tst-488-31-diff-pom-mr-588-38622843.md": "ef1a42bf85f8affffc31fd0e2d1b5bf35da65a9779c033e049d2f1bc12b9d775",
+    "payload/documents/active/chatbi-234bc98b-vs-0af54804-sql-xml-mr-578-a46010e5.md": "470d631d82a470a762bb598076b561ee0925dfc5f50e553a1deed5fc2bb39f9f",
+    "payload/documents/active/openviking-dsh-account-user-admin-366ff5ad.md": "c7224417227e2c7b0f62807005e496199c1c6453d7397c1c083ff2a578da7f54",
+    "payload/documents/active/setattribute-dsh-remote-web-ui-0-4-19-71393374.md": "df6ec7cc55ebdb54e8deac5106f3d62c4b481615d0fed34583e6c9d035999bad",
+    "payload/documents/active/dsh-openviking-23a6f590.md": "4868c0d95de683bf3aefbad4d615fc331a90a489b462d9ae9a1032e6602e0132",
+    "payload/documents/active/sql-mapper-xml-mr-590-8d4061ae.md": "8f11f323100e3967ef4f911f7ebe2f2c4c23a01ae1bb14460065f903b0b05e5a",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
