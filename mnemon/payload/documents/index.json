@@ -228,7 +228,7 @@
       ],
       "createdAt": "2026-11-13T02:19:16.079Z",
       "updatedAt": "2026-11-13T02:19:16.079Z",
-      "lastAccessedAt": "2026-11-19T07:36:21.309Z",
+      "lastAccessedAt": "2026-11-19T12:24:10.429Z",
       "revision": 1,
       "contentHash": "afff8f6063cbca0bffc34ba6ab1c8d849b29f0204c81101f7eba57deea5fba10",
       "sizeBytes": 8323,
@@ -806,7 +806,7 @@
       ],
       "createdAt": "2026-11-13T23:34:05.065Z",
       "updatedAt": "2026-11-13T23:34:05.065Z",
-      "lastAccessedAt": "2026-11-19T07:36:21.309Z",
+      "lastAccessedAt": "2026-11-19T12:24:10.429Z",
       "revision": 1,
       "contentHash": "a16b6cc4d7f109a6b75b5b36107d8aa943038cedb8d2c5285ea62de6f911302d",
       "sizeBytes": 6436,
@@ -3328,7 +3328,7 @@
       ],
       "createdAt": "2026-11-19T08:59:03.476Z",
       "updatedAt": "2026-11-19T08:59:03.476Z",
-      "lastAccessedAt": "2026-11-19T11:21:20.273Z",
+      "lastAccessedAt": "2026-11-19T12:24:10.429Z",
       "revision": 1,
       "contentHash": "5432aa00aaa7577f34e9319a24d98bb1507fc61851d723636ac86a0f4233a308",
       "sizeBytes": 7268,
@@ -3467,7 +3467,7 @@
       ],
       "createdAt": "2026-11-19T10:02:29.882Z",
       "updatedAt": "2026-11-19T10:02:29.882Z",
-      "lastAccessedAt": "2026-11-19T11:21:20.273Z",
+      "lastAccessedAt": "2026-11-19T12:12:23.288Z",
       "revision": 1,
       "contentHash": "7e712530d6ab0e55aac94f55ae14ae594f086dd4f49b5dd2dd6255e3b511a2e7",
       "sizeBytes": 5815,
@@ -3486,7 +3486,7 @@
       ],
       "createdAt": "2026-11-19T10:14:07.721Z",
       "updatedAt": "2026-11-19T10:14:07.721Z",
-      "lastAccessedAt": "2026-11-19T10:26:04.244Z",
+      "lastAccessedAt": "2026-11-19T12:24:10.429Z",
       "revision": 1,
       "contentHash": "61f64d68a6246227d5a19004e5cbaf262472322895619112d5b33e2a59bb2153",
       "sizeBytes": 7977,
@@ -3556,7 +3556,7 @@
       ],
       "createdAt": "2026-11-19T10:52:42.398Z",
       "updatedAt": "2026-11-19T10:52:42.398Z",
-      "lastAccessedAt": "2026-11-19T11:21:20.273Z",
+      "lastAccessedAt": "2026-11-19T12:12:23.288Z",
       "revision": 1,
       "contentHash": "21b4b779d7cc32e601eb58fd8fa6b9f667507e3fb4538bbc3e73c9a2125cb3f3",
       "sizeBytes": 6273,
@@ -3606,7 +3606,7 @@
       ],
       "createdAt": "2026-11-19T10:59:41.065Z",
       "updatedAt": "2026-11-19T10:59:41.065Z",
-      "lastAccessedAt": "2026-11-19T11:21:20.273Z",
+      "lastAccessedAt": "2026-11-19T12:12:23.288Z",
       "revision": 1,
       "contentHash": "f68db882234ec1edf0599e8a865bd10851da1d5aac7ed78c05a9470d84659f39",
       "sizeBytes": 7597,
@@ -3630,10 +3630,54 @@
       ],
       "createdAt": "2026-11-19T11:21:37.431Z",
       "updatedAt": "2026-11-19T11:21:37.431Z",
-      "lastAccessedAt": "2026-11-19T11:21:37.431Z",
+      "lastAccessedAt": "2026-11-19T12:12:23.288Z",
       "revision": 1,
       "contentHash": "d2614d31d01c89f9e182f5c0192b5bece9633e7a982c791ab263edb4daee06b2",
       "sizeBytes": 6620,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "dfebe689-1537-49bd-a261-bb249822d57b",
+      "title": "回放翻译：结果卡片随译文整体重建（setup 固化 props 的坑，MR !1128 / !1129）",
+      "description": "ssg_sales_ops 回放翻译增量修复：切语言后图表标题/视图说明/Data tab 表头不刷新，根因是 SmartData.vue 与各图表壳子在 setup 顶层把 props 固化成普通常量；修复为 computed + PbiRecommendation 的 translationVersion 拼入 v-for key 强制整卡重建，含文件行号、type-check 报错与 MR 归属。",
+      "status": "active",
+      "filename": "setup-props-mr-1128-1129-dfebe689.md",
+      "relativePath": "documents/active/setup-props-mr-1128-1129-dfebe689.md",
+      "sourcePaths": [
+        "src/components/PbiRecommend/Nodes/SmartData.vue",
+        "src/components/PbiRecommend/PbiRecommendation.vue"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-95b6499f-1492-46ed-878b-792661acc9d0"
+      ],
+      "createdAt": "2026-11-19T12:12:53.327Z",
+      "updatedAt": "2026-11-19T12:12:53.327Z",
+      "lastAccessedAt": "2026-11-19T12:12:53.327Z",
+      "revision": 1,
+      "contentHash": "d88be6106190d4ff504adfbf8348ace67755e305770f6fc8565be0b0d839eecf",
+      "sizeBytes": 4578,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "6be8daa7-27e7-4ca1-93d9-4e26142f2a82",
+      "title": "生产会话每轮 Turn failed（WorkspaceLifecycleError）复现与前端静默假死根因",
+      "description": "ssg-sales-ops 某会话 workspace 丢失导致每轮 Turn 启动即 WorkspaceLifecycleError（复现对照数据）；附带 runtime_reset_required 全量重放与 pbiRuntimeStream 停滞 stop() 不复位 loading 导致点击被吞的链路、文件行号与两条待修项。",
+      "status": "active",
+      "filename": "turn-failed-workspacelifecycleerror-6be8daa7.md",
+      "relativePath": "documents/active/turn-failed-workspacelifecycleerror-6be8daa7.md",
+      "sourcePaths": [
+        "src/services/pbiRuntimeStream.ts",
+        "src/components/Agent/AgentChatPanel.vue"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-9db24969-20f5-41be-bc1a-e881c74abe02"
+      ],
+      "createdAt": "2026-11-19T12:24:28.121Z",
+      "updatedAt": "2026-11-19T12:24:28.121Z",
+      "lastAccessedAt": "2026-11-19T12:24:28.121Z",
+      "revision": 1,
+      "contentHash": "00c00370cc56e6855da1b14b727c4045bee110a523ccd2b9acb2790d8c2856cf",
+      "sizeBytes": 5526,
       "memoryBodyIds": []
     }
   ]
