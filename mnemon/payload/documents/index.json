@@ -371,7 +371,7 @@
       ],
       "createdAt": "2026-11-13T03:21:51.485Z",
       "updatedAt": "2026-11-13T03:21:51.485Z",
-      "lastAccessedAt": "2026-11-16T03:09:33.830Z",
+      "lastAccessedAt": "2026-11-19T07:00:09.340Z",
       "revision": 1,
       "contentHash": "9b2fe0dedc3a38ce8f8b71f61c33544f3ea3c22f9c28f6f95e04601ac56f26a1",
       "sizeBytes": 9039,
@@ -997,7 +997,7 @@
       ],
       "createdAt": "2026-11-16T01:49:20.091Z",
       "updatedAt": "2026-11-16T01:49:20.091Z",
-      "lastAccessedAt": "2026-11-16T02:16:07.577Z",
+      "lastAccessedAt": "2026-11-19T07:00:09.340Z",
       "revision": 1,
       "contentHash": "85c038e1037cec8200ac1b27eea3f5e624249f4270d0a4f0a447317b4402a35b",
       "sizeBytes": 8430,
@@ -1266,7 +1266,7 @@
       ],
       "createdAt": "2026-11-16T08:34:50.403Z",
       "updatedAt": "2026-11-16T08:34:50.403Z",
-      "lastAccessedAt": "2026-11-16T08:37:29.216Z",
+      "lastAccessedAt": "2026-11-19T06:51:57.582Z",
       "revision": 1,
       "contentHash": "556ac91401553d63abe0fd1cc2b70aa6713a75b906f34678b471d9f8cbdc37fa",
       "sizeBytes": 7797,
@@ -3064,7 +3064,7 @@
       ],
       "createdAt": "2026-11-19T03:13:44.838Z",
       "updatedAt": "2026-11-19T03:13:44.838Z",
-      "lastAccessedAt": "2026-11-19T03:13:44.838Z",
+      "lastAccessedAt": "2026-11-19T07:00:09.340Z",
       "revision": 1,
       "contentHash": "44a438f9ce8c73c9e2e4e41293eb2d2ea7c327c5bc0fe4eb879246ea43cd970f",
       "sizeBytes": 7863,
@@ -3184,6 +3184,44 @@
       "revision": 1,
       "contentHash": "2f54828fb72d2015882738989e5f0b7a82a8d8f07c93131dbe902fd9006b0617",
       "sizeBytes": 7894,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "81078dc5-14c3-46cd-af43-9737596876b4",
+      "title": "Claude Code / Codex 子智能体插件：调用方式、模型来源与三份配置收敛",
+      "description": "dsh-subagent-claude-code 与 dsh-subagent-codex 两插件的能力与调用方式（AI 自动/可点名）、模型不随调用参数传递、scrubbedParentEnv 造成的配置不继承机制与代码行号证据、本机 DSH/Claude Code/Codex 三处 base_url-model-key 对照与 8080 不通问题、方案 A（塞插件 env）与 B（单一源+同步脚本）的取舍。调研完成，待用户拍板。",
+      "status": "active",
+      "filename": "claude-code-codex-81078dc5.md",
+      "relativePath": "documents/active/claude-code-codex-81078dc5.md",
+      "sourcePaths": [],
+      "sessionIds": [
+        "mnemon-review-v1-7e189d5d-5e59-49b8-9c1b-da3fe2b0f4f8"
+      ],
+      "createdAt": "2026-11-19T06:52:21.272Z",
+      "updatedAt": "2026-11-19T06:52:21.272Z",
+      "lastAccessedAt": "2026-11-19T07:00:09.340Z",
+      "revision": 1,
+      "contentHash": "3a5c792b4775f16cd78ac0e6fbc6f838ca1a6a040de44dcd7edcff6b0f5e5da1",
+      "sizeBytes": 7107,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "d2da0cf8-a949-4789-851c-81718ed06ac3",
+      "title": "Claude Code / Codex 子智能体插件：permissionMode 默认值、可用取值与实测验证",
+      "description": "两个 DSH 子智能体插件的权限层记录：Claude Code 默认 dontAsk（写入被拒）/acceptEdits/bypassPermissions 三档实测，Codex 默认 never 实为 workspace-write 且 config.toml 的 sandbox_mode 不生效，dangerously-bypass-approvals-and-sandbox 的越级写入验证法，patch yml 热生效，与无人值守无审批的风险控制要点。",
+      "status": "active",
+      "filename": "claude-code-codex-permissionmode-d2da0cf8.md",
+      "relativePath": "documents/active/claude-code-codex-permissionmode-d2da0cf8.md",
+      "sourcePaths": [],
+      "sessionIds": [
+        "mnemon-review-v1-cf9d88e3-7804-4739-9599-426f12f621b8"
+      ],
+      "createdAt": "2026-11-19T07:00:33.981Z",
+      "updatedAt": "2026-11-19T07:00:33.981Z",
+      "lastAccessedAt": "2026-11-19T07:00:33.981Z",
+      "revision": 1,
+      "contentHash": "1b65dd23c1c697d630b23a43320b6d6e7c5f72ca51f0905162e757866c0da1f1",
+      "sizeBytes": 6084,
       "memoryBodyIds": []
     }
   ]

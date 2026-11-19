@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "5dc031f8bc059f807df5b55637757edbff1d9f2879d98b8125c788846a97ca87",
     "payload/runtime/USER.md": "90d148d53bfb77bdc3c55c6e69f0685fbfef9aa8965b012efed5a4f33672fcfb",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "a6ad3d1faf8408eea7cec47650f651801d9a003f2c9b20646ef27f820949d32a",
+    "payload/documents/index.json": "9480a5bffda0e9fb3d02bc381edbfc1ea61114426689e88c51de24004d8b6dee",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -141,6 +141,8 @@
     "payload/documents/active/jira-freemarker-590-mr-591-592-4766279b.md": "3cbd5b90a4a9aeadda1db11cfb2ce218c95cb38ff8c79a720382828286d3624c",
     "payload/documents/active/spark-thymeleaf-592-freemarker-07982661.md": "d9abcfd83de9581af006439b8e227680f402e2b69a9fb137fa26687711710ef7",
     "payload/documents/active/service-portfolio-kpi-data-source-ssg-sales-ops--a538574e.md": "c9a326a12092f6ffd8d304bccd65bb5b679377d026a511c2577e627f98fe4601",
+    "payload/documents/active/claude-code-codex-81078dc5.md": "7d78dfd9381513fbe7a05c531b5f37cb9d8230f8f7f8ccd03fe5dfb63287f89b",
+    "payload/documents/active/claude-code-codex-permissionmode-d2da0cf8.md": "28999b9e5c7e269b1718c6ea3939f21c42034f6e2f0017aef3b383e2b4a521ce",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
