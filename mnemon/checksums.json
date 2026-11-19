@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "5dc031f8bc059f807df5b55637757edbff1d9f2879d98b8125c788846a97ca87",
     "payload/runtime/USER.md": "90d148d53bfb77bdc3c55c6e69f0685fbfef9aa8965b012efed5a4f33672fcfb",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "0206d4ddd90f0406beb208a84b4ad03770589dd846d878b9e7e54b9368e76cbe",
+    "payload/documents/index.json": "84659467c931fd9a63a9a30c41e4dd3c280885234515394cd8be5cfe5d0ab03d",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -152,6 +152,11 @@
     "payload/documents/active/workbuddy-panel-8789-auth-glob-503-c28e03c1.md": "8b3558978d2b9164198bff847d651c2b6d8c835ecf3d74dfc6bcf9a4922dd3c1",
     "payload/documents/active/workbuddy-panel-8789-0-mcp-00bd0694.md": "1615f287de148f14e3cadacb0d8919928cc1ca1ce1c4759c74c90a3b965bca2b",
     "payload/documents/active/panel-8788-16-v1-f5b4ff78.md": "76afd3c4dc0c04a534096d86870c81dec999cf2bf1bd543db1a256338adfcc73",
+    "payload/documents/active/8788-v1-api-key-2026-11-19-a666ef43.md": "f387100216da534c6c485573de986109163e297e85c1bcf95f59ae3ee46c00a6",
+    "payload/documents/active/service-portfolio-2026-11-19-dd868132.md": "54435a4a9690cc708235c398eda68d9692810c5db935a7cd4ddc32317af20f79",
+    "payload/documents/active/mr-1121-1122-62323dec.md": "0d111525b6c599ce8e22f0fceef5695191056a61fdca846f94e117131286de7d",
+    "payload/documents/active/workbuddy2api-panel-expiringurgency-fefo-6103c10c.md": "e8ef0d75bb4aaefda8a6321114a6969473a3fbd24993da04ca978934719e50f2",
+    "payload/documents/active/workbuddy-panel-e3c69c40.md": "a448a291c15510bea7824b96781d2dfc2a6ce26c83f31a780029303c8f89aa5e",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
