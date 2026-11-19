@@ -482,7 +482,7 @@
       ],
       "createdAt": "2026-11-13T06:13:21.952Z",
       "updatedAt": "2026-11-13T06:13:21.952Z",
-      "lastAccessedAt": "2026-11-19T10:02:02.880Z",
+      "lastAccessedAt": "2026-11-19T10:37:33.696Z",
       "revision": 1,
       "contentHash": "5bf88f8df496af04abe01af34a4609667306d5e0879ff3c834165c551ef26c90",
       "sizeBytes": 5562,
@@ -600,7 +600,7 @@
       ],
       "createdAt": "2026-11-13T10:44:03.159Z",
       "updatedAt": "2026-11-13T10:44:03.159Z",
-      "lastAccessedAt": "2026-11-19T10:02:02.880Z",
+      "lastAccessedAt": "2026-11-19T10:37:33.696Z",
       "revision": 1,
       "contentHash": "7517ec65f984c2b137d4572e52ad7a33870ee8d8c13dd1a0ec60cb01250bf303",
       "sizeBytes": 4765,
@@ -1526,7 +1526,7 @@
       ],
       "createdAt": "2026-11-17T01:47:24.558Z",
       "updatedAt": "2026-11-17T01:47:24.558Z",
-      "lastAccessedAt": "2026-11-19T01:51:29.769Z",
+      "lastAccessedAt": "2026-11-19T10:57:23.859Z",
       "revision": 1,
       "contentHash": "b20e661c149ad39add631cbe931552c1354584d18b852d99a11ee10a68fa97c8",
       "sizeBytes": 8883,
@@ -2328,7 +2328,7 @@
       ],
       "createdAt": "2026-11-17T14:14:09.384Z",
       "updatedAt": "2026-11-17T14:14:09.384Z",
-      "lastAccessedAt": "2026-11-19T08:57:02.166Z",
+      "lastAccessedAt": "2026-11-19T10:57:23.859Z",
       "revision": 1,
       "contentHash": "f040fffc716cb3d8932b27b2402031e7013d7ef212582f8e7bc2022b1635a779",
       "sizeBytes": 7943,
@@ -2464,7 +2464,7 @@
       ],
       "createdAt": "2026-11-18T03:10:39.768Z",
       "updatedAt": "2026-11-18T03:10:39.768Z",
-      "lastAccessedAt": "2026-11-18T03:35:25.524Z",
+      "lastAccessedAt": "2026-11-19T10:57:23.859Z",
       "revision": 1,
       "contentHash": "b8361a2f509ce91a50aefb1491c56d8eb979b6531174b124b6a674bd7ec2787a",
       "sizeBytes": 7169,
@@ -2978,7 +2978,7 @@
       ],
       "createdAt": "2026-11-18T20:17:17.919Z",
       "updatedAt": "2026-11-18T20:17:17.919Z",
-      "lastAccessedAt": "2026-11-19T03:07:59.879Z",
+      "lastAccessedAt": "2026-11-19T10:57:23.859Z",
       "revision": 1,
       "contentHash": "2a1a52b50c444fd90533ccf3436574c7dd0e8d1bcd62061de9c0cdcd433520d7",
       "sizeBytes": 10253,
@@ -3242,7 +3242,7 @@
       ],
       "createdAt": "2026-11-19T07:36:37.017Z",
       "updatedAt": "2026-11-19T07:36:37.017Z",
-      "lastAccessedAt": "2026-11-19T08:58:36.954Z",
+      "lastAccessedAt": "2026-11-19T10:59:13.272Z",
       "revision": 1,
       "contentHash": "77c3a26fb220e91428ddb78d2ac9017dd2107bef0bd5d65eb19617d4b4e7c8ec",
       "sizeBytes": 6241,
@@ -3328,7 +3328,7 @@
       ],
       "createdAt": "2026-11-19T08:59:03.476Z",
       "updatedAt": "2026-11-19T08:59:03.476Z",
-      "lastAccessedAt": "2026-11-19T10:02:02.880Z",
+      "lastAccessedAt": "2026-11-19T11:21:20.273Z",
       "revision": 1,
       "contentHash": "5432aa00aaa7577f34e9319a24d98bb1507fc61851d723636ac86a0f4233a308",
       "sizeBytes": 7268,
@@ -3467,7 +3467,7 @@
       ],
       "createdAt": "2026-11-19T10:02:29.882Z",
       "updatedAt": "2026-11-19T10:02:29.882Z",
-      "lastAccessedAt": "2026-11-19T10:02:29.882Z",
+      "lastAccessedAt": "2026-11-19T11:21:20.273Z",
       "revision": 1,
       "contentHash": "7e712530d6ab0e55aac94f55ae14ae594f086dd4f49b5dd2dd6255e3b511a2e7",
       "sizeBytes": 5815,
@@ -3509,6 +3509,131 @@
       "revision": 1,
       "contentHash": "1a6ddc0e1ba237014de5f8bf194a4548a47f05b6bcdfec8cf26ac9d086e819c8",
       "sizeBytes": 7168,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "f3474585-e700-4c3c-9a68-df5abd42e039",
+      "title": "回放翻译的呈现策略（答案叠加 vs 问题替换）与报表加载态动效（MR !1123 / !1124）",
+      "description": "ssg_sales_ops 报表模块：为何用户问题翻译替换气泡文字、而答案只提取 finalAssistantText + profileTaskAnswers 叠加成独立译文块（PbiRecommendation 结构化渲染约束）；翻译按钮三点上浮动效与 LoadingRows 指标卡占位骨架的参数与接入范围，以及 !1123/!1124 双基线交付验证。",
+      "status": "active",
+      "filename": "vs-mr-1123-1124-f3474585.md",
+      "relativePath": "documents/active/vs-mr-1123-1124-f3474585.md",
+      "sourcePaths": [
+        "src/views/Setting/reports/history-replay/HistoryChatPanel.vue",
+        "src/views/Setting/reports/user-logs/components/ui/LoadingRows.vue",
+        "src/views/Setting/reports/user-logs/styles.less",
+        "src/views/Setting/reports/user-logs/components/views/OverviewView.vue",
+        "src/views/Setting/reports/user-logs/components/views/FeedbackView.vue"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-570a155d-1bee-43b2-903f-3909ae7e6071"
+      ],
+      "createdAt": "2026-11-19T10:38:39.219Z",
+      "updatedAt": "2026-11-19T10:38:39.219Z",
+      "lastAccessedAt": "2026-11-19T10:52:18.392Z",
+      "revision": 1,
+      "contentHash": "503c06e9ab3edfbbbc5e554763996ed952d4084ae271ff1dcda1b8fe0d703e18",
+      "sizeBytes": 5217,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "f8c73c4a-a6ef-491e-a80c-96d0df436d17",
+      "title": "回放翻译渲染内核归属、正文替换三方案与 master 撤下翻译（!1125）",
+      "description": "ssg_sales_ops 回放与 Chat BI 共用 PbiRecommendation.vue / pbiParse.ts / pbiFold.ts 的查证结论（外壳独立、内核同一份，附两侧 props 差异）；正文替换的 A/B/C 三方案与代价；!1125 从 master 摘掉翻译的范围、刻意保留的骨架优化，以及 master/develop 在 HistoryChatPanel.vue 分叉后的两条复原路径。",
+      "status": "active",
+      "filename": "master-1125-f8c73c4a.md",
+      "relativePath": "documents/active/master-1125-f8c73c4a.md",
+      "sourcePaths": [
+        "src/components/PbiRecommend/PbiRecommendation.vue",
+        "src/components/Agent/AgentChatPanel.vue",
+        "src/views/Setting/reports/history-replay/HistoryChatPanel.vue",
+        "src/views/Setting/reports/history-replay/translateApi.ts",
+        "src/views/Setting/reports/user-logs/components/modals/DetailModal.vue",
+        "src/views/Setting/reports/user-logs/components/ui/LoadingRows.vue"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-681d63ff-26c9-4d27-b15a-4fdc1e5a3eef"
+      ],
+      "createdAt": "2026-11-19T10:52:42.398Z",
+      "updatedAt": "2026-11-19T10:52:42.398Z",
+      "lastAccessedAt": "2026-11-19T11:21:20.273Z",
+      "revision": 1,
+      "contentHash": "21b4b779d7cc32e601eb58fd8fa6b9f667507e3fb4538bbc3e73c9a2125cb3f3",
+      "sizeBytes": 6273,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "99f450f1-6195-4a65-99a1-2499785b6331",
+      "title": "PBI 页面链接 link_bi 改为 workspace 入口：跨表同步范围与三张必须不动的表（ssg-pbi-metadata，2026-11-19）",
+      "description": "生产+测试双库把 catalog id=65 的页级 link_bi 从个人 app 入口换成 workspace 入口：必须同改 catalog/thumbnail/sheet_search 三表；kpi_map/rag_notes/km_sync_records 存报告级共享链接不能动；含个人账号无写权限、sheet_search 为重建式派生索引、审计不留痕等坑。",
+      "status": "active",
+      "filename": "pbi-link-bi-workspace-ssg-pbi-metadata-2026-11-1-99f450f1.md",
+      "relativePath": "documents/active/pbi-link-bi-workspace-ssg-pbi-metadata-2026-11-1-99f450f1.md",
+      "sourcePaths": [
+        "app/services/pbi/metadata_write.py",
+        "app/services/pbi/metadata_identity.py",
+        "app/services/pbi/search_index.py",
+        "app/tasks/workflow_search_index.py",
+        "app/services/pbi/audit.py"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-d35b7b9b-f614-4234-b369-e9e8094e4821"
+      ],
+      "createdAt": "2026-11-19T10:57:41.210Z",
+      "updatedAt": "2026-11-19T10:57:41.210Z",
+      "lastAccessedAt": "2026-11-19T10:57:41.210Z",
+      "revision": 1,
+      "contentHash": "b533acd0da78efca9bdae1774c7ed925b24e8a536a020e72d56e31ea27bbedf0",
+      "sizeBytes": 5980,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "00c8b297-ee92-4caf-b3cb-01943ef6b4b5",
+      "title": "回放翻译：接口层方案否决理由与「原文对照 / 反问未翻 / 大屏末轮」三个反馈的根因",
+      "description": "ssg_sales_ops 回放翻译追加查证（只读、未拍板）：为何翻译不能下沉到接口层（SSE 逐事件 + 正文由前端 pbiFold 折叠 + 产品形态退步）；领导反馈的三个缺陷各自的根因行号、改动范围与风险，以及先 2.3+2.1 后 2.2 的落地顺序和「图表/SQL/内置文案仍英文」的能力边界。",
+      "status": "active",
+      "filename": "document-00c8b297.md",
+      "relativePath": "documents/active/document-00c8b297.md",
+      "sourcePaths": [
+        "src/views/Setting/reports/history-replay/HistoryChatPanel.vue",
+        "src/components/PbiRecommend/PbiRecommendation.vue",
+        "src/components/Agent/AgentChatPanel.vue",
+        "src/components/PbiRecommend/pbiParse.ts",
+        "src/components/PbiRecommend/pbiFold.ts"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-f92def5e-b993-4f91-9578-14d47a9fe710"
+      ],
+      "createdAt": "2026-11-19T10:59:41.065Z",
+      "updatedAt": "2026-11-19T10:59:41.065Z",
+      "lastAccessedAt": "2026-11-19T11:21:20.273Z",
+      "revision": 1,
+      "contentHash": "f68db882234ec1edf0599e8a865bd10851da1d5aac7ed78c05a9470d84659f39",
+      "sizeBytes": 7597,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "3ac2a628-0a6a-42ed-a2a3-56755ff27ed0",
+      "title": "回放翻译全量化：整轮替换 + 反问/建议/图表文案覆盖（MR !1126 / !1127）",
+      "description": "ssg_sales_ops 前端把回放翻译从双语对照升级为整轮替换，新增 pbiTranslate.ts 作为收集/回填唯一入口（collectPbiTexts / applyPbiTranslations，无译文零拷贝以隔离实时会话），覆盖反问卡问题与选项、建议卡、子任务摘要、图表标题与表头；修复大屏下最后一轮无法跟随的 32% 视角线根因；develop/master 双分支提交（!1126 develop、!1127 master 重新接入 !1125 撤销的入口）。",
+      "status": "active",
+      "filename": "mr-1126-1127-3ac2a628.md",
+      "relativePath": "documents/active/mr-1126-1127-3ac2a628.md",
+      "sourcePaths": [
+        "src/components/PbiRecommend/pbiTranslate.ts",
+        "src/components/PbiRecommend/PbiRecommendation.vue",
+        "src/views/Setting/reports/history-replay/HistoryChatPanel.vue",
+        "src/views/Setting/reports/history-replay/translateApi.ts"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-c4829475-f291-4b66-b65f-3a0469e1cef8"
+      ],
+      "createdAt": "2026-11-19T11:21:37.431Z",
+      "updatedAt": "2026-11-19T11:21:37.431Z",
+      "lastAccessedAt": "2026-11-19T11:21:37.431Z",
+      "revision": 1,
+      "contentHash": "d2614d31d01c89f9e182f5c0192b5bece9633e7a982c791ab263edb4daee06b2",
+      "sizeBytes": 6620,
       "memoryBodyIds": []
     }
   ]

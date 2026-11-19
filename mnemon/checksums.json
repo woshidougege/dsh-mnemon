@@ -1,10 +1,10 @@
 {
   "algorithm": "sha256",
   "files": {
-    "payload/runtime/memories.json": "5dc031f8bc059f807df5b55637757edbff1d9f2879d98b8125c788846a97ca87",
-    "payload/runtime/USER.md": "90d148d53bfb77bdc3c55c6e69f0685fbfef9aa8965b012efed5a4f33672fcfb",
+    "payload/runtime/memories.json": "1e878119fd9e4f75e831783a60caade98542cabbc4049d3d73937823c30d40bc",
+    "payload/runtime/USER.md": "bc22cb1c19aa85ae7e52a7669e635cf18fd51c65acc363220e70ee9d314f7230",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "84659467c931fd9a63a9a30c41e4dd3c280885234515394cd8be5cfe5d0ab03d",
+    "payload/documents/index.json": "205147f952757e4fcee7396ef2ec3fe0f41b17971d3eb5c4be5a6fd157ee85f1",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -157,6 +157,11 @@
     "payload/documents/active/mr-1121-1122-62323dec.md": "0d111525b6c599ce8e22f0fceef5695191056a61fdca846f94e117131286de7d",
     "payload/documents/active/workbuddy2api-panel-expiringurgency-fefo-6103c10c.md": "e8ef0d75bb4aaefda8a6321114a6969473a3fbd24993da04ca978934719e50f2",
     "payload/documents/active/workbuddy-panel-e3c69c40.md": "a448a291c15510bea7824b96781d2dfc2a6ce26c83f31a780029303c8f89aa5e",
+    "payload/documents/active/vs-mr-1123-1124-f3474585.md": "885bbd452ab6f590f085bdc66b2a8209af9a22b3e9b64b31db139f924c818add",
+    "payload/documents/active/master-1125-f8c73c4a.md": "7105a6166a9217bd2141063872f35e5aa8e1c302a278ca3aa368d568a41e3d75",
+    "payload/documents/active/pbi-link-bi-workspace-ssg-pbi-metadata-2026-11-1-99f450f1.md": "8e046fb919739ee0135d8e9b41a2ddd55b49d003dd24e89ad6a57233e26dd27c",
+    "payload/documents/active/document-00c8b297.md": "7f4485c7a9dda375a6020d80a369b66ef9a4fc95835753be9ef4e1606df571f9",
+    "payload/documents/active/mr-1126-1127-3ac2a628.md": "adc54322e898896895b89945da113e2c0fc6ea98973dccb80eda69713312ff5c",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
