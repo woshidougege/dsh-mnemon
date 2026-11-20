@@ -66,7 +66,7 @@
       ],
       "createdAt": "2026-11-12T10:27:28.174Z",
       "updatedAt": "2026-11-12T10:27:28.174Z",
-      "lastAccessedAt": "2026-11-20T02:41:54.755Z",
+      "lastAccessedAt": "2026-11-20T20:27:42.357Z",
       "revision": 1,
       "contentHash": "c7c840199b3337be483a26361d97a4db8b81e93b5118d15e0f8ca4bbba5ed998",
       "sizeBytes": 8953,
@@ -738,7 +738,7 @@
       ],
       "createdAt": "2026-11-13T19:12:45.375Z",
       "updatedAt": "2026-11-13T19:12:45.375Z",
-      "lastAccessedAt": "2026-11-19T03:04:40.898Z",
+      "lastAccessedAt": "2026-11-20T14:12:20.930Z",
       "revision": 1,
       "contentHash": "cc6115fa3d8f30fc903ada462d217b25462a8fcf154d49160c982eefc05af21d",
       "sizeBytes": 4476,
@@ -763,7 +763,7 @@
       ],
       "createdAt": "2026-11-13T19:43:48.238Z",
       "updatedAt": "2026-11-13T19:43:48.238Z",
-      "lastAccessedAt": "2026-11-19T08:58:36.954Z",
+      "lastAccessedAt": "2026-11-20T14:12:20.930Z",
       "revision": 1,
       "contentHash": "c72024b90b2935346cbcdfd0d290e2c1a84bb489318cf8a882d91a8a2b2e88a2",
       "sizeBytes": 5163,
@@ -1402,7 +1402,7 @@
       ],
       "createdAt": "2026-11-16T10:18:46.206Z",
       "updatedAt": "2026-11-16T10:18:46.206Z",
-      "lastAccessedAt": "2026-11-20T06:50:50.675Z",
+      "lastAccessedAt": "2026-11-20T14:12:20.930Z",
       "revision": 1,
       "contentHash": "d1afd26cb1e15604422f04efd1f3558405fe50acfdb7dbaa194213925588243c",
       "sizeBytes": 7345,
@@ -1760,7 +1760,7 @@
       ],
       "createdAt": "2026-11-17T03:22:41.001Z",
       "updatedAt": "2026-11-17T03:22:41.001Z",
-      "lastAccessedAt": "2026-11-20T06:50:50.675Z",
+      "lastAccessedAt": "2026-11-20T20:27:42.357Z",
       "revision": 1,
       "contentHash": "b09ba9d39fc11d34097bd49a0b81238738b6e0881e8533155060876e4dc51015",
       "sizeBytes": 6796,
@@ -2464,7 +2464,7 @@
       ],
       "createdAt": "2026-11-18T03:10:39.768Z",
       "updatedAt": "2026-11-18T03:10:39.768Z",
-      "lastAccessedAt": "2026-11-19T10:57:23.859Z",
+      "lastAccessedAt": "2026-11-20T14:12:20.930Z",
       "revision": 1,
       "contentHash": "b8361a2f509ce91a50aefb1491c56d8eb979b6531174b124b6a674bd7ec2787a",
       "sizeBytes": 7169,
@@ -2930,7 +2930,7 @@
       ],
       "createdAt": "2026-11-18T11:52:02.654Z",
       "updatedAt": "2026-11-18T11:52:02.654Z",
-      "lastAccessedAt": "2026-11-18T15:51:25.048Z",
+      "lastAccessedAt": "2026-11-20T20:52:34.787Z",
       "revision": 1,
       "contentHash": "0476f879437873ebc7c60d8afa34fe840cc0519327c1f53f33f91e255715adf2",
       "sizeBytes": 8853,
@@ -4045,10 +4045,78 @@
       ],
       "createdAt": "2026-11-20T10:27:52.176Z",
       "updatedAt": "2026-11-20T10:27:52.176Z",
-      "lastAccessedAt": "2026-11-20T10:27:52.176Z",
+      "lastAccessedAt": "2026-11-20T20:52:34.787Z",
       "revision": 1,
       "contentHash": "3b3e1fbd1332fcd655d47aca25f70bf0477be9f994e6b84c478369b5a1436797",
       "sizeBytes": 5726,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "664308d6-d2cc-47b5-a77e-c544492e5504",
+      "title": "ChatBI 会话记录报表接口性能归因与优化方案（MR !599 / !1137 / !1138）",
+      "description": "6 条并行 SQL 的 EXPLAIN ANALYZE 实测（:154 4721/1786ms、:158 2022ms、:166 2316ms、hit 至 274k）、固定 RTT 233ms 的测法、瓶颈定位在三层 LATERAL 逐行展开而非排序或网络、5 条优化建议及理由（缓存优先、LATERAL 提 CTE、不建议合并 SQL）、topQuestions 测量无效的遗留。",
+      "status": "active",
+      "filename": "chatbi-mr-599-1137-1138-664308d6.md",
+      "relativePath": "documents/active/chatbi-mr-599-1137-1138-664308d6.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/controller/ChatbiEventReportController.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java",
+        "src/views/Setting/reports/user-logs/components/views/QueryView.vue"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-c7cc3acd-139c-4a2f-9bd8-6bedb573ca94"
+      ],
+      "createdAt": "2026-11-20T14:13:38.234Z",
+      "updatedAt": "2026-11-20T14:13:38.234Z",
+      "lastAccessedAt": "2026-11-20T20:52:34.787Z",
+      "revision": 1,
+      "contentHash": "36d20a7f09ae1cd61b258cd9a993e4dc82a5065ae0aaa11b0991be2e7052ea17",
+      "sizeBytes": 6932,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "f4ea3686-cfb6-4cd9-9e97-913d85d292bc",
+      "title": "ChatBI 会话汇总报表：线程池 6→18 与 60s 结果缓存的实施与实测",
+      "description": "已实施并实测：QUERY_PARALLELISM 6→18（3 请求×6 条，卡 Druid maxActive=20）、Guava SUMMARY_CACHE 60s/200 条/22 参数 key；实测冷 12.3s→热 245ms、基线 392ms、3 路并发总 4812ms；Windows 启动 mvn 命令行超长改用 java -jar；顺带发现 chatbiMode 参数名与 sn_profile 缺失 FROM 两个既有 bug。",
+      "status": "active",
+      "filename": "chatbi-6-18-60s-f4ea3686.md",
+      "relativePath": "documents/active/chatbi-6-18-60s-f4ea3686.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.xml",
+        "smartop-service/admin/pom.xml",
+        "pom.xml"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-f19a1f5c-a01a-4c00-8063-292d14663970"
+      ],
+      "createdAt": "2026-11-20T20:27:59.000Z",
+      "updatedAt": "2026-11-20T20:27:59.000Z",
+      "lastAccessedAt": "2026-11-20T20:52:34.787Z",
+      "revision": 1,
+      "contentHash": "7741b823e1918edcc7bbb2b5dbf0419f2af95c6329db004e22d40f562c9abab5",
+      "sizeBytes": 6415,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "23649248-42bc-420e-8949-46b687fda13f",
+      "title": "用 IDEA MCP 启动 Spring Boot 服务：execute_tool 调用程序与失败模式",
+      "description": "IntelliJ IDEA MCP 连接（srv-e3b0c44298fc1c14，唯一工具 execute_tool）的 streamable-http 调用程序、--paramName value 参数格式与三条错误对照、start_run_configuration 实测结果，以及 IDEA 索引假报错（LinkedHashMap 无法解析、差 19 行）的证据链与修复步骤；附 MR 待决事项。",
+      "status": "active",
+      "filename": "idea-mcp-spring-boot-execute-tool-23649248.md",
+      "relativePath": "documents/active/idea-mcp-spring-boot-execute-tool-23649248.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-d44d87a8-dc61-4b5f-927f-fbf20a9e434a"
+      ],
+      "createdAt": "2026-11-20T20:52:52.859Z",
+      "updatedAt": "2026-11-20T20:52:52.859Z",
+      "lastAccessedAt": "2026-11-20T20:52:52.859Z",
+      "revision": 1,
+      "contentHash": "2d79c4889620a35f2e211553815dd1a5b008d0128e54ca46c613073235d35958",
+      "sizeBytes": 6731,
       "memoryBodyIds": []
     }
   ]
