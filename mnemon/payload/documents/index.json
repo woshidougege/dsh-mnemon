@@ -2464,7 +2464,7 @@
       ],
       "createdAt": "2026-11-18T03:10:39.768Z",
       "updatedAt": "2026-11-18T03:10:39.768Z",
-      "lastAccessedAt": "2026-11-20T14:12:20.930Z",
+      "lastAccessedAt": "2026-11-20T21:14:23.705Z",
       "revision": 1,
       "contentHash": "b8361a2f509ce91a50aefb1491c56d8eb979b6531174b124b6a674bd7ec2787a",
       "sizeBytes": 7169,
@@ -3530,7 +3530,7 @@
       ],
       "createdAt": "2026-11-19T10:38:39.219Z",
       "updatedAt": "2026-11-19T10:38:39.219Z",
-      "lastAccessedAt": "2026-11-20T01:50:20.947Z",
+      "lastAccessedAt": "2026-11-20T21:14:23.705Z",
       "revision": 1,
       "contentHash": "503c06e9ab3edfbbbc5e554763996ed952d4084ae271ff1dcda1b8fe0d703e18",
       "sizeBytes": 5217,
@@ -4068,7 +4068,7 @@
       ],
       "createdAt": "2026-11-20T14:13:38.234Z",
       "updatedAt": "2026-11-20T14:13:38.234Z",
-      "lastAccessedAt": "2026-11-20T20:52:34.787Z",
+      "lastAccessedAt": "2026-11-20T21:14:23.705Z",
       "revision": 1,
       "contentHash": "36d20a7f09ae1cd61b258cd9a993e4dc82a5065ae0aaa11b0991be2e7052ea17",
       "sizeBytes": 6932,
@@ -4092,7 +4092,7 @@
       ],
       "createdAt": "2026-11-20T20:27:59.000Z",
       "updatedAt": "2026-11-20T20:27:59.000Z",
-      "lastAccessedAt": "2026-11-20T20:52:34.787Z",
+      "lastAccessedAt": "2026-11-20T21:14:23.705Z",
       "revision": 1,
       "contentHash": "7741b823e1918edcc7bbb2b5dbf0419f2af95c6329db004e22d40f562c9abab5",
       "sizeBytes": 6415,
@@ -4117,6 +4117,31 @@
       "revision": 1,
       "contentHash": "2d79c4889620a35f2e211553815dd1a5b008d0128e54ca46c613073235d35958",
       "sizeBytes": 6731,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "b671b031-2dab-48c5-91dc-0e1ca6251107",
+      "title": "ChatBI 报表「接口 200 但数据块为空」两处根因修复（MR !600）与首屏分块出数方案",
+      "description": "sessionInternalCount 的 @Param 名漂移与三条语句缺 sn_jira/sn_profile/sn_user LATERAL 关联两个根因、51 条语句全量核对法与 4 组实测；前端 LoadingRows 已由骨架屏退化为纯圆环、FeedbackView 三块共用 loading 布尔、后端 8 步串行链（第 7 步 sessionSummary 仅为两个分母）与三档渐进出数方案及取舍（未拍板）。",
+      "status": "active",
+      "filename": "chatbi-200-mr-600-b671b031.md",
+      "relativePath": "documents/active/chatbi-200-mr-600-b671b031.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiEventReportService.java",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/dao/ChatbiEventQueryMapper.java",
+        "smartop-service/admin/src/main/resources/mapper/chatbi/ChatbiEventQueryMapper.xml",
+        "src/views/Setting/reports/user-logs/components/ui/LoadingRows.vue",
+        "src/views/Setting/reports/user-logs/components/views/FeedbackView.vue"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-793a9d02-07eb-48e5-a9dd-0441e34eced9"
+      ],
+      "createdAt": "2026-11-20T21:14:47.377Z",
+      "updatedAt": "2026-11-20T21:14:47.377Z",
+      "lastAccessedAt": "2026-11-20T21:14:47.377Z",
+      "revision": 1,
+      "contentHash": "8dd522cd9275cae3cee011fa440d06b9eebb5c0a2ef95e667cdab123a29d9f17",
+      "sizeBytes": 8750,
       "memoryBodyIds": []
     }
   ]

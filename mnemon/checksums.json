@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "1e878119fd9e4f75e831783a60caade98542cabbc4049d3d73937823c30d40bc",
     "payload/runtime/USER.md": "bc22cb1c19aa85ae7e52a7669e635cf18fd51c65acc363220e70ee9d314f7230",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "831d67c6abc9ff14846e8489ff19b8b9c33ff7ee6ed64bc7c13fa54856056ba8",
+    "payload/documents/index.json": "9997331bb28b5ab1b92d335624c35f735d8d2d244993bbc7fe3bf68153bdddd7",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -183,6 +183,7 @@
     "payload/documents/active/chatbi-mr-599-1137-1138-664308d6.md": "0a55028d1964c0af7689f7603985166022e4a65731408217a879121bc16a93fc",
     "payload/documents/active/chatbi-6-18-60s-f4ea3686.md": "c1dae745c842be6d22f709dfc5e0bc79df05349d0e069b2e2c8c51676aa34e8d",
     "payload/documents/active/idea-mcp-spring-boot-execute-tool-23649248.md": "85c601264a37bd4ee4041d96ab04d9e0e58c93b3c3cb3cf1dee2efefb56a57f8",
+    "payload/documents/active/chatbi-200-mr-600-b671b031.md": "8aa0bc98ac0e1b487e0b7a5b1c4f276cffd60d508ea62d4c5d127c0f3fb21684",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
