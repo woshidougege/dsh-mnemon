@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "1e878119fd9e4f75e831783a60caade98542cabbc4049d3d73937823c30d40bc",
     "payload/runtime/USER.md": "bc22cb1c19aa85ae7e52a7669e635cf18fd51c65acc363220e70ee9d314f7230",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "78d1a79e9a27e989f638d058daf605fb106cf7aba866abef71e5eb05d8ecf99e",
+    "payload/documents/index.json": "9794ab1cde30b64c6cedafafca8a8554d41c4a97383e99d658607f9b1f22a3c5",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -166,6 +166,9 @@
     "payload/documents/active/turn-failed-workspacelifecycleerror-6be8daa7.md": "b739e59c4f7e393f3a992123e1e61bd9be0f93447f1e866765c014605ca25210",
     "payload/documents/active/mr-1132-1127-64041ba0.md": "3af72f63cc4d226f98326c3f86a75a66acaad560275fc4145ca2d161f584f6a0",
     "payload/documents/active/3-mr-1133-1127-782f3180.md": "cb16be83e47b781e4382e3e80586d048e0ae293dce7de709b48769e80e70cc4b",
+    "payload/documents/active/1133-1127-4c9a0b2e.md": "62832802c166e721b93534bc6508e3198f5b018ab1a42cd1703b4e1669ba27be",
+    "payload/documents/active/chatbi-route-failed-ssg-sales-ops-ssg-sales-ops-02b68005.md": "5f4fce4bc6742b60eb887cb54b1c44266a4848705232cf0ec8daafe4af8f36e0",
+    "payload/documents/active/chatbi-accuracy-rate-success-only-ssg-sales-ops-06e3e0aa.md": "64c76692dc1762616a0383f0b67cb80adf44ec2b32db6aaf1ba4abe1b3d9e636",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
