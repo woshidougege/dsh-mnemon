@@ -624,7 +624,7 @@
       ],
       "createdAt": "2026-11-13T17:01:13.848Z",
       "updatedAt": "2026-11-13T17:01:13.848Z",
-      "lastAccessedAt": "2026-11-18T08:32:49.514Z",
+      "lastAccessedAt": "2026-11-20T09:49:53.356Z",
       "revision": 1,
       "contentHash": "45162472fdcf883c0377bcfeb6d0a81479703457d6a100e8544f74ad7f5978f2",
       "sizeBytes": 5592,
@@ -673,7 +673,7 @@
       ],
       "createdAt": "2026-11-13T17:57:57.239Z",
       "updatedAt": "2026-11-13T17:57:57.239Z",
-      "lastAccessedAt": "2026-11-18T08:32:49.514Z",
+      "lastAccessedAt": "2026-11-20T09:49:53.356Z",
       "revision": 1,
       "contentHash": "a435e0974ae83c5c3a6d45415dd7b1ea20a88a14f136fc3edb9b34344a96370c",
       "sizeBytes": 7345,
@@ -831,7 +831,7 @@
       ],
       "createdAt": "2026-11-14T00:52:09.428Z",
       "updatedAt": "2026-11-14T00:52:09.428Z",
-      "lastAccessedAt": "2026-11-19T04:25:23.513Z",
+      "lastAccessedAt": "2026-11-20T09:55:41.454Z",
       "revision": 1,
       "contentHash": "9a0223e0772f8f78b6793f8b7b054a23ca83dc5fab6673a0ca89c86ca31784c3",
       "sizeBytes": 7633,
@@ -2508,7 +2508,7 @@
       ],
       "createdAt": "2026-11-18T03:35:45.637Z",
       "updatedAt": "2026-11-18T03:35:45.637Z",
-      "lastAccessedAt": "2026-11-19T08:12:38.859Z",
+      "lastAccessedAt": "2026-11-20T09:55:41.454Z",
       "revision": 1,
       "contentHash": "13d2a347ab7dab994502e9b4a1330904089ce7ab73bd2e660406b3fbe732e8e8",
       "sizeBytes": 8910,
@@ -3000,7 +3000,7 @@
       ],
       "createdAt": "2026-11-18T20:55:44.747Z",
       "updatedAt": "2026-11-18T20:55:44.747Z",
-      "lastAccessedAt": "2026-11-19T03:13:19.899Z",
+      "lastAccessedAt": "2026-11-20T09:55:41.454Z",
       "revision": 1,
       "contentHash": "00e027ba4100eac0d69ad0c848e4c96649c962d863403bb6b08ff3072872c8f1",
       "sizeBytes": 9050,
@@ -3045,7 +3045,7 @@
       ],
       "createdAt": "2026-11-19T03:04:55.743Z",
       "updatedAt": "2026-11-19T03:04:55.743Z",
-      "lastAccessedAt": "2026-11-19T03:23:38.274Z",
+      "lastAccessedAt": "2026-11-20T09:49:53.356Z",
       "revision": 1,
       "contentHash": "c1ac58a9fc3b61d737cb9a5d2539dfb0d4cc0a1765fec216834e7d8f4b1139da",
       "sizeBytes": 6512,
@@ -3983,6 +3983,50 @@
       "revision": 1,
       "contentHash": "501cad768afd8f03f32fb670407f0936fe49f0b2ca8d9c0744921cb5d4f1baa4",
       "sizeBytes": 5119,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "e8298f54-6834-4b0f-99aa-aeab603ea881",
+      "title": "本地 5173 前端 token 为空排查：vite 代理分工（auth→tst / admin→本地）、dev 与 tst 共用 Redis、session cookie 生命周期",
+      "description": "5173 前端 token 为空的实测排查：vite 代理确实按「auth 走 tst、admin 走本地 8082」工作（含 3 条对照响应）；dev 与 tst 的 spring.redis 完全一致（database=1）故 tst token 本地可校验；前端 token 为无 expires 的 session cookie（src/utils/cookie.ts:6-7），无 token 不设 Authorization（src/services/request.ts:33-39），401 会 removeUserInfo 并刷新（:89-97）；登录页从 res.data.Authorization 取值（src/views/Login/index.vue:63-72）；待用户确认 token 为空的具体位置。",
+      "status": "active",
+      "filename": "5173-token-vite-auth-tst-admin-dev-tst-redis-ses-e8298f54.md",
+      "relativePath": "documents/active/5173-token-vite-auth-tst-admin-dev-tst-redis-ses-e8298f54.md",
+      "sourcePaths": [
+        "src/utils/cookie.ts",
+        "src/services/request.ts",
+        "src/views/Login/index.vue"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-cfff2bf4-886e-4261-90a9-26cbc62a55ed"
+      ],
+      "createdAt": "2026-11-20T09:50:22.935Z",
+      "updatedAt": "2026-11-20T09:50:22.935Z",
+      "lastAccessedAt": "2026-11-20T09:55:41.454Z",
+      "revision": 1,
+      "contentHash": "2d64eddcd6d3678a5ae4f67dcea8648f3c93326455231e78987812edd67f7de8",
+      "sizeBytes": 4828,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "9ffb7ded-d7a0-4b81-824f-1c9021daa281",
+      "title": "ChatBI 埋点失败归因数据核查与环比可行性（failed_reason / failed_step 实测分布）",
+      "description": "统计报表 Failed 节点「归因层 / 环比」的数据可行性核查：失败归因写在 query_session 的 properties JSON（failed_step / failed_reason / failed_duration_ms，见 ChatbiChatReporter.java:139-149、211-219），tst 979 条失败实测 reason 6 枚举与 step 分布；环比受 queriesSummary 单时间窗与仅一周数据限制；含「别只看列名、JSON 属性里才有数据」的误判教训；关联 5173 token 文档 e8298f54。",
+      "status": "active",
+      "filename": "chatbi-failed-reason-failed-step-9ffb7ded.md",
+      "relativePath": "documents/active/chatbi-failed-reason-failed-step-9ffb7ded.md",
+      "sourcePaths": [
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiChatReporter.java"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-193d145a-39fd-47c8-9632-3e972d600c00"
+      ],
+      "createdAt": "2026-11-20T09:56:21.523Z",
+      "updatedAt": "2026-11-20T09:56:21.523Z",
+      "lastAccessedAt": "2026-11-20T09:56:21.523Z",
+      "revision": 1,
+      "contentHash": "125515c74cb593bbe370f890ee64ec19bbcc516733f470d0ff7098d020abec1e",
+      "sizeBytes": 5087,
       "memoryBodyIds": []
     }
   ]

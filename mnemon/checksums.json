@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "1e878119fd9e4f75e831783a60caade98542cabbc4049d3d73937823c30d40bc",
     "payload/runtime/USER.md": "bc22cb1c19aa85ae7e52a7669e635cf18fd51c65acc363220e70ee9d314f7230",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "f12d34163047df1f2e2318d7af524d5f22ef8f7d921a739185535e68569b0c1e",
+    "payload/documents/index.json": "afd4e7bb35a1b53c3575f39f3a4ce14fa4f76541d470547db3c375b0bec9232e",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -177,6 +177,8 @@
     "payload/documents/active/422-username-cookie-25h-spark-mr-151-1135-1136-2f46ae5b.md": "975074d239c136ff6e84b47d39a640c0c08133c4002cfa5c58ddb8f794b06386",
     "payload/documents/active/kpi-region-null-bookings-market-ssg-sales-ops-49ad133b.md": "76809c0b4063094868a9ec4eeba621d834d1cfbc7e8e00640b73414ecbac27ed",
     "payload/documents/active/user-logs-user-query-feedback-efa0c2db.md": "fda86e8a80d76870e8e68ae17af3673776718f5ec7a1d4e110ab2114e87793da",
+    "payload/documents/active/5173-token-vite-auth-tst-admin-dev-tst-redis-ses-e8298f54.md": "3f5de0901c7a33c89474cdcd2630f06704eacdb4b9c8f626d6c5d3e6f9aadb94",
+    "payload/documents/active/chatbi-failed-reason-failed-step-9ffb7ded.md": "8f721c5a0548c359aaa20c360209a44d137ba30e0bf1604162ed89439665b2b1",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
