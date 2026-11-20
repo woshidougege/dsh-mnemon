@@ -3242,7 +3242,7 @@
       ],
       "createdAt": "2026-11-19T07:36:37.017Z",
       "updatedAt": "2026-11-19T07:36:37.017Z",
-      "lastAccessedAt": "2026-11-19T10:59:13.272Z",
+      "lastAccessedAt": "2026-11-20T01:28:14.477Z",
       "revision": 1,
       "contentHash": "77c3a26fb220e91428ddb78d2ac9017dd2107bef0bd5d65eb19617d4b4e7c8ec",
       "sizeBytes": 6241,
@@ -3328,7 +3328,7 @@
       ],
       "createdAt": "2026-11-19T08:59:03.476Z",
       "updatedAt": "2026-11-19T08:59:03.476Z",
-      "lastAccessedAt": "2026-11-19T12:24:10.429Z",
+      "lastAccessedAt": "2026-11-20T01:36:50.734Z",
       "revision": 1,
       "contentHash": "5432aa00aaa7577f34e9319a24d98bb1507fc61851d723636ac86a0f4233a308",
       "sizeBytes": 7268,
@@ -3467,7 +3467,7 @@
       ],
       "createdAt": "2026-11-19T10:02:29.882Z",
       "updatedAt": "2026-11-19T10:02:29.882Z",
-      "lastAccessedAt": "2026-11-19T12:12:23.288Z",
+      "lastAccessedAt": "2026-11-20T01:36:50.734Z",
       "revision": 1,
       "contentHash": "7e712530d6ab0e55aac94f55ae14ae594f086dd4f49b5dd2dd6255e3b511a2e7",
       "sizeBytes": 5815,
@@ -3606,7 +3606,7 @@
       ],
       "createdAt": "2026-11-19T10:59:41.065Z",
       "updatedAt": "2026-11-19T10:59:41.065Z",
-      "lastAccessedAt": "2026-11-19T12:12:23.288Z",
+      "lastAccessedAt": "2026-11-20T01:28:14.477Z",
       "revision": 1,
       "contentHash": "f68db882234ec1edf0599e8a865bd10851da1d5aac7ed78c05a9470d84659f39",
       "sizeBytes": 7597,
@@ -3630,7 +3630,7 @@
       ],
       "createdAt": "2026-11-19T11:21:37.431Z",
       "updatedAt": "2026-11-19T11:21:37.431Z",
-      "lastAccessedAt": "2026-11-19T12:12:23.288Z",
+      "lastAccessedAt": "2026-11-20T01:36:50.734Z",
       "revision": 1,
       "contentHash": "d2614d31d01c89f9e182f5c0192b5bece9633e7a982c791ab263edb4daee06b2",
       "sizeBytes": 6620,
@@ -3652,7 +3652,7 @@
       ],
       "createdAt": "2026-11-19T12:12:53.327Z",
       "updatedAt": "2026-11-19T12:12:53.327Z",
-      "lastAccessedAt": "2026-11-19T12:12:53.327Z",
+      "lastAccessedAt": "2026-11-20T01:28:14.477Z",
       "revision": 1,
       "contentHash": "d88be6106190d4ff504adfbf8348ace67755e305770f6fc8565be0b0d839eecf",
       "sizeBytes": 4578,
@@ -3678,6 +3678,53 @@
       "revision": 1,
       "contentHash": "00c00370cc56e6855da1b14b727c4045bee110a523ccd2b9acb2790d8c2856cf",
       "sizeBytes": 5526,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "64041ba0-ab9a-437b-9926-14e657b5662e",
+      "title": "回放翻译整会话：模型单次容量上限证据与四层分批策略（MR !1132 / !1127）",
+      "description": "ssg_sales_ops 回放翻译新增「整会话」按钮后的容量结论：后端 MAX_REQUEST_ITEMS=120 / MAX_CALL_CHARS=12000 / MAX_CALL_ITEMS=24、max-tokens 8192、180s 超时共同决定一次全发不可行（124 轮约 40 万字符，输出需求是单次上限 ~50 倍）；实际按文本量四层切分（全局去重 → 每 20 轮一块 HTTP → 每次 HTTP 12 段/8000 字符 → 后端 12000 字符/24 段），每批完成即生效且单批失败不丢已完成结果；含三态按钮与单轮/整篇互斥规则，以及并发与后端异步任务两条未实施优化。",
+      "status": "active",
+      "filename": "mr-1132-1127-64041ba0.md",
+      "relativePath": "documents/active/mr-1132-1127-64041ba0.md",
+      "sourcePaths": [
+        "src/views/Setting/reports/history-replay/HistoryChatPanel.vue",
+        "src/views/Setting/reports/history-replay/translateApi.ts",
+        "src/components/PbiRecommend/pbiTranslate.ts",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiReplayTranslateService.java"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-ae23020b-466c-495f-a59f-d74a2f0d8245"
+      ],
+      "createdAt": "2026-11-20T01:28:31.559Z",
+      "updatedAt": "2026-11-20T01:28:31.559Z",
+      "lastAccessedAt": "2026-11-20T01:36:50.734Z",
+      "revision": 1,
+      "contentHash": "f1f1074111530d8c4d3203ce3385529f370fe54cdf7b38dd30407d5a8dec16c1",
+      "sizeBytes": 5863,
+      "memoryBodyIds": []
+    },
+    {
+      "id": "782f3180-7153-4e56-8eb9-94c7ccc44830",
+      "title": "回放翻译整会话：按文本量切块 + 3 路并发（MR !1133 / !1127）",
+      "description": "修复「整会话翻译全部完成才显示、且慢」：定位到前一版按 TURNS_PER_CHUNK=20 分块在 8 轮会话退化成单块、块内十几批串行后才一次性替换 translations；改为累计 8000 字符/块（单块最多 4 轮）+ 3 路并发 + 每块即时落地 + 仅写入译文的轮次重建卡片；交付 MR !1133（develop, 373e65f3）与 !1127（master, 77797ee5），type-check 通过；后端异步任务仍未做。",
+      "status": "active",
+      "filename": "3-mr-1133-1127-782f3180.md",
+      "relativePath": "documents/active/3-mr-1133-1127-782f3180.md",
+      "sourcePaths": [
+        "src/views/Setting/reports/history-replay/HistoryChatPanel.vue",
+        "src/views/Setting/reports/history-replay/translateApi.ts",
+        "smartop-service/admin/src/main/java/com/lenovo/admin/chatbi/service/ChatbiReplayTranslateService.java"
+      ],
+      "sessionIds": [
+        "mnemon-review-v1-62dfe001-76f2-4aaa-88e6-f0c2cb548284"
+      ],
+      "createdAt": "2026-11-20T01:37:09.656Z",
+      "updatedAt": "2026-11-20T01:37:09.656Z",
+      "lastAccessedAt": "2026-11-20T01:37:09.656Z",
+      "revision": 1,
+      "contentHash": "120930d6a8628c8e0befc3169dafefcdd84cd27dd9aebb85337070f6bf4267d2",
+      "sizeBytes": 4385,
       "memoryBodyIds": []
     }
   ]
