@@ -4,7 +4,7 @@
     "payload/runtime/memories.json": "1e878119fd9e4f75e831783a60caade98542cabbc4049d3d73937823c30d40bc",
     "payload/runtime/USER.md": "bc22cb1c19aa85ae7e52a7669e635cf18fd51c65acc363220e70ee9d314f7230",
     "payload/runtime/MEMORY.md": "418d3556fc37bbaeac770eb96587791ee04bcf9f072753cbbec5c3347d5c691c",
-    "payload/documents/index.json": "9794ab1cde30b64c6cedafafca8a8554d41c4a97383e99d658607f9b1f22a3c5",
+    "payload/documents/index.json": "78388e35025811c36d09d3f5573c57dd0a575abb0220ae12eb7f9c1aa1abc9ad",
     "payload/documents/active/admin-65-ssg-sales-ops-114173fc.md": "563daed9259a748be4babb7e0fc89997120b060f95d2d44dc4bf36f55dfc56b6",
     "payload/documents/active/ssg-lgfs-cron-p49-g1189-ssg-sales-ops-d6ae03bd.md": "8284ccf7bd6e542c35938b7af0e8624b245602178825f09ff905c6a133a1fa7c",
     "payload/documents/active/chatbi-success-rate-accuracy-rate-ssg-sales-ops-38b9c4c0.md": "65deaa0affa9ca7513ba1b427cf6470ebcff827735a329c026ef00cf675c71b5",
@@ -169,6 +169,8 @@
     "payload/documents/active/1133-1127-4c9a0b2e.md": "62832802c166e721b93534bc6508e3198f5b018ab1a42cd1703b4e1669ba27be",
     "payload/documents/active/chatbi-route-failed-ssg-sales-ops-ssg-sales-ops-02b68005.md": "5f4fce4bc6742b60eb887cb54b1c44266a4848705232cf0ec8daafe4af8f36e0",
     "payload/documents/active/chatbi-accuracy-rate-success-only-ssg-sales-ops-06e3e0aa.md": "64c76692dc1762616a0383f0b67cb80adf44ec2b32db6aaf1ba4abe1b3d9e636",
+    "payload/documents/active/vs-dsh-6-65bfad27.md": "be0d3931c05e3ec1c61fa3af5310a0d0eb04c9bd03057f49a2c88b9cd2811827",
+    "payload/documents/active/setting-admin-control-ssg-sales-ops-19-57-2-780b959b.md": "623f6ee716a29c31efc8257b801705dd0dff6ea4898d868cc7e9c4c5ad40d748",
     "payload/data/.dsh-memory-bodies.json": "dc6020b75bab2ed6109193aea9c3427c22d9d2b6edd223c4c8c6cd87ad0c67dd"
   }
 }
